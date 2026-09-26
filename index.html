@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Due Diligence</title>
+<style>
+:root{color-scheme:light dark;--paper:#f7f6f0;--ink:#222923;--muted:#5b655d;--rule:#b9c2b9;--surface:#eeeee6;--green:#17653a;--good:#e2efe3;--red:#a12a25;--bad:#fae7e3;--focus:#265ca7;--button:#263d2e;--button-ink:#fff}
+@media(prefers-color-scheme:dark){:root{--paper:#171d19;--ink:#edf0e8;--muted:#b0bbaf;--rule:#566357;--surface:#222c24;--green:#92d9a7;--good:#243d2c;--red:#ffaca1;--bad:#422b28;--focus:#9cc3ff;--button:#c6dfc6;--button-ink:#17251b}}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-variant-numeric:tabular-nums;line-height:1.55;scrollbar-color:var(--rule) var(--paper)}::selection{background:var(--button);color:var(--button-ink)}button,a{ -webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;cursor:pointer;touch-action:manipulation}button:disabled{cursor:default}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:4px}h1,h2,h3,p{margin:0}h1{font-size:clamp(2.3rem,7vw,4rem);line-height:1.06;letter-spacing:-.035em;font-weight:800}h2{font-size:clamp(1.35rem,3.8vw,1.9rem);line-height:1.3;letter-spacing:-.02em}h3{font-size:1.04rem}a{color:var(--green);text-underline-offset:3px}.shell{max-width:900px;margin:auto;padding: max(22px,env(safe-area-inset-top)) max(22px,env(safe-area-inset-right)) max(28px,env(safe-area-inset-bottom)) max(22px,env(safe-area-inset-left))}.mast{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:0 0 18px;border-bottom:2px solid var(--ink);font-size:.88rem}.brand{font-weight:800;letter-spacing:.02em}.muted{color:var(--muted)}.intro{padding:38px 0 30px}.intro p{margin-top:16px;max-width:54ch}.overview{display:flex;gap:24px;margin:24px 0 8px;font-size:.9rem}.overview strong{display:block;font-size:1.4rem}.modes{border-top:1px solid var(--rule)}.mode{display:grid;grid-template-columns:1fr auto;gap:12px;width:100%;padding:22px 0;text-align:left;border:0;border-bottom:1px solid var(--rule);background:transparent}.mode:hover{background:var(--surface)}.mode-title{font-size:1.15rem;font-weight:750}.mode-desc{display:block;margin-top:4px;color:var(--muted);font-size:.9rem}.mode-meta{font-size:.82rem;display:flex;gap:18px;margin-top:12px;flex-wrap:wrap}.start{align-self:center;color:var(--green);font-weight:700}.foot{margin-top:30px;color:var(--muted);font-size:.82rem}.foot p+ p{margin-top:8px}summary{cursor:pointer;padding:12px 0}details ul{padding-left:20px}.toolbar{display:flex;justify-content:space-between;align-items:center;margin:20px 0;gap:16px}.text-button{border:0;background:transparent;padding:10px 0;color:var(--muted);text-decoration:underline;text-underline-offset:4px;min-height:44px}.progress{height:4px;background:var(--rule);margin:18px 0 24px}.progress span{display:block;height:100%;background:var(--green)}.quiz-meta{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.88rem}.question{padding:12px 0 22px}.concept{color:var(--muted);margin-top:12px;font-size:.9rem}.answers{display:grid;gap:10px}.answer{width:100%;min-height:56px;padding:15px 17px;background:transparent;border:1px solid var(--rule);border-radius:2px;text-align:left;display:flex;gap:14px;align-items:baseline;line-height:1.45}.answer:not(:disabled):hover{background:var(--surface);border-color:var(--ink)}.letter{color:var(--muted);font-size:.8rem;min-width:14px}.answer.correct{background:var(--good);border-color:var(--green);color:var(--green)}.answer.wrong{background:var(--bad);border-color:var(--red);color:var(--red)}.answer-mark{display:block;font-weight:700;font-size:.8rem;margin-top:4px}.feedback{margin-top:22px;padding:20px 0;border-top:2px solid var(--green);animation:reveal .16s ease-out}.feedback.wrong{border-color:var(--red)}.feedback h3{color:var(--green);margin-bottom:6px}.feedback.wrong h3{color:var(--red)}.feedback p{max-width:70ch}.primary{background:var(--button);color:var(--button-ink);border:1px solid var(--button);padding:13px 22px;min-height:48px;font-weight:700}.primary:hover{filter:brightness(.92)}.actions{display:flex;gap:12px;margin-top:22px;align-items:center}.secondary{background:transparent;color:var(--ink);border:1px solid var(--rule);padding:13px 22px;min-height:48px}.statement{margin:0 0 24px;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:14px 0}.statement caption{text-align:left;font-weight:700;padding:0 0 10px}.statement table{width:100%;border-collapse:collapse;font-size:.9rem}.statement th,.statement td{padding:7px 0;border-top:1px solid var(--rule);vertical-align:top}.statement th{text-align:left;font-weight:400;color:var(--muted);width:48%}.statement td{text-align:right;font-weight:600}.case-note{font-size:.9rem;padding-top:12px}.result-total{font-size:clamp(3rem,10vw,5rem);font-weight:800;line-height:1.1;margin:24px 0 8px;letter-spacing:-.035em}.review{margin-top:34px}.review h3{padding:16px 0 10px;border-top:1px solid var(--ink)}.review article{padding:14px 0 18px;border-top:1px solid var(--rule)}.review article p{margin-top:7px;font-size:.92rem}.wrong-text{color:var(--red)}.correct-text{color:var(--green)}.storage{font-size:.8rem;color:var(--red);margin-top:12px}.hidden{display:none!important}main:focus,h2:focus{outline:none}@keyframes reveal{from{opacity:.55}to{opacity:1}}@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}@media(max-width:540px){.shell{padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}.intro{padding-top:28px}.mode{grid-template-columns:1fr}.start{font-size:.86rem}.overview{gap:28px}.actions{flex-direction:column;align-items:stretch}.actions button{width:100%}.statement th{width:44%}.mast{font-size:.8rem}}
+
+.shell{max-width:1080px}.intro{padding:28px 0 22px}.intro h1{font-size:clamp(2rem,5vw,3.1rem)}.overview{gap:28px}.overview strong{font-size:1.2rem}.mode{padding:19px 0}.legacy{font-size:.78rem}.checkpoint-line{display:flex;justify-content:space-between;gap:12px;font-size:.78rem;color:var(--muted);margin-top:15px}.progress{margin:8px 0 18px}.question{padding-top:4px}.feedback{margin-top:0;padding-top:16px}.feedback p+p{margin-top:12px}.input-note{font-size:.8rem;margin-top:14px}.source-note,.choice-review{font-size:.9rem;border-bottom:1px solid var(--rule);margin-top:10px}.source-note p{margin:8px 0}.reason{padding:12px 0;border-top:1px solid var(--rule)}.reason p{margin-top:6px}.next-actions{margin-top:16px}.standalone{margin:0 0 20px}.selected-answer{color:var(--muted)}.review .statement{margin:16px 0}.review article{overflow-wrap:anywhere}.foot{margin-top:22px}.foot p+p{margin-top:8px}summary{min-height:44px}.toolbar .text-button{white-space:nowrap}.toolbar>span{text-align:right}.workspace{max-width:780px;margin:auto}.answer-side{min-width:0}.question-side{min-width:0}@media(min-width:850px){.has-statement{display:grid;grid-template-columns:1fr 1fr;gap:36px;max-width:none}.has-statement .answer-side{padding-top:4px}.overview{gap:38px}}@media(max-width:540px){.overview{gap:18px}.overview strong{font-size:1.05rem}.overview span{font-size:.78rem}.desktop-hint{display:none}.feedback{padding-bottom:4px}.next-actions{gap:8px}.question h2{font-size:1.28rem}.checkpoint-line span:last-child{text-align:right}.statement{padding-top:10px;margin-bottom:18px}.statement th,.statement td{font-size:.84rem;padding:5px 0}.toolbar{font-size:.86rem}.answer{padding:12px;min-height:50px}.intro p{font-size:.95rem}.result-total{font-size:3.5rem}}@media(max-height:700px){.shell{padding-top:max(12px,env(safe-area-inset-top))}.mast{padding-bottom:10px}.toolbar{margin:10px 0}.progress{margin-bottom:12px}.question{padding-bottom:14px}.foot{margin-top:18px}}
+</style>
+</head>
+<body><div class="shell"><header class="mast"><span class="brand">DUE DILIGENCE</span><span id="xp">0 XP</span></header><main id="app" tabindex="-1"></main><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><footer class="foot">A little scrutiny. A better decision.<br>Offline practice · <span id="save-status">Saved in this browser</span></footer></div>
+<script type="application/json" id="research-data">{
+  "version": 1,
+  "checkedAt": "2026-09-26T21:23:00.214125+00:00",
+  "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
+  "cases": [
+    {
+      "id": "history-costco",
+      "mode": "foundation",
+      "concept": "Accrual timing",
+      "caseType": "Historical case",
+      "prompt": "Costco’s 2025 filing describes membership fees recognized over a one-year period. Why not recognize all membership revenue when cash arrives?",
+      "choices": [
+        {
+          "text": "Access is provided over time",
+          "why": "The membership benefit is delivered throughout the service period."
+        },
+        {
+          "text": "Cash is not an asset until the year ends",
+          "why": "Cash is already an asset; the offset can be a service obligation."
+        },
+        {
+          "text": "Membership cash can never become revenue",
+          "why": "It becomes revenue as the promised membership access is provided."
+        },
+        {
+          "text": "The fee must be counted as a bank loan",
+          "why": "A customer service obligation is not automatically borrowing."
+        }
+      ],
+      "explanation": "Cash collection and earning a fee are separate events. The unearned portion remains deferred until the related service is provided.",
+      "note": "Documented accounting practice, not an allegation of misconduct. This question concerns the policy, not current membership pricing.",
+      "stats": [],
+      "source": {
+        "title": "Costco · 2025 Form 10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+        "kind": "Documented business practice",
+        "note": "Costco reports recognizing membership fees over the one-year membership period. Its shop-card revenue is generally recognized on redemption. The small-business amounts here are invented, not Costco figures."
+      },
+      "calculations": []
+    },
+    {
+      "id": "history-worldcom",
+      "mode": "foundation",
+      "concept": "Capital spending",
+      "caseType": "Historical case",
+      "prompt": "In the SEC’s 2002 WorldCom complaint, routine network costs were shifted into capital accounts. Why did that make reported earnings look better?",
+      "choices": [
+        {
+          "text": "Costs were removed from current expense",
+          "why": "That increases reported profit while overstating assets under the alleged improper entries."
+        },
+        {
+          "text": "The underlying services became free",
+          "why": "A journal entry does not remove the economic cost."
+        },
+        {
+          "text": "The company collected more customer cash",
+          "why": "The reclassification does not itself create receipts."
+        },
+        {
+          "text": "All network fees must be capitalized",
+          "why": "Consumed operating services do not become assets just because they support a network."
+        }
+      ],
+      "explanation": "Misclassification can overstate profit without improving the business. The lesson is to substantiate assets rather than accept account labels.",
+      "note": "Historical SEC allegations, distinguished from the game’s fictional small-business adaptations.",
+      "stats": [],
+      "source": {
+        "title": "WorldCom · SEC complaint, 2002",
+        "url": "https://www.sec.gov/litigation/complaints/complr17588.htm",
+        "kind": "Historical enforcement case",
+        "note": "The SEC alleged that WorldCom moved operating line costs into capital accounts, understating expenses and overstating earnings. This exercise adapts that accounting mechanism; its business and amounts are fictional."
+      },
+      "calculations": []
+    },
+    {
+      "id": "history-kraft",
+      "mode": "investor",
+      "concept": "Earnings quality",
+      "caseType": "Historical case",
+      "prompt": "The SEC’s 2021 Kraft Heinz action described unearned supplier discounts reducing reported costs. Which diligence request best addresses that mechanism?",
+      "choices": [
+        {
+          "text": "Supplier agreements and proof the discount conditions were satisfied",
+          "why": "Those records test whether the claimed savings were earned."
+        },
+        {
+          "text": "Only the customer marketing brochure",
+          "why": "Customer marketing does not establish supplier rebate rights."
+        },
+        {
+          "text": "Only the stock price chart",
+          "why": "Market price cannot validate expense recognition."
+        },
+        {
+          "text": "A promise that next year’s sales will rise",
+          "why": "Future growth does not prove an existing rebate was earned."
+        }
+      ],
+      "explanation": "Verify the contractual support for cost reductions before treating them as recurring profit. A flattering margin can depend on unsupported expense entries.",
+      "note": "Kraft settled without admitting or denying the SEC’s findings.",
+      "stats": [],
+      "source": {
+        "title": "Kraft Heinz · SEC settlement, 2021",
+        "url": "https://www.sec.gov/newsroom/press-releases/2021-174",
+        "kind": "Historical enforcement case",
+        "note": "The SEC found improper supplier discounts reduced reported costs and inflated earnings. Kraft settled without admitting or denying the findings. Exercise contracts and figures are fictional."
+      },
+      "calculations": []
+    },
+    {
+      "id": "history-armour",
+      "mode": "investor",
+      "concept": "Earnings quality",
+      "caseType": "Historical case",
+      "prompt": "Under Armour’s 2021 SEC settlement concerned undisclosed effects of moving orders into earlier quarters. What is the transferable investing lesson?",
+      "choices": [
+        {
+          "text": "Separate sustainable demand from sales shifted between periods",
+          "why": "A timing change can improve one quarter while reducing the next quarter’s backlog."
+        },
+        {
+          "text": "Every early delivery is automatically fraudulent",
+          "why": "The case does not establish that blanket rule."
+        },
+        {
+          "text": "More shipments always mean more full-year demand",
+          "why": "Earlier timing can move existing demand without adding demand."
+        },
+        {
+          "text": "A strong quarter eliminates the need to read disclosures",
+          "why": "The drivers of the result remain decision-critical."
+        }
+      ],
+      "explanation": "Investigate timing effects and forward demand before applying a growth valuation. Validly earned revenue and repeatable growth are distinct questions.",
+      "note": "The company settled without admitting or denying the findings; the question does not ask for a present-day stock verdict.",
+      "stats": [],
+      "source": {
+        "title": "Under Armour · SEC settlement, 2021",
+        "url": "https://www.sec.gov/newsroom/press-releases/2021-78",
+        "kind": "Historical enforcement case",
+        "note": "The SEC found Under Armour failed to disclose material effects of pulling orders into earlier quarters. It settled without admitting or denying the findings. This is a growth-quality lesson, not a claim that early shipment itself always violates revenue rules."
+      },
+      "calculations": []
+    },
+    {
+      "id": "history-target",
+      "mode": "investor",
+      "concept": "Working capital",
+      "caseType": "Historical case",
+      "prompt": "In June 2022, Target announced excess-inventory actions, including markdowns and order cancellations. What should a buyer learn from that event?",
+      "choices": [
+        {
+          "text": "Test inventory recoverability and its effect on future margins",
+          "why": "Clearing excess inventory can consume margin even when sales remain substantial."
+        },
+        {
+          "text": "Inventory growth always increases business value",
+          "why": "Stock can become slow-moving or require discounting."
+        },
+        {
+          "text": "Cancelling orders automatically increases reported revenue",
+          "why": "Fewer future purchases are not new sales."
+        },
+        {
+          "text": "Every retailer should carry zero inventory",
+          "why": "The issue is inventory mix and demand, not eliminating stock entirely."
+        }
+      ],
+      "explanation": "Review aging, demand, and likely net proceeds before paying book cost for stock. Revenue trends alone can conceal inventory risk.",
+      "note": "Documented company action plan; later outcomes are not assumed in this question.",
+      "stats": [],
+      "source": {
+        "title": "Target · Inventory action plan, June 2022",
+        "url": "https://corporate.target.com/press/release/2022/06/target-corporation-announces-updated-2022-plan-foc",
+        "kind": "Documented business event",
+        "note": "Target announced markdowns, excess-inventory removal, and order cancellations, and lowered its near-term margin outlook. Exercise amounts and retailers are fictional, not Target results."
+      },
+      "calculations": []
+    },
+    {
+      "id": "history-cake",
+      "mode": "investor",
+      "concept": "Cash runway",
+      "caseType": "Historical case",
+      "prompt": "In the historical Cheesecake Factory disclosure case, which additional information was essential to understanding the sustainability claim?",
+      "choices": [
+        {
+          "text": "Cash burn and the projected liquidity runway",
+          "why": "Those facts test whether the operation can fund its obligations."
+        },
+        {
+          "text": "Only the size of the menu",
+          "why": "Menu breadth does not establish liquidity."
+        },
+        {
+          "text": "Only how many customers liked the brand",
+          "why": "Brand strength does not pay near-term obligations by itself."
+        },
+        {
+          "text": "Nothing if some restaurants were still open",
+          "why": "Operating stores can still consume cash faster than the company can fund it."
+        }
+      ],
+      "explanation": "Operating activity is not the same as adequate liquidity. Compare management’s description with cash forecasts and committed funding.",
+      "note": "Historical evidence question. Unlike fictional Verdict deals, this asks what evidence matters, not whether to buy the real company today.",
+      "stats": [],
+      "source": {
+        "title": "Cheesecake Factory · SEC settlement, 2020",
+        "url": "https://www.sec.gov/newsroom/press-releases/2020-306",
+        "kind": "Historical enforcement case",
+        "note": "The SEC found sustainability disclosures misleading while internal forecasts showed substantial cash losses and limited runway. The company settled without admitting the findings. Generated restaurant figures are fictional."
+      },
+      "calculations": []
+    },
+    {
+      "id": "history-marks",
+      "mode": "lease",
+      "concept": "Contract evidence",
+      "caseType": "Historical case",
+      "prompt": "In the 2015 English M&S lease dispute, the court did not imply a refund of advance basic rent after a break. Which practical step follows?",
+      "choices": [
+        {
+          "text": "Negotiate and verify express refund terms before relying on the money",
+          "why": "Written rights are more dependable than assuming a fairness-based refund."
+        },
+        {
+          "text": "Assume every US lease has exactly the same rule",
+          "why": "The case arose under English law and particular lease terms."
+        },
+        {
+          "text": "Stop paying rent whenever a break notice is served",
+          "why": "Payment obligations and break conditions still need to be met."
+        },
+        {
+          "text": "Treat every service charge as identical to basic rent",
+          "why": "The judgment distinguished charges with different express terms."
+        }
+      ],
+      "explanation": "Inspect each payment clause and the break conditions before budgeting an exit. The historical result illustrates a drafting risk, not a worldwide rule.",
+      "note": "UK Supreme Court [2015] UKSC 72. The case concerns its own contract and jurisdiction.",
+      "stats": [],
+      "source": {
+        "title": "M&S v BNP Paribas · UK Supreme Court, 2015",
+        "url": "https://supremecourt.uk/uploads/uksc_2014_0158_press_summary_37363b227a.pdf",
+        "kind": "Historical lease dispute · England",
+        "note": "M&S did not obtain an implied refund of advance basic rent after exercising a lease break. Service charges had different express provisions. The budgeting lesson is to read refund terms; this English decision is not a universal rule for US leases."
+      },
+      "calculations": []
+    },
+    {
+      "id": "history-rock",
+      "mode": "lease",
+      "concept": "Contract evidence",
+      "caseType": "Historical case",
+      "prompt": "Rock Advertising relied on an oral payment change in an English office-licence dispute. The agreement required written, signed variations. What is the practical lesson?",
+      "choices": [
+        {
+          "text": "Document the agreed change in the required form",
+          "why": "The oral change in this case failed the contractual formalities."
+        },
+        {
+          "text": "An oral promise always overrides signed terms",
+          "why": "The court did not accept that proposition in this case."
+        },
+        {
+          "text": "Never negotiate payment schedules",
+          "why": "Negotiation is useful when the resulting terms are properly documented."
+        },
+        {
+          "text": "Assume an office licence and every lease are legally identical",
+          "why": "The contract form and local law still matter."
+        }
+      ],
+      "explanation": "Verify both the substance of a concession and how it must be agreed. Do not base the cash plan on an undocumented change whose effect remains uncertain.",
+      "note": "UK Supreme Court [2018] UKSC 24, involving an office licence.",
+      "stats": [],
+      "source": {
+        "title": "Rock Advertising v MWB · UK Supreme Court, 2018",
+        "url": "https://supremecourt.uk/uploads/uksc_2016_0152_press_summary_02f6ce100c.pdf",
+        "kind": "Historical occupancy dispute · England",
+        "note": "An oral payment variation under an office licence failed because the agreement required written, signed changes. This exercise applies the documentation lesson, not an assumption that every jurisdiction treats oral promises identically."
+      },
+      "calculations": []
+    },
+    {
+      "id": "foundation-hertz-depreciation-estimates",
+      "mode": "foundation",
+      "concept": "Depreciation estimates connect earnings, asset values, and cash flow",
+      "caseType": "Historical case",
+      "prompt": "The SEC’s August 2020 Hertz complaint alleged that longer fleet holding periods lowered depreciation without proper disclosure. Holding cost and residual value constant, what does spreading depreciation over a longer useful life do?",
+      "choices": [
+        {
+          "text": "Raises near-term profit and asset carrying value without itself generating cash.",
+          "why": "Lower depreciation reduces expense and accumulated depreciation; changing the estimate does not create a cash receipt."
+        },
+        {
+          "text": "Raises profit and operating cash flow by the same amount.",
+          "why": "Depreciation is noncash. Ignoring taxes, its lower expense is offset by a smaller depreciation add-back under the indirect cash-flow method."
+        },
+        {
+          "text": "Raises profit while reducing the asset’s carrying value faster.",
+          "why": "A lower depreciation charge leaves a higher carrying value, all else equal."
+        },
+        {
+          "text": "Leaves profit unchanged until the vehicles are sold.",
+          "why": "Depreciation affects expense during ownership; sale proceeds are not required for the estimate to affect profit."
+        }
+      ],
+      "explanation": "Depreciation allocates an asset’s cost across reporting periods, so its assumptions affect both earnings and the balance sheet. A longer estimated life can improve near-term reported profit without improving cash generation; examine whether operating evidence supports the estimate.",
+      "note": "U.S. federal enforcement action filed in New Jersey. The August 13, 2020 release described allegations and a proposed settlement without admission or denial, subject to court approval at that time. The question assumes straight-line depreciation and ignores taxes; it does not assert that every useful-life extension is improper.",
+      "stats": [],
+      "source": {
+        "title": "SEC Charges Hertz’s Former CEO With Aiding and Abetting Company’s Financial Reporting and Disclosure Violations",
+        "url": "https://www.sec.gov/newsroom/press-releases/2020-183",
+        "kind": "Historical enforcement case",
+        "note": "Establishes the SEC’s allegations concerning fleet holding periods and disclosure. The controlled accounting assumptions and answer choices are instructional additions."
+      },
+      "evidence": "hold rental cars in its fleet for longer periods and thus lower its depreciation expenses",
+      "calculations": []
+    },
+    {
+      "id": "lease-bakery-removable-assets",
+      "mode": "lease",
+      "concept": "Leasehold improvements, equipment removal, and exit value",
+      "caseType": "Adapted case",
+      "prompt": "A fictional Ontario bakery plans to install a financed, bolted-down mixer and custom counters. Its proposed lease leaves their removal rights unclear. Before treating those assets as recoverable value at exit, what should the owner do?",
+      "choices": [
+        {
+          "text": "Negotiate explicit removal rights and restoration duties for each asset, and confirm the lender accepts them.",
+          "why": "Specific contractual treatment makes exit assumptions reviewable and addresses the lender’s interest in financed equipment."
+        },
+        {
+          "text": "Count every tenant-paid installation as removable because the bakery bought it.",
+          "why": "Payment alone does not resolve how an attached installation is treated under the lease."
+        },
+        {
+          "text": "Use the remaining accounting book value as the guaranteed exit recovery.",
+          "why": "Book value establishes neither removal rights nor resale proceeds."
+        },
+        {
+          "text": "Rely on the equipment loan agreement to establish removal rights against the landlord.",
+          "why": "Financing documents do not by themselves establish the landlord’s contractual agreement to removal."
+        }
+      ],
+      "explanation": "An installation’s value to the bakery depends partly on whether it can leave with the tenant and what removal will cost. Clarify those rights before signing, then use conservative exit assumptions in the occupancy budget.",
+      "note": "The bakery, equipment arrangement, and proposed lease are fictional. This adapts Canadian practitioner guidance to an Ontario scenario; it does not state a universal rule about fixtures or U.S. lease law.",
+      "stats": [],
+      "source": {
+        "title": "How to protect your business when making leasehold improvements",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-protect-your-business-when-making-lease-hold-improvements",
+        "kind": "Practitioner guidance",
+        "note": "BDC’s October 4, 2022 guidance recommends explicit lease treatment of removable assets and identifies possible lender requirements. The bakery scenario is invented."
+      },
+      "evidence": "Be sure your lease explicitly clarifies the status of all assets you may want to remove if you leave.",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-confirmed-customer-exit",
+      "mode": "verdict",
+      "concept": "Confirmed customer loss invalidates historical valuation and debt coverage",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Cedar Tray Bakery’s largest customer has confirmed in writing that it will stop buying at closing. Verified forecasts excluding that customer show insufficient cash for scheduled debt payments, with no funded bridge or credible replacement orders. The seller refuses a lower price or contingent payment. At these offered terms, what is your verdict?",
+      "choices": [
+        {
+          "text": "Pass",
+          "why": "The customer loss and financing shortfall are verified, and the seller rejects changes that could address the unacceptable terms."
+        },
+        {
+          "text": "Investigate",
+          "why": "The decisive issue has already been resolved through customer confirmation and verified forecasts. Additional routine diligence does not repair these fixed terms."
+        },
+        {
+          "text": "Invest",
+          "why": "Historical margins and sales do not support the price when a known departure leaves the acquisition unable to service its debt."
+        }
+      ],
+      "explanation": "Value the cash flows the buyer can retain after closing, including the effect of confirmed customer departures. Pass applies to this offered deal because the shortfall is established and mitigation has been refused; unresolved customer intentions would instead call for investigation.",
+      "note": "Cedar Tray Bakery, all numbers, customer correspondence, forecasts, financing facts, and seller responses are fictional training assumptions. Historical statistics below describe the fictional business before the customer’s departure. This is a business-acquisition exercise, not a recommendation about a real investment.",
+      "stats": [
+        [
+          "Revenue",
+          "Fictional trailing annual revenue: $1,200,000"
+        ],
+        [
+          "Margins",
+          "Fictional historical gross margin: 46%; EBITDA margin: 13%"
+        ],
+        [
+          "Customer mix",
+          "Fictional largest customer: 45% of revenue; confirmed departure at closing"
+        ],
+        [
+          "Occupancy",
+          "Fictional annual rent and occupancy charges: $96,000"
+        ],
+        [
+          "Debt",
+          "Fictional proposed annual debt service: $90,000; verified post-departure cash available for debt service: $30,000"
+        ],
+        [
+          "AR days",
+          "Fictional historical accounts-receivable days: 34"
+        ]
+      ],
+      "source": {
+        "title": "How to conduct due diligence when buying a business",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/buying-business-conducting-due-diligence",
+        "kind": "Practitioner guidance",
+        "note": "Updated November 24, 2025. Supports checking customer concentration, meeting key customers, and reassessing a deal after diligence. All business facts and the verdict are fictional applications."
+      },
+      "evidence": "In cases of high customer concentration, it’s helpful to meet those key clients.",
+      "calculations": []
+    }
+  ],
+  "researchNote": "Three new cases prioritize verdict, foundation, and lease, the least-covered modes. Opened and read SEC enforcement reporting and BDC practitioner guidance, including its November 2025 update. Searches also covered 2026 developments, but attempted SEC filing opens failed; no questions rely on those inaccessible filings. Historical allegations and fictional assumptions are explicitly separated."
+}
+</script>
+<script>
+'use strict';
+const SOURCES={
+ sec:{title:'SEC · Financial statement guide',url:'https://www.sec.gov/about/reports-publications/investorpubsbegfinstmtguide',kind:'Practice reference',note:'The SEC explains statement relationships and why earnings differ from cash. Exercise amounts are invented.'},
+ costco:{title:'Costco · 2025 Form 10-K',url:'https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm',kind:'Documented business practice',note:'Costco reports recognizing membership fees over the one-year membership period. Its shop-card revenue is generally recognized on redemption. The small-business amounts here are invented, not Costco figures.'},
+ worldcom:{title:'WorldCom · SEC complaint, 2002',url:'https://www.sec.gov/litigation/complaints/complr17588.htm',kind:'Historical enforcement case',note:'The SEC alleged that WorldCom moved operating line costs into capital accounts, understating expenses and overstating earnings. This exercise adapts that accounting mechanism; its business and amounts are fictional.'},
+ kraft:{title:'Kraft Heinz · SEC settlement, 2021',url:'https://www.sec.gov/newsroom/press-releases/2021-174',kind:'Historical enforcement case',note:'The SEC found improper supplier discounts reduced reported costs and inflated earnings. Kraft settled without admitting or denying the findings. Exercise contracts and figures are fictional.'},
+ armour:{title:'Under Armour · SEC settlement, 2021',url:'https://www.sec.gov/newsroom/press-releases/2021-78',kind:'Historical enforcement case',note:'The SEC found Under Armour failed to disclose material effects of pulling orders into earlier quarters. It settled without admitting or denying the findings. This is a growth-quality lesson, not a claim that early shipment itself always violates revenue rules.'},
+ cake:{title:'Cheesecake Factory · SEC settlement, 2020',url:'https://www.sec.gov/newsroom/press-releases/2020-306',kind:'Historical enforcement case',note:'The SEC found sustainability disclosures misleading while internal forecasts showed substantial cash losses and limited runway. The company settled without admitting the findings. Generated restaurant figures are fictional.'},
+ target:{title:'Target · Inventory action plan, June 2022',url:'https://corporate.target.com/press/release/2022/06/target-corporation-announces-updated-2022-plan-foc',kind:'Documented business event',note:'Target announced markdowns, excess-inventory removal, and order cancellations, and lowered its near-term margin outlook. Exercise amounts and retailers are fictional, not Target results.'},
+ marks:{title:'M&S v BNP Paribas · UK Supreme Court, 2015',url:'https://supremecourt.uk/uploads/uksc_2014_0158_press_summary_37363b227a.pdf',kind:'Historical lease dispute · England',note:'M&S did not obtain an implied refund of advance basic rent after exercising a lease break. Service charges had different express provisions. The budgeting lesson is to read refund terms; this English decision is not a universal rule for US leases.'},
+ rock:{title:'Rock Advertising v MWB · UK Supreme Court, 2018',url:'https://supremecourt.uk/uploads/uksc_2016_0152_press_summary_02f6ce100c.pdf',kind:'Historical occupancy dispute · England',note:'An oral payment variation under an office licence failed because the agreement required written, signed changes. This exercise applies the documentation lesson, not an assumption that every jurisdiction treats oral promises identically.'},
+ bdc:{title:'BDC · Acquisition due diligence',url:'https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/buying-business-conducting-due-diligence',kind:'Practitioner guidance',note:'BDC describes financial, commercial, and legal checks, including customer dependence and the evidence needed to support a deal. These are fictional practice cases, not accounts of identified BDC clients.'},
+ lease:{title:'BDC · Commercial lease negotiation',url:'https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-negotiate-commercial-lease-effectively',kind:'Practitioner guidance',note:'BDC stresses checking total costs, renewal terms, and the written allocation of obligations. Exercise lease clauses are assumptions, not local legal rules.'},
+ ti:{title:'BDC · Protecting leasehold improvements',url:'https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-protect-your-business-when-making-lease-hold-improvements',kind:'Practitioner guidance',note:'BDC describes improvement allowances, budgets, and protection for investment in rented space. Exercise prices, timelines, and reimbursement conditions are fictional.'},
+ ratios:{title:'Fidelity · Company valuation ratios',url:'https://www.fidelity.com/learning-center/trading-investing/fundamental-analysis/company-valuation-ratios',kind:'Practice reference',note:'Ratio definitions support the exercises. A low multiple or PEG is a screening clue, not proof that a business is worth buying.'},
+ occupancy:{title:'National Restaurant Association · 2024 occupancy data',url:'https://restaurant.org/research-and-media/research/restaurant-economic-insights/analysis-commentary/restaurant-occupancy-costs-were-more-than-5-of-sales-in-2024/',kind:'Industry context',note:'Reported occupancy ratios vary by location and segment. The game’s 6–10% screening band and 12%+ warning are teaching heuristics, not universal industry standards.'}
+};
+const modes=[{id:'foundation',name:'Statements Foundation',desc:'Read the statements. Separate profit from cash.',legacyTotal:12},{id:'investor',name:'Investor Lens',desc:'Test earnings, risk, and the price being asked.',legacyTotal:14},{id:'lease',name:'Lease Lab',desc:'Read the clauses behind the monthly payment.',legacyTotal:14},{id:'verdict',name:'Verdict',desc:'Weigh the evidence. Invest, investigate, or pass.',legacyTotal:6}];
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+const int=(a,b,step=1)=>a+Math.floor(Math.random()*(Math.floor((b-a)/step)+1))*step;
+const shuffle=a=>{const b=[...a];for(let i=b.length-1;i>0;i--){const j=int(0,i);[b[i],b[j]]=[b[j],b[i]];}return b;};
+const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n);
+const num=n=>new Intl.NumberFormat('en-US',{maximumFractionDigits:2}).format(n);
+const pct=n=>num(n)+'%';
+const biz=()=>pick(['a neighborhood bakery','a repair shop','a produce distributor','a small manufacturer','a catering business','a specialty retailer']);
+const opt=(text,why)=>({text,why});
+const bank=[];
+function add(id,mode,concept,source,make){bank.push({id,mode,concept,source,make});}
+function item(prompt,choices,explanation,extra={}){return {prompt,choices:choices.map((o,i)=>({...o,correct:i===0})),explanation,...extra};}
+function math(prompt,value,wrongs,formula,lesson,format=money,extra={}){
+ const choices=[opt(format(value),'This uses the stated inputs and the correct relationship.')];
+ for(const [n,why] of wrongs){if(Number.isFinite(n)&&!choices.some(o=>o.text===format(n)))choices.push(opt(format(n),why));}
+ for(let n=1;choices.length<4;n++){const v=value+n*Math.max(1,Math.abs(value)*.1);if(!choices.some(o=>o.text===format(v)))choices.push(opt(format(v),'That amount does not follow the stated formula and inputs.'));}
+ return item(prompt,choices.slice(0,4),formula+' '+lesson,{...extra,calc:{value,display:format(value)}});
+}
+add('f-equity','foundation','Statement structure','sec',()=>{const debt=int(30,150)*1000,equity=int(80,300)*1000,a=debt+equity;return math(`${biz()} has ${money(a)} of assets and ${money(debt)} of liabilities. What is equity?`,equity,[[a+debt,'Adding liabilities counts financed assets twice.'],[debt,'Liabilities are what creditors are owed, not the owners’ residual interest.'],[a,'Assets include amounts financed by creditors.']],`${money(a)} − ${money(debt)} = ${money(equity)}. Assets = liabilities + equity; book equity is not necessarily market value.`, 'A buyer still needs a valuation.',money,{inputs:{a,debt}});});
+add('f-ladder','foundation','Statement structure','sec',()=>{const r=int(30,90)*1000,c=r*.4,o=r*.3,it=r*.1;return math(`Revenue ${money(r)}, COGS ${money(c)}, OpEx ${money(o)}, interest and taxes ${money(it)}. What reaches net income?`,r-c-o-it,[[r-c,'That is gross profit, before operating and financing/tax costs.'],[r-c-o,'That is operating income, before interest and taxes.'],[r-o-it,'COGS must also be deducted.']],`Revenue − COGS = gross profit; − OpEx = operating income; − interest/taxes = ${money(r-c-o-it)} net income.`,'Following the whole ladder prevents mistaking gross profit for take-home earnings.',money,{inputs:{r,c,o,it}});});
+add('f-snapshot','foundation','Statement structure','sec',()=>{const month=pick(['March','June','September','December']);return item(`A lender requests assets and liabilities as of the last day of ${month}. Which statement answers that request?`,[opt('Balance sheet','It shows financial position on a specific date.'),opt('P&L for the month','A P&L measures activity over a period, not the ending assets and obligations.'),opt('Sales forecast','A forecast is a projection, not a record of the current financial position.'),opt('Cash receipts list','Cash receipts omit noncash assets, liabilities, and equity.')],'A balance sheet is a dated snapshot. The P&L explains revenue and expenses over a period; neither can replace the other.');});
+add('f-retained','foundation','Equity flows','sec',()=>{const b=int(40,120)*1000,n=int(20,60)*1000,d=int(5,15)*1000;return math(`Starting retained earnings ${money(b)}, net income ${money(n)}, dividends ${money(d)}. Ending retained earnings?`,b+n-d,[[b+n+d,'Dividends reduce retained earnings rather than increase them.'],[n-d,'The opening balance still belongs in ending retained earnings.'],[b+n,'This leaves out the dividend reduction.']],`${money(b)} + ${money(n)} − ${money(d)} = ${money(b+n-d)}.`,'Net income flows into retained earnings; distributions reduce equity without becoming P&L expense.',money,{inputs:{b,n,d}});});
+add('f-delivery','foundation','Accrual timing','sec',()=>{const [a,b]=pick([['March','April'],['June','July'],['November','December']]),v=int(12,80)*100;return item(`A caterer completes a ${money(v)} event in ${a}, with an unconditional right to payment. The customer pays in ${b}. When is revenue earned?`,[opt(a,'The promised service is complete, so revenue and receivables arise then.'),opt(b,'Collection changes receivables into cash; it does not earn the sale again.'),opt('Half in each month','There is no remaining performance obligation in this example.'),opt('Only when the owner withdraws cash','Owner distributions do not determine revenue timing.')],`The ${money(v)} sale belongs in ${a} under the stated accrual facts. Payment in ${b} reduces AR and increases cash without a second sale.`);});
+add('f-expense','foundation','Accrual timing','sec',()=>{const cost=pick(['electricity consumed','temporary labor used','routine cleaning completed']),v=int(8,45)*100;return item(`${money(v)} of ${cost} in June is paid in July. Where does the expense belong?`,[opt('June, with a payable until paid','The service was consumed in June.'),opt('July only','That follows payment timing rather than accrual timing.'),opt('On the balance sheet forever','Consumed services do not provide a future asset in these facts.'),opt('It reduces revenue instead','This is an operating expense, not a refund to a customer.')],'Record the expense when the service is consumed and recognize the unpaid obligation. Later payment reduces cash and the payable, without another expense.');});
+add('f-ar','foundation','Working capital','sec',()=>{const v=int(15,80)*1000;return item(`Customers owe ${money(v)} for completed deliveries. How should the owner read that AR balance?`,[opt('An asset, but not yet cash','It is a claim against customers and still carries collection risk.'),opt('Cash available to spend today','Receivables must be collected before they can fund payments.'),opt('An amount owed to suppliers','Supplier obligations are AP, a liability.'),opt('Revenue to book again on collection','The revenue was already earned when the deliveries were completed.')],'AR is an asset representing the right to collect. Inspect aging and subsequent receipts to judge how much is likely to become cash.');});
+add('f-ap','foundation','Working capital','sec',()=>{const v=int(10,55)*1000;return item(`A supplier invoice for ${money(v)} remains unpaid. What happens when it is paid from the bank?`,[opt('Cash and accounts payable both decrease','The payment settles an existing liability.'),opt('Revenue and cash both increase','Paying suppliers is not a customer sale.'),opt('A second purchase expense is always recorded','That would double-count an expense or inventory purchase already recorded.'),opt('Equity automatically rises','Settling a liability is not new profit or contributed capital.')],'AP is a liability, and payment reduces it along with cash. Whether the original purchase became inventory or an expense depends on what was bought.');});
+add('f-depreciation','foundation','Capital spending','sec',()=>{const years=int(4,10),annual=int(3,12)*1000,residual=int(0,4)*1000,cost=years*annual+residual;return math(`Equipment costs ${money(cost)}, with ${money(residual)} residual value and a ${years}-year life. Full-year straight-line book depreciation?`,annual,[[cost,'Capitalizing the equipment spreads its depreciable cost across its useful life.'],[cost/years,'Depreciation excludes residual value.'],[(cost-residual)*years,'Divide by useful life, rather than multiply.']],`(${money(cost)} − ${money(residual)}) ÷ ${years} = ${money(annual)} per full year.`,'Cash purchase timing and book expense timing differ; tax rules may differ too.',money,{inputs:{cost,residual,years}});});
+add('f-distribution','foundation','Equity flows','sec',()=>{const v=int(2,18)*1000;return item(`The owner takes ${money(v)} as a distribution, not wages. Which reading is correct?`,[opt('Cash and equity fall; P&L profit stays unchanged','A distribution is a transaction with the owner, not an operating expense.'),opt('Operating profit falls by the distribution','This incorrectly treats an equity withdrawal as wages or an operating cost.'),opt('The business earns additional revenue','Cash leaving for the owner does not create sales.'),opt('The payment never appears in any statement','It affects the balance sheet and financing cash flows.')],'Owner distributions bypass the P&L. They reduce cash and equity and also appear on the cash flow statement.');});
+add('f-principal','foundation','Debt and cash','sec',()=>{const p=int(5,30)*100,i=int(1,4)*100;return math(`A normal loan payment is ${money(p)} principal plus ${money(i)} interest. How much is P&L interest expense?`,i,[[p,'Principal reduces debt rather than profit.'],[p+i,'The full cash payment includes repayment of a liability.'],[0,'Ordinary interest is an expense in these facts.']],`${money(i)} is interest expense; ${money(p)} reduces the loan balance.`,'Principal never becomes a P&L expense simply because it is repaid.',money,{inputs:{p,i}});});
+add('f-cashbridge','foundation','Debt and cash','sec',()=>{const net=int(20,60)*1000,ar=int(10,30)*1000,cap=int(30,80)*1000;return math(`Net income is ${money(net)}; AR rises ${money(ar)}; cash equipment purchases are ${money(cap)}. With no other adjustments, what is the cash change?`,net-ar-cap,[[net,'Profit omits the collection timing and equipment cash outflow.'],[net+ar-cap,'An AR increase ties up cash, so subtract it.'],[net-ar,'This omits the equipment payment.']],`${money(net)} − ${money(ar)} − ${money(cap)} = ${money(net-ar-cap)}.`,'A profitable period can still consume cash.',money,{inputs:{net,ar,cap}});});
+add('f-membership','foundation','Accrual timing','costco',()=>{const monthly=int(10,60,5),v=monthly*12,m=int(1,10);return math(`A club collects ${money(v)} for 12 months of evenly provided access. After ${m} full months, how much has been earned?`,monthly*m,[[v,'Upfront cash includes service not yet provided.'],[v-monthly*m,'That is the remaining deferred revenue, not the earned portion.'],[0,'Service has already been provided for part of the year.']],`${money(v)} ÷ 12 × ${m} = ${money(monthly*m)} earned; ${money(v-monthly*m)} remains deferred.`,'Upfront payment does not make all future service revenue earned.',money,{inputs:{v,m}});});
+add('f-giftcard','foundation','Accrual timing','costco',()=>{const sold=int(20,90)*100,used=int(5,15)*100;return math(`A bakery sells ${money(sold)} of gift cards; customers redeem ${money(used)} for goods. Ignoring breakage and tax, how much gift-card liability remains?`,sold-used,[[sold,'Redemption settles part of the obligation.'],[used,'That is the portion redeemed, not still owed.'],[sold+used,'Redemptions reduce, rather than add to, the liability.']],`${money(sold)} − ${money(used)} = ${money(sold-used)} still owed in goods or services.`,'Cash from selling a gift card is initially a liability; redemption supports recognizing the related revenue.',money,{inputs:{sold,used}});});
+add('f-prepaid','foundation','Accrual timing','sec',()=>{const monthly=int(2,9)*100,paid=monthly*12;return math(`A shop prepays ${money(paid)} for 12 months of insurance starting January 1. What is January’s expense?`,monthly,[[paid,'Most coverage remains a prepaid asset at January-end.'],[paid-monthly,'That is the unexpired prepaid balance.'],[0,'One month of insurance has been consumed.']],`${money(paid)} ÷ 12 = ${money(monthly)} of expense for January.`,'The other eleven months remain an asset until their coverage is consumed.',money,{inputs:{paid}});});
+add('f-capitalization','foundation','Capital spending','worldcom',()=>{const expense=int(10,90)*1000;return item(`A manager moves ${money(expense)} of this month’s routine network fees into an equipment asset. No future asset was created. What is the immediate effect, before depreciation or tax?`,[opt('Expenses are understated and profit/assets overstated','A consumed operating service has been incorrectly removed from expense.'),opt('Cash is restored by the journal entry','Reclassification does not undo the cash payment.'),opt('The entry is valid because profits improve','Desired earnings are not a basis for asset recognition.'),opt('Only liabilities change','This entry changes the expense and asset accounts.')],`The unsupported capitalization inflates pretax profit and assets by ${money(expense)} initially. Trace additions to invoices and asset evidence rather than trusting the account label.`);});
+add('f-discount','foundation','Earnings quality','kraft',()=>{const v=int(5,35)*1000;return item(`A food processor books a ${money(v)} supplier rebate before meeting a required purchase target. There is no support that the rebate is earned. What needs correction?`,[opt('Reverse the unsupported cost reduction','An unearned discount cannot support the claimed reduction under the stated facts.'),opt('Keep it because management expects growth','An optimistic forecast is not evidence that the contract condition is satisfied.'),opt('Book the rebate as customer revenue','A supplier rebate is not a sale to a customer.'),opt('Ignore it because no cash changed hands','Noncash entries can still materially distort profit.')],'The unsupported rebate lowers costs and overstates profit. Verify the signed supplier terms and whether the conditions for recognition have actually been met.');});
+add('f-cashinjection','foundation','Equity flows','sec',()=>{const v=int(5,50)*1000;return item(`An owner contributes ${money(v)} of personal cash to fund the company. What changes immediately?`,[opt('Cash and contributed equity increase','This is owner financing, not earned revenue.'),opt('Net income increases','An equity contribution is not profit.'),opt('Sales and COGS both increase','No customer transaction occurred.'),opt('The company records depreciation','Cash is not depreciable equipment.')],'The contribution increases assets and owner capital on the balance sheet. It appears as financing cash inflow rather than revenue.');});
+add('i-margin','investor','Margin analysis','sec',()=>{const r=int(40,150)*10000,g=int(30,50),op=int(10,25),net=int(3,9),which=pick(['gross','operating','net']),v={gross:g,operating:op,net}[which];return math(`Revenue ${money(r)}; gross profit ${money(r*g/100)}; operating income ${money(r*op/100)}; net income ${money(r*net/100)}. What is the ${which} margin?`,v,[[100-v,'That is the complement of the requested margin.'],[which==='gross'?op:g,'That uses a different profit subtotal.'],[which==='net'?op:net,'That uses a different profit subtotal.']],`${which[0].toUpperCase()+which.slice(1)} margin = ${money(r*v/100)} ÷ ${money(r)} × 100 = ${pct(v)}.`,'Use revenue as the denominator, then compare like-for-like peers and periods.',pct,{inputs:{r,profit:r*v/100}});});
+add('i-trend','investor','Trends and cash quality','sec',()=>{const r=int(5,20)*100000;return item(`Three years: sales ${money(r)} → ${money(r*1.2)} → ${money(r*1.4)}, operating margins 15% → 10% → 5%. What needs attention?`,[opt('Operating profit is falling despite rising sales','The shrinking margin more than offsets the growth in revenue.'),opt('Operating profit is rising with revenue','Sales alone omit the deterioration in cost economics.'),opt('The company must be insolvent','This trend does not disclose its liabilities or cash resources.'),opt('The margin definition changed automatically','Nothing in the facts establishes a definition change.')],`Operating profit is ${money(r*.15)}, ${money(r*.12)}, then ${money(r*.07)}. Investigate cost growth, pricing, and mix before valuing the rising sales as healthy growth.`);});
+add('i-peers','investor','Margin analysis','ratios',()=>item(`A grocer has a ${pick([2,3,4])}% net margin; a software firm earns ${pick([18,22,25])}%. Which comparison is sound?`,[opt('Compare each with its own peers and history','Margins reflect different cost structures and business models.'),opt('Always buy the higher-margin firm','Valuation, capital requirements, and risk can overturn that ranking.'),opt('The grocer must lose cash','A thin positive margin does not imply a cash loss.'),opt('Ignore all margins','Margins remain useful when the comparison is consistent.')],'An isolated margin is not an investment verdict. Match industry, accounting definitions, and trend context before judging quality.'));
+add('i-outlier','investor','Earnings quality','bdc',()=>item(`A seller claims ${pick([9,11,13])}% net margin while matched peers earn about 2%. What is the right response?`,[opt('Verify recurring earnings and missing costs','A large gap needs a documented operational or accounting explanation.'),opt('Pay a premium before reviewing records','The claimed advantage has not been established.'),opt('Conclude fraud immediately','A genuine advantage is possible; the discrepancy is a question, not proof.'),opt('Compare only revenue instead','Revenue does not explain the margin difference.')],'Reconcile bank activity, ledgers, owner labor, and nonrecurring items. An outlier can be real, but the evidence must support the claimed recurring economics.'));
+add('i-owner','investor','Earnings quality','bdc',()=>{const p=int(12,30)*10000,w=int(6,11)*10000;return math(`A seller reports ${money(p)} profit before a full-time owner’s unpaid labor. Replacement management costs ${money(w)} all-in. Normalized profit before tax adjustments?`,p-w,[[p,'That treats the owner’s work as free.'],[p+w,'Missing recurring labor cost should be deducted, not added.'],[w,'Replacement salary is a cost, not the remaining profit.']],`${money(p)} − ${money(w)} = ${money(p-w)}.`,'Value the business after paying for the labor it needs to operate.',money,{inputs:{p,w}});});
+add('i-current','investor','Liquidity and leverage','sec',()=>{const l=int(5,20)*10000,ratio=pick([.75,1.25,1.5,2,2.5]),a=l*ratio;return math(`Current assets ${money(a)}, current liabilities ${money(l)}. Current ratio?`,ratio,[[1/ratio,'The ratio is assets divided by liabilities, not the reverse.'],[ratio+1,'Adding one has no basis in the definition.'],[ratio*100,'That converts a multiple into a percentage without labeling it.']],`${money(a)} ÷ ${money(l)} = ${num(ratio)}×.`,'Inspect asset quality: aged AR and obsolete stock may provide little near-term coverage.',n=>num(n)+'×',{inputs:{a,l}});});
+add('i-debt','investor','Liquidity and leverage','ratios',()=>{const e=int(8,30)*10000,ratio=pick([.25,.5,1.5,2]),d=e*ratio;return math(`Interest-bearing debt ${money(d)}, equity ${money(e)}. Debt-to-equity using that debt definition?`,ratio,[[1/ratio,'This is equity divided by debt.'],[ratio+1,'Adding equity to debt changes the numerator.'],[ratio/(1+ratio),'This divides debt by total debt plus equity, a different ratio.']],`${money(d)} ÷ ${money(e)} = ${num(ratio)}×.`,'Some sources use total liabilities; compare using one consistent definition.',n=>num(n)+'×',{inputs:{d,e}});});
+add('i-roe','investor','Return and valuation','ratios',()=>{const e=int(10,40)*10000,rate=int(8,24,2),n=e*rate/100;return math(`Annual net income ${money(n)}, average equity ${money(e)}. Return on equity?`,rate,[[100/rate,'That reverses the intended return relationship.'],[rate/100,'That is the decimal form, not the percentage displayed here.'],[rate*2,'No doubling is justified by the annual inputs.']],`${money(n)} ÷ ${money(e)} × 100 = ${pct(rate)}.`,'High leverage or unusually small equity can make ROE look impressive without improving business quality.',pct,{inputs:{n,e}});});
+add('i-pe','investor','Return and valuation','ratios',()=>{const eps=int(2,8),pe=int(7,22),price=eps*pe;return math(`Share price ${money(price)}, annual earnings per share ${money(eps)}. P/E?`,pe,[[eps/price,'This is earnings yield as a decimal, not price-to-earnings.'],[price,'Price alone ignores the earnings denominator.'],[price*eps,'Multiply is the wrong operation for this ratio.']],`${money(price)} ÷ ${money(eps)} = ${pe}×.`,'Check whether EPS is recurring and whether both comparison figures use trailing or forward earnings.',n=>num(n)+'×',{inputs:{price,eps}});});
+add('i-peg','investor','Return and valuation','ratios',()=>{const g=int(10,25,5),pe=g*.8,g2=int(5,15,5),pe2=g2*1.6,flip=!!int(0,1);const a=flip?[pe2,g2]:[pe,g],b=flip?[pe,g]:[pe2,g2],win=flip?'B':'A';return item(`A: P/E ${num(a[0])}, expected EPS growth ${a[1]}%. B: P/E ${num(b[0])}, growth ${b[1]}%. Which is cheaper relative to growth by PEG?`,[opt(`${win}, with PEG 0.8`,'Its P/E divided by the growth percentage number is lower.'),opt(`${flip?'A':'B'}, with PEG 1.6`,'That is the higher PEG under the stated forecasts.'),opt('They have the same PEG','Their P/E-to-growth relationships differ.'),opt('Neither ratio can use percentages','PEG uses the growth percentage number, such as 20, not 0.20.')],`A has PEG ${num(a[0]/a[1])}; B has ${num(b[0]/b[1])}. Below 1 can suggest cheapness relative to forecast growth, but growth uncertainty and business risk can invalidate the apparent bargain.`);});
+add('i-fcf','investor','Trends and cash quality','sec',()=>{const ocf=int(8,30)*10000,cap=int(3,7)*10000,ni=int(10,25)*10000;return math(`Net income ${money(ni)}, operating cash flow ${money(ocf)}, capital spending ${money(cap)}. Simple free cash flow?`,ocf-cap,[[ni,'Net income does not deduct cash capital spending in full.'],[ni-cap,'Start from operating cash flow, not net income.'],[ocf+cap,'Capital spending is a cash use and must be subtracted.']],`${money(ocf)} − ${money(cap)} = ${money(ocf-cap)}.`,'This simple FCF measure is not automatically the amount available for distribution after debt obligations.',money,{inputs:{ocf,cap}});});
+add('i-inventory','investor','Working capital','target',()=>item(`Sales increased ${int(2,9)}%, but inventory increased ${int(30,65)}%. Which evidence is most useful before trusting the growth?`,[opt('Inventory aging, sell-through, and markdown exposure','These show whether the extra stock is likely to convert into cash at expected margins.'),opt('Only the warehouse’s square footage','Storage capacity does not establish demand or recoverable value.'),opt('Only reported gross profit','The current margin may not include the future cost of clearing excess stock.'),opt('Ignore it because inventory is an asset','An asset label does not guarantee full recovery or rapid conversion to cash.')],'Extra inventory can tie up cash and require markdowns when demand changes. Check seasonality and buying plans before deciding whether the increase is justified.'));
+add('i-ar','investor','Working capital','bdc',()=>item(`Sales rise ${int(3,12)}%, while receivables rise ${int(35,70)}%. Which follow-up best tests the earnings?`,[opt('Check AR aging and subsequent customer receipts','Collection evidence tests whether recorded sales turn into cash.'),opt('Treat the extra AR as cash','AR is still a claim, not available bank funds.'),opt('Automatically double the earnings multiple','Slower cash conversion can increase risk rather than justify a premium.'),opt('Check only accounts payable','Supplier payment timing does not establish customer collection quality.')],'Receivables outrunning revenue can signal slow collections or revenue-quality problems. Confirm terms, seasonal timing, disputes, and receipts before relying on the balance.'));
+add('i-pullforward','investor','Earnings quality','armour',()=>{const r=int(8,20)*100000,pull=r*.15;return item(`A wholesaler reports ${money(r)} quarterly sales, including ${money(pull)} shipped early from next quarter’s orders. Transfer criteria were met. What remains to investigate?`,[opt('Whether growth borrowed from future demand','Valid recognition and sustainable growth are different questions.'),opt('Every early shipment is automatically fraud','The stated transfer criteria were met; the concern is disclosure and repeatability.'),opt('The next quarter is guaranteed to grow','Moving orders earlier can leave a later shortfall.'),opt('Cash must equal the quarter’s revenue','Shipment timing does not prove collection.')],'Examine the order backlog, customer demand, and disclosure of timing effects. Pulling orders forward can make this quarter look stronger while weakening the next.');});
+add('i-runway','investor','Cash runway','cake',()=>{const burn=int(10,40)*1000,weeks=int(5,18),cash=burn*weeks;return math(`A restaurant group has ${money(cash)} cash and burns ${money(burn)} per week. With no financing or change in burn, how long is its runway?`,weeks,[[cash*burn,'Multiply is not the relationship between cash and a weekly burn rate.'],[weeks*4,'The burn is already per week; multiplying by four overstates runway.'],[weeks/4,'The question asks for weeks, not approximate months.']],`${money(cash)} ÷ ${money(burn)} per week = ${weeks} weeks.`,'A claim of sustainability should be reconciled with the cash forecast and obligations.',n=>num(n)+' weeks',{inputs:{cash,burn}});});
+add('i-oneoff','investor','Earnings quality','bdc',()=>{const total=int(15,35)*10000,gain=int(3,10)*10000;return math(`Reported pretax profit is ${money(total)}, including a ${money(gain)} one-time property-sale gain. Recurring pretax profit before other adjustments?`,total-gain,[[total,'A one-time disposal gain is not recurring operating earning power.'],[total+gain,'That double-counts the gain.'],[gain,'The gain is the item being removed, not what remains.']],`${money(total)} − ${money(gain)} = ${money(total-gain)}.`,'Normalize the earnings before applying a recurring-profit multiple.',money,{inputs:{total,gain}});});
+add('i-coverage','investor','Debt coverage','bdc',()=>{const service=int(5,15)*10000,ratio=pick([.8,1.2,1.5,2]),cash=service*ratio;return math(`Using this lender’s definition, annual cash available for debt service is ${money(cash)} and principal plus interest is ${money(service)}. Coverage ratio?`,ratio,[[1/ratio,'That reverses available cash and required debt service.'],[ratio+1,'No extra one belongs in the coverage formula.'],[ratio*100,'Coverage is shown as a multiple here.']],`${money(cash)} ÷ ${money(service)} = ${num(ratio)}× coverage.`,'Below 1 means the stated cash is insufficient; use the lender’s exact definition and stress-test it.',n=>num(n)+'×',{inputs:{cash,service}});});
+add('i-breakeven','investor','Break-even','bdc',()=>{const fixed=int(15,50)*1000,margin=pick([.25,.4,.5]);return math(`Monthly fixed operating costs are ${money(fixed)}. Contribution margin after variable costs is ${pct(margin*100)}. Operating break-even sales, before financing and tax?`,fixed/margin,[[fixed*margin,'Multiply understates sales needed to contribute enough dollars.'],[fixed,'Only part of each sales dollar covers fixed costs.'],[fixed/(1-margin),'That uses the variable-cost percentage, not contribution margin.']],`${money(fixed)} ÷ ${margin} = ${money(fixed/margin)} in monthly sales.`,'At this sales level contribution covers fixed operating costs, but financing, tax, and cash timing can still create needs.',money,{inputs:{fixed,margin}});});
+add('i-concentration','investor','Customer risk','bdc',()=>item(`One customer provides ${int(65,95)}% of revenue and may terminate next month. What matters most?`,[opt('Contract durability, replacement demand, and the cash impact of loss','These determine whether earnings survive losing the concentrated account.'),opt('Only the number of small customers','Many tiny accounts may not offset one dominant customer.'),opt('Whether the customer has a recognizable logo','A famous customer can still cancel or negotiate lower prices.'),opt('The owner’s confidence alone','Confidence does not replace commitments and diversification evidence.')],'A large customer can control both sales and bargaining power. Model the loss before relying on the seller’s earnings or valuation.'));
+add('i-markdown','investor','Working capital','target',()=>{const stock=int(4,20)*10000,recovery=pick([.5,.6,.7,.8]);return math(`Slow stock has book cost ${money(stock)}. Expected net proceeds after selling costs are ${money(stock*recovery)}. In this simplified recoverability exercise, what write-down is indicated?`,stock*(1-recovery),[[stock,'A full write-off ignores the stated recovery.'],[stock*recovery,'That is remaining recoverable value, not the reduction.'],[0,'Book cost exceeds the expected recovery in the stated facts.']],`${money(stock)} − ${money(stock*recovery)} = ${money(stock*(1-recovery))}.`,'Verify the inventory valuation rules and credible recovery evidence before treating old stock as full-value working capital.',money,{inputs:{stock,recovery}});});
+add('l-base','lease','Rent math','lease',()=>{const area=int(10,30)*100,rate=int(20,40,2);return math(`A ${num(area)} sqft bakery is quoted ${money(rate)}/sqft/year base rent. Monthly base?`,area*rate/12,[[area*rate,'That is annual rent, not monthly rent.'],[rate*12,'This omits the floor area and converts in the wrong direction.'],[area*rate/10,'A year has twelve monthly payments, not ten.']],`${num(area)} × ${money(rate)} ÷ 12 = ${money(area*rate/12)} per month, rounded to the nearest dollar.`,'The quote is annual per square foot, not a monthly rate.',money,{inputs:{area,rate}});});
+add('l-nnnmath','lease','Rent math','lease',()=>{const area=int(12,28)*100,base=int(20,36,2),nnn=int(5,12);return math(`Space: ${num(area)} sqft. Annual base ${money(base)}/sqft plus NNN ${money(nnn)}/sqft. Monthly base plus NNN?`,area*(base+nnn)/12,[[area*base/12,'This leaves out NNN charges.'],[area*(base+nnn),'This is the annual total.'],[area*base/12+nnn,'The NNN rate applies to all square feet, not once per month.']],`${num(area)} × (${money(base)} + ${money(nnn)}) ÷ 12 = ${money(area*(base+nnn)/12)}, rounded.`,'Separately billed utilities or other exclusions may increase total occupancy further.',money,{inputs:{area,base,nnn}});});
+add('l-nnndef','lease','Lease structure','lease',()=>item('A broker advertises a triple-net lease. Which budget assumption is the sound starting point?',[opt('Base rent plus allocated taxes, insurance, and operating/maintenance charges','NNN typically passes these building costs to the tenant.'),opt('Base rent covers every building cost','That confuses NNN with a broad gross-rent arrangement.'),opt('Only the landlord’s income tax is passed through','Property taxes and landlord income tax are different obligations.'),opt('NNN estimates can never change','Estimates may reconcile to actual costs under the lease.')],'Read the charge definitions, exclusions, and caps. The label NNN is not a complete description of the tenant’s obligations.'));
+add('l-gross','lease','Lease structure','lease',()=>item('A gross lease bundles base rent and specified building expenses. What must still be checked?',[opt('Exclusions, utilities, and expense escalation terms','A gross label does not tell whether all costs are fixed or included.'),opt('Nothing; the rent can never change','Escalation clauses can still apply.'),opt('Whether every charge must be paid twice','Bundled costs should not simply be added again.'),opt('Only the building’s paint color','Appearance does not establish the financial obligations.')],'Compare the actual included costs and future increases. A lower headline rate can be more expensive after exclusions.'));
+add('l-ratio','lease','Occupancy economics','occupancy',()=>{const sales=int(40,120)*1000,r=pick([6,8,10,12,15]),cost=sales*r/100;return math(`Monthly total occupancy ${money(cost)}, monthly sales ${money(sales)}. Occupancy ratio?`,r,[[sales/cost,'That reverses costs and sales.'],[r/12,'Both figures already cover the same month.'],[r*12,'Annualizing both numerator and denominator leaves the ratio unchanged.']],`${money(cost)} ÷ ${money(sales)} × 100 = ${pct(r)}.`,'Use all costs in one consistent occupancy definition; assess the ratio against actual margins and local conditions.',pct,{inputs:{sales,cost}});});
+add('l-band','lease','Occupancy economics','occupancy',()=>item(`A bakery’s occupancy ratio is ${pick([13,14,16])}% of projected sales, with thin margins. What does the game’s 12%+ warning suggest?`,[opt('Stress-test sales and renegotiate before committing','The fixed occupancy burden can leave too little room for other costs.'),opt('It proves the business must fail','A heuristic is not proof; economics and cost definitions vary.'),opt('Any rent is affordable if revenue grows','Projected growth may not materialize.'),opt('Exclude NNN to make the ratio look lower','Omitting real occupancy costs hides the commitment.')],'The requested 6–10% band is a rough screen, not a guaranteed healthy range. A high ratio deserves evidence and downside testing, especially before a long lease.'));
+add('l-breakpoint','lease','Percentage rent','lease',()=>{const rate=pick([4,5,6,8]),breakpoint=int(5,18)*100000,base=breakpoint*rate/100;return math(`Annual base ${money(base)}; percentage rent ${rate}% above the natural breakpoint. Breakpoint?`,breakpoint,[[base*rate/100,'Multiply gives a fraction of the rent, not the sales breakpoint.'],[base/rate,'Convert the rate to a decimal before division.'],[base*12,'Base is already annual.']],`${money(base)} ÷ ${rate/100} = ${money(breakpoint)} annual sales.`,'Use the written breakpoint if the lease specifies one that differs from the natural calculation.',money,{inputs:{base,rate}});});
+add('l-percentage','lease','Percentage rent','lease',()=>{const base=int(4,10)*10000,threshold=int(6,12)*100000,excess=int(1,5)*100000,rate=pick([4,5,6]);return math(`Annual base ${money(base)}, plus ${rate}% of sales above a stated ${money(threshold)} breakpoint. Sales ${money(threshold+excess)}. Annual rent before other costs?`,base+excess*rate/100,[[base+(threshold+excess)*rate/100,'Percentage rent applies only to the excess in this contract.'],[excess*rate/100,'That is additional percentage rent, omitting the base.'],[base,'Sales exceed the breakpoint, so additional rent applies.']],`${money(base)} + (${money(threshold+excess)} − ${money(threshold)}) × ${rate/100} = ${money(base+excess*rate/100)}.`,'Do not double-count percentage rent below the stated breakpoint.',money,{inputs:{base,threshold,excess,rate}});});
+add('l-escalation','lease','Rent math','lease',()=>{const base=int(25,65)*100,rate=pick([2,3,4]),year=int(3,7),v=base*(1+rate/100)**(year-1);return math(`Year 1 rent ${money(base)}/month, rising ${rate}% at each anniversary. Monthly rent during year ${year}, nearest dollar?`,Math.round(v),[[Math.round(base*(1+rate/100)**year),'That applies one extra anniversary increase.'],[Math.round(base*(1+rate/100*(year-1))),'That adds simple increases rather than compounding them.'],[base,'Annual increases cannot be ignored.']],`${money(base)} × ${1+rate/100}^${year-1} = ${money(v)} rounded.`,'Year one is the starting rate, so year N has N minus one increases.',money,{inputs:{base,rate,year}});});
+add('l-ti','lease','Buildout protection','ti',()=>{const area=int(12,25)*100,rate=int(20,50,5),cost=area*rate+int(20,70)*1000;return math(`Eligible buildout costs ${money(cost)}. The landlord reimburses ${money(rate)}/sqft for ${num(area)} sqft. What remains tenant-funded after reimbursement?`,cost-area*rate,[[cost,'That ignores the allowance after reimbursement.'],[area*rate,'That is the allowance, not the remaining tenant-funded amount.'],[cost+area*rate,'The reimbursement reduces, rather than increases, net cost.']],`${money(cost)} − (${num(area)} × ${money(rate)}) = ${money(cost-area*rate)}.`,'The tenant may still need to finance the full initial payment until reimbursement conditions are met.',money,{inputs:{cost,area,rate}});});
+add('l-guarantee','lease','Personal exposure','lease',()=>item('The company signs a lease and the owner signs a separate personal guarantee. What deserves review?',[opt('The guarantee’s scope, cap, duration, and release conditions','Personal obligations may survive the business’s inability to pay.'),opt('Only the company’s limited-liability label','That label does not erase a separately signed personal obligation.'),opt('Only this month’s rent','Future rent, damages, or other costs may be included.'),opt('Nothing, because guarantees are never enforced','Enforcement depends on the terms and applicable law, not this assumption.')],'A personal guarantee can expose the signer beyond the company’s assets. Review the actual language and negotiate limitations before relying on entity protection.'));
+add('l-compare','lease','Lease structure','lease',()=>{const base=int(22,32),charges=int(6,10),gross=base+charges-pick([2,3,4]),area=int(12,25)*100;return math(`Matched inclusions: ${money(gross)}/sqft/year gross versus ${money(base)} base + ${money(charges)} NNN for ${num(area)} sqft. Annual savings with gross?`,(base+charges-gross)*area,[[Math.abs(gross-base)*area,'Comparing only base rates leaves out NNN.'],[(base+charges-gross)*area/12,'That is monthly savings, not annual savings.'],[0,'The matched totals differ.']],`(${money(base+charges)} − ${money(gross)}) × ${num(area)} = ${money((base+charges-gross)*area)} annually.`,'Match costs first, then compare future escalations and exclusions.',money,{inputs:{base,charges,gross,area}});});
+add('l-renewal','lease','Buildout protection','ti',()=>item(`A bakery invests ${money(int(10,40)*10000)} in a leased kitchen. The lease ends before the investment is expected to pay back. What most directly protects continued use?`,[opt('An enforceable tenant renewal option with workable conditions','This gives a defined route to continue occupying the space.'),opt('A verbal statement that renewal should be fine','Goodwill does not create the same documented right.'),opt('A larger logo on the storefront','Branding cannot extend the legal term.'),opt('Assuming renovation creates ownership','Improvements to rented premises do not automatically make the tenant the owner.')],'Review notice timing, default conditions, transfer rights, and renewal pricing. An option that cannot be exercised affordably or transferred with the business may provide little protection.'));
+add('l-sales','lease','Occupancy economics','occupancy',()=>{const cost=int(5,12)*12000,ratio=pick([6,8,10]);return math(`Total annual occupancy is ${money(cost)}. What sales support a ${ratio}% occupancy ratio?`,cost/(ratio/100),[[cost*ratio/100,'Multiply does not solve for the sales denominator.'],[cost/ratio,'The percent must be converted to a decimal.'],[cost*12,'The occupancy amount is already annual.']],`${money(cost)} ÷ ${ratio/100} = ${money(cost/(ratio/100))} sales, rounded.`,'Evaluate whether conservative sales evidence can support that volume.',money,{inputs:{cost,ratio}});});
+add('l-cam','lease','Lease structure','lease',()=>{const est=int(5,12)*1000,actual=est+int(2,8)*1000;return math(`The lease requires an annual CAM true-up. The tenant paid ${money(est)} in estimates; its verified allocated actual cost is ${money(actual)}. Extra amount due?`,actual-est,[[actual,'The estimates already paid must be credited.'],[est,'That is what was already paid, not the balance.'],[0,'An estimate is not a cap under these stated terms.']],`${money(actual)} − ${money(est)} = ${money(actual-est)}.`,'Inspect allocations, exclusions, and supporting invoices rather than assuming every billed item is permitted.',money,{inputs:{est,actual}});});
+add('l-oral','lease','Contract evidence','rock',()=>item('A landlord verbally agrees to defer rent. The written agreement requires signed written changes, and none has been signed. What is the prudent budgeting decision?',[opt('Keep the original obligation in the budget until the change is documented','The alleged variation is not yet dependable for planning.'),opt('Remove the rent permanently','Deferral is not forgiveness, and the change is not documented.'),opt('Assume every oral promise is enforceable everywhere','Formalities and local law matter.'),opt('Stop communicating with the landlord','Clarifying and documenting the agreement is the useful next step.')],'Obtain a signed amendment matching the intended concession and review its effect. The documented English office-licence dispute illustrates the risk, but local law and contract language control each case.'));
+add('l-breakrefund','lease','Contract evidence','marks',()=>item('A tenant expects an automatic refund of advance rent after using a mid-quarter break option. The lease does not clearly promise a refund. What should the cash forecast assume?',[opt('Do not rely on the refund until the right is verified','An assumed refund could create a cash shortfall.'),opt('A prorated refund is guaranteed everywhere','The result depends on the contract and jurisdiction.'),opt('The break automatically refunds the entire quarter','Occupation before the break also had a cost.'),opt('Rent and service charges must always be treated identically','Separate clauses can create different rights for each payment.')],'Read the refund terms for each charge and obtain advice before counting the cash. The M&S English lease dispute shows why fairness alone may not supply a missing refund term.'));
+add('l-delay','lease','Buildout protection','ti',()=>{const rent=int(3,8)*1000,months=int(2,5);return math(`Rent starts before opening. A permit delay adds ${months} months at ${money(rent)}/month, with no relief. Added base-rent cash needed?`,rent*months,[[rent,'That funds one delayed month only.'],[rent/months,'Multiply monthly cost by months of delay.'],[0,'Rent starts before opening under the stated contract.']],`${months} × ${money(rent)} = ${money(rent*months)} extra base rent.`,'Budget separately for utilities, payroll, and construction overruns; negotiate commencement and permitting protections early.',money,{inputs:{rent,months}});});
+add('l-stress','lease','Occupancy economics','occupancy',()=>{const sales=int(60,100)*1000,cost=sales*.08,drop=pick([20,25,40]);return math(`Occupancy costs ${money(cost)}/month on ${money(sales)} sales. If sales fall ${drop}% and occupancy is fixed, new ratio?`,cost/(sales*(1-drop/100))*100,[[8,'The cost stays fixed but sales fall, so the ratio rises.'],[8*(1-drop/100),'That incorrectly makes occupancy fall in step with sales.'],[drop,'The sales decline is not the occupancy ratio.']],`${money(cost)} ÷ ${money(sales*(1-drop/100))} × 100 = ${pct(cost/(sales*(1-drop/100))*100)}.`,'Fixed occupancy magnifies downside when sales weaken.',pct,{inputs:{sales,cost,drop}});});
+add('l-use','lease','Contract evidence','lease',()=>item('The space is advertised as ideal for a bakery, but permitted use, ventilation approvals, and landlord consent for a hood remain unverified. Best next step?',[opt('Verify permissions and conditions before an unconditional commitment','The business model depends on legally and physically operating the kitchen.'),opt('Sign because the listing says bakery','Marketing language is not the necessary permit or contractual permission.'),opt('Assume the previous tenant’s approval transfers automatically','A new use or operator may face different conditions.'),opt('Ignore the kitchen because base rent is low','Low rent does not fix a space that cannot support the intended operation.')],'Confirm the lease use clause, building requirements, and approvals for the planned operation. Make the commitment depend on resolving essential conditions rather than hoping they will work out.'));
+function verdict(prompt,correct,reasons,note,stats,explanation,extra={}){return item(prompt,[opt(correct,reasons[correct]),...['Invest','Investigate','Pass'].filter(x=>x!==correct).map(x=>opt(x,reasons[x]))],explanation,{note,stats,...extra});}
+function caseStats({revenue,net=10,gross=40,customer=8,occupancy=6,debt=50000,days=25}){return [['Annual revenue',money(revenue)],['Gross / net margin',`${gross}% / ${net}%`],['Largest customer',customer+'% of sales'],['Occupancy / sales',occupancy+'%'],['Interest-bearing debt',money(debt)],['AR days',days+' days']];}
+add('v-owner','verdict','Earnings quality','bdc',()=>{const rev=int(8,18)*100000,salary=int(7,12)*10000,profit=rev*.12,verified=!!int(0,1);return verdict('The owner-operated shop: what does the evidence support?',verified?'Invest':'Investigate',verified?{Invest:'Replacement management is already costed, earnings are verified, and the price is supported.',Investigate:'The case explicitly says the labor, cash, valuation, and contract checks are complete.',Pass:'There is no stated unresolved deal-breaking risk at the reviewed price.'}:{Invest:'The asking price relies on profit that omits necessary labor.',Investigate:'Normalize the missing salary and reassess the price before committing.',Pass:'Missing evidence can be resolved; the facts do not yet establish an unacceptable deal.'},verified?`Independent diligence confirms 12% net AFTER ${money(salary)} market-rate management pay, recurring cash flow, sound equipment and contracts. A ${money(profit*4)} equity price (4× net income) and funding are supported.`:`Reported profit omits a full-time owner’s ${money(salary)} replacement cost. The price assumes that labor is free; normalized results have not been supplied.`,caseStats({revenue:rev,net:12}),verified?'The deciding factor is verified recurring earnings after paying for required labor at a supported price. Owner operation itself is not a reason to reject a sound business.':`Before tax adjustments, ${money(profit)} reported profit falls to ${money(profit-salary)} after replacement labor. Investigate that economic difference rather than valuing unpaid work as free profit.`);});
+add('v-customer','verdict','Customer risk','bdc',()=>{const rev=int(20,55)*100000,share=int(85,95),days=pick([75,90,105]);return verdict('The dependent distributor: accept the current deal?', 'Pass',{Invest:'The concentrated, cancellable account and long collections create an unprotected cash and revenue risk.',Investigate:'The adverse contract facts are already verified, and the seller refuses mitigation or a price change.',Pass:'The verified concentration and liquidity exposure are unacceptable on these stated terms.'},`One customer produces ${share}% of sales, may cancel in 30 days, and pays slowly. Verified records show no committed replacement business or liquidity facility. The seller refuses protection or repricing.`,caseStats({revenue:rev,net:4,gross:18,customer:share,days,debt:rev*.25,occupancy:2}),'Pass on the current terms because the dominant customer can disappear before the cash cycle completes. A different structure or price might change the decision, but neither is offered here.');});
+add('v-startup','verdict','Occupancy economics','occupancy',()=>{const sales=int(5,9)*100000,ratio=pick([14,15,16]);return verdict('The new bakery: commit on the proposed terms?','Pass',{Invest:'The forecast is unproven and the fixed occupancy burden is already high.',Investigate:'Essential history is absent and the offered terms remain unaffordable in the stated downside test.',Pass:'Reject or renegotiate the commitment before investing.'},`${money(sales)} is a sales forecast, not operating history. Annual occupancy is ${money(sales*ratio/100)} with a long lease and uncapped personal guarantee; a 20% sales downside cannot be funded.`,caseStats({revenue:sales,net:8,gross:65,customer:0,occupancy:ratio,debt:180000,days:0}),'Pass means pass or renegotiate these terms. The deciding factor is a large fixed commitment against unproven sales with no funded downside, not simply that the business is new.',{statsLabel:'Projected statement · no operating history'});});
+add('v-machine','verdict','Return and valuation','bdc',()=>{const rev=int(12,35)*100000,net=pick([14,16,18]),p=rev*net/100,price=p*pick([3,4]);return verdict('The established machine shop: what does the evidence support?','Invest',{Invest:'Verified earnings, customer diversity, low debt, and a supported price justify the case.',Investigate:'The price, recurring earnings, contracts, equipment, and financing have already been independently checked.',Pass:'A boring business is not a bad business; no disqualifying fact is supplied.'},`Three stable years, market-rate management pay included, and cash flow supports earnings. Independent diligence confirms equipment, contracts, and funding. The ${money(price)} equity price is supported after debt and capital needs.`,caseStats({revenue:rev,net,gross:38,customer:8,occupancy:4,debt:60000,days:28}),'Invest at the reviewed price because the recurring economics and essential evidence are in place. A high margin alone would not justify the same decision.');});
+add('v-collections','verdict','Working capital','bdc',()=>{const rev=int(15,40)*100000,resolved=!!int(0,1);return verdict('The wholesaler with a receivables spike: best next step?',resolved?'Invest':'Investigate',resolved?{Invest:'The timing issue has been tested against receipts and the overall deal is supported.',Investigate:'The case says the collection uncertainty and broader diligence are resolved.',Pass:'A resolved timing effect is not the same as permanent uncollectible revenue.'}:{Invest:'The reported profit lacks collection evidence.',Investigate:'AR aging and subsequent receipts could resolve the discrepancy.',Pass:'The current facts raise a question but do not establish unrecoverable balances.'},resolved?'AR rose faster than sales at year-end. Subsequent bank receipts confirm collection in full under agreed seasonal terms. Independent review supports normalized cash flow, fair price, contracts, equipment, and funding.':'AR grew 45% while sales rose 8%; collection days doubled. Operating cash flow is negative, and aging reports and subsequent receipts have not been provided.',caseStats({revenue:rev,net:7,gross:24,customer:12,occupancy:3,debt:250000,days:resolved?35:70}),resolved?'Evidence can change the verdict: verified subsequent collections explain the temporary AR spike. With the remaining diligence and price supported, the warning has been resolved.':'Investigate whether rising AR reflects timing, disputes, or aggressive sales recognition. Profit unsupported by collections should not be accepted at face value.');});
+add('v-inventory','verdict','Working capital','target',()=>{const rev=int(10,25)*100000,written=!!int(0,1);return verdict('The retailer carrying excess stock: what now?',written?'Invest':'Investigate',written?{Invest:'The markdown loss is recognized, obsolete stock is excluded from the price, and the remaining business is verified.',Investigate:'The specific inventory uncertainty and remaining diligence are explicitly resolved.',Pass:'Past overstock does not disqualify a repriced, verified business forever.'}:{Invest:'Unreviewed aged stock can inflate both earnings and acquisition working capital.',Investigate:'Establish recovery value and required markdowns before accepting the price.',Pass:'Excess stock may be manageable after valuation and repricing; evidence is still missing.'},written?'A completed stock count and sell-through review identified obsolete goods. The write-down is recorded and the purchase price excludes those goods; independent review supports recurring margins, contracts, financing and the revised valuation.':'Stock is up 50%, sales up 5%. The seller values all inventory at cost, but stock aging and markdown forecasts are missing.',caseStats({revenue:rev,net:6,gross:30,customer:5,occupancy:7,debt:100000,days:5}),written?'Invest at the reviewed, revised price because the known stock loss has been recognized and allocated. The deciding factor is resolution of the risk, not pretending the overstock never happened.':'Investigate realizable inventory value and the cash needed to clear excess stock. A growing asset balance is not proof of growing value.');});
+add('v-runway','verdict','Cash runway','cake',()=>{const burn=int(15,40)*1000,weeks=int(4,9),cash=burn*weeks;return verdict('The restaurant described as sustainable: commit now?','Pass',{Invest:'The cash forecast contradicts an adequately funded business.',Investigate:'The short runway and absence of funding are verified; this is not just a missing document.',Pass:'The business cannot fund the stated plan on the offered terms.'},`Cash is ${money(cash)} and weekly net burn is ${money(burn)}. Only ${weeks} weeks remain; no financing is committed and the seller requires closing without new capital. The forecast already includes rent and debt payments.`,caseStats({revenue:int(10,25)*100000,net:-4,gross:58,customer:4,occupancy:12,debt:300000,days:3}),'Pass on these terms because the verified cash runway cannot support the operating plan. Describing stores as sustainable does not replace an adequately funded cash forecast.');});
+add('v-rebate','verdict','Earnings quality','kraft',()=>{const rev=int(20,45)*100000,rebate=int(4,12)*10000;return verdict('The food processor’s sudden margin improvement: best next step?','Investigate',{Invest:'The apparent savings depend on unsupported rebate recognition.',Investigate:'Verify the signed rebate terms and accounting before trusting the margin.',Pass:'The facts establish an unresolved issue, not yet the corrected economics or the seller’s response.'},`Reported profit includes ${money(rebate)} of supplier rebates. Purchase thresholds may not have been met, and supplier confirmations are missing. The seller has agreed to supply the contracts.`,caseStats({revenue:rev,net:9,gross:28,customer:15,occupancy:3,debt:200000,days:40}),'Investigate the recognition criteria and normalize any unearned rebate. The deciding factor is support for the cost reduction, not the size of the reported margin.');});
+add('v-pullforward','verdict','Earnings quality','armour',()=>verdict('The supplier with a record quarter: trust the growth multiple?','Investigate',{Invest:'The growth may reflect order timing rather than new demand.',Investigate:'Review the backlog, timing effects, and sustainable run rate before valuation.',Pass:'Early shipments with valid transfer terms do not alone prove the deal is unsalvageable.'},`${int(12,22)}% of this quarter’s revenue came from orders originally scheduled next quarter. Shipment/transfer conditions were satisfied, but management has not separated timing from new demand.`,caseStats({revenue:int(20,50)*100000,net:8,gross:32,customer:14,occupancy:3,debt:150000,days:45}),'Investigate recurring demand before paying for headline growth. The lesson is earnings quality and disclosure, not that every early shipment is improper.'));
+add('v-leasepaper','verdict','Contract evidence','rock',()=>verdict('The bakery acquisition depends on a promised rent concession. Commit now?','Investigate',{Invest:'The savings exist only in an unconfirmed oral promise.',Investigate:'Obtain a valid documented amendment and recalculate the deal.',Pass:'The documentation may be resolved before committing, and the parties have not refused.'},`The seller’s profit forecast assumes ${money(int(1,3)*1000)} monthly rent relief. The lease requires signed amendments; the concession is verbal only, and the landlord has agreed to discuss it.`,caseStats({revenue:int(8,15)*100000,net:10,gross:63,customer:5,occupancy:9,debt:40000,days:3}),'Investigate the enforceable written terms before valuing the concession. A forecast that depends on a promise needs evidence of that promise’s actual effect.'));
+add('v-oven','verdict','Capital spending','worldcom',()=>{const rev=int(10,25)*100000;return verdict('The service company’s improved profit: what now?','Investigate',{Invest:'Unsupported capitalization can make recurring costs disappear from the P&L.',Investigate:'Trace the asset entries and restate maintainable earnings before valuation.',Pass:'The entries need review and correction; the seller has not refused access or a revised price.'},`${money(int(4,10)*10000)} of routine consumed services were booked as equipment. There are no related physical assets or documented future benefits; the seller permits a full accounting review and repricing.`,caseStats({revenue:rev,net:16,gross:45,customer:9,occupancy:5,debt:60000,days:30}),'Investigate and correct the unsupported assets and inflated earnings. Willingness to review and reprice keeps this an unresolved diligence question rather than an automatic investment.');});
+add('v-bakery','verdict','Buildout protection','ti',()=>{const rev=int(8,16)*100000;return verdict('The bakery after lease and equipment review: what does the evidence support?','Invest',{Invest:'The verified economics and documented tenure support the reviewed price.',Investigate:'The material lease, equipment, cash-flow, and price checks have been completed.',Pass:'No stated unresolved risk outweighs the verified economics at this price.'},`Four years of steady sales; market-rate manager pay included. A transferable renewal option has affordable documented pricing. Independent review confirms equipment, cash flow, contracts and financing, and supports the ${money(rev*.1*4)} equity price.`,caseStats({revenue:rev,net:10,gross:64,customer:4,occupancy:7,debt:30000,days:4}),'Invest at the supported price because earnings and continued occupancy are verified. The renewal right protects the use of the buildout only because its terms are workable.');});
+const research=JSON.parse(document.getElementById('research-data').textContent);
+for(const entry of research.cases){const source='research-'+entry.id;SOURCES[source]=entry.source;add(entry.id,entry.mode,entry.concept,source,()=>item(entry.prompt,entry.choices.map(c=>opt(c.text,c.why)),entry.explanation,{note:entry.note,stats:entry.stats,caseType:entry.caseType,statsLabel:entry.caseType==='Historical case'?'Documented case facts':'Fictional practice facts'}));}
+const KEY='due-diligence-v1',BATCH=10;
+const blank=()=>({schema:2,xp:0,modes:{},sessions:{}});
+const safeInt=n=>Number.isSafeInteger(n)&&n>=0?n:0;
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const app=document.getElementById('app');let saved=blank(),storageOK=true,active=null,view='home';
+function freshProgress(){return {answered:0,correct:0,bestStreak:0,bestTen:0,checkpoints:0,concepts:{},recent:[],deck:[],legacy:null};}
+function validQuestion(q){return q&&typeof q.prompt==='string'&&q.prompt.length<2000&&typeof q.explanation==='string'&&typeof q.id==='string'&&bank.some(t=>t.id===q.id)&&SOURCES[q.source]&&Array.isArray(q.choices)&&q.choices.length>=3&&q.choices.length<=4&&q.choices.every(o=>typeof o.text==='string'&&typeof o.why==='string'&&typeof o.correct==='boolean')&&q.choices.filter(o=>o.correct).length===1;}
+function readSave(){try{const raw=localStorage.getItem(KEY);if(!raw)return;const p=JSON.parse(raw);if(!p||typeof p!=='object')return;saved.xp=safeInt(p.xp);for(const m of modes){const old=p.modes&&p.modes[m.id];const s=freshProgress();if(old&&p.schema===2){for(const k of ['answered','correct','bestStreak','bestTen','checkpoints'])s[k]=safeInt(old[k]);s.correct=Math.min(s.correct,s.answered);s.bestTen=Math.min(10,s.bestTen);s.legacy=old.legacy&&{best:Math.min(m.legacyTotal,safeInt(old.legacy.best)),completed:safeInt(old.legacy.completed)};for(const concept of new Set(bank.filter(t=>t.mode===m.id).map(t=>t.concept))){const c=old.concepts&&old.concepts[concept];if(c)s.concepts[concept]={answered:safeInt(c.answered),correct:Math.min(safeInt(c.correct),safeInt(c.answered))};}s.recent=Array.isArray(old.recent)?old.recent.filter(x=>typeof x==='string').slice(-80):[];s.deck=Array.isArray(old.deck)?old.deck.filter(id=>bank.some(t=>t.id===id&&t.mode===m.id)):[];}else if(old){s.legacy={best:Math.min(m.legacyTotal,safeInt(old.best)),completed:safeInt(old.completed)};}saved.modes[m.id]=s;const r=p.sessions&&p.sessions[m.id];if(p.schema===2&&r&&r.mode===m.id&&Array.isArray(r.batch)&&r.batch.length<=10&&r.batch.every(a=>validQuestion(a.q)&&Number.isInteger(a.choice)&&a.choice>=0&&a.choice<a.q.choices.length)&&validQuestion(r.current)&&r.current.mode===m.id){r.total=safeInt(r.total);r.correct=Math.min(r.total,safeInt(r.correct));r.streak=safeInt(r.streak);r.bestStreak=safeInt(r.bestStreak);r.chosen=Number.isInteger(r.chosen)&&r.chosen>=0&&r.chosen<r.current.choices.length?r.chosen:null;r.checkpoint=r.checkpoint===true&&r.batch.length>0;r.recentIds=Array.isArray(r.recentIds)?r.recentIds.filter(id=>typeof id==='string').slice(-4):[];saved.sessions[m.id]=r;}}}catch(e){storageOK=false;}}
+function stats(mode){return saved.modes[mode]||(saved.modes[mode]=freshProgress());}
+function sync(){try{localStorage.setItem(KEY,JSON.stringify(saved));storageOK=true;}catch(e){storageOK=false;}chrome();}
+function chrome(){document.getElementById('xp').textContent=saved.xp.toLocaleString()+' XP';document.getElementById('storage').classList.toggle('hidden',storageOK);document.getElementById('save-status').textContent=storageOK?'Saved in this browser':'Session only; storage unavailable';}
+function focusMain(){window.scrollTo(0,0);app.focus({preventScroll:true});}
+function sourceHTML(q){const s=SOURCES[q.source];return `<details class="source-note"><summary>Research behind this question</summary><p><strong>${esc(s.kind)}</strong></p><p>${esc(s.note)}</p><p><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a> · opens online</p></details>`;}
+function weak(mode){return Object.entries(stats(mode).concepts).filter(([,v])=>v.answered>=2&&v.correct<v.answered).sort((a,b)=>(a[1].correct/a[1].answered)-(b[1].correct/b[1].answered));}
+function createQuestion(mode,r){const s=stats(mode),pool=bank.filter(t=>t.mode===mode);if(!s.deck.length)s.deck=shuffle(pool.map(t=>t.id));let id;const weaknesses=weak(mode);if(r.total>0&&r.total%4===0&&weaknesses.length){const candidates=pool.filter(t=>t.concept===weaknesses[0][0]&&!r.recentIds.includes(t.id));if(candidates.length)id=pick(candidates).id;}if(!id){const at=s.deck.findIndex(x=>!r.recentIds.includes(x));id=s.deck.splice(at<0?0:at,1)[0];}const template=pool.find(t=>t.id===id);let question;for(let tries=0;tries<20;tries++){question={...template.make(),id,mode,concept:template.concept,source:template.source};if(!s.recent.includes(question.prompt))break;}question.choices=shuffle(question.choices);question.caseType=question.caseType||(SOURCES[template.source].kind.startsWith('Historical')||SOURCES[template.source].kind.startsWith('Documented')?'Adapted from a documented case':'Research-informed practice');s.recent.push(question.prompt);s.recent=s.recent.slice(-80);r.recentIds.push(id);r.recentIds=r.recentIds.slice(-4);return question;}
+function home(){active=null;view='home';chrome();const total=modes.reduce((n,m)=>n+stats(m.id).answered,0);app.innerHTML=`<section class="intro"><h1>Better questions.<br>Better decisions.</h1><p class="muted">Continuous practice built around business evidence. New numbers, changing facts, and a clear reason behind every answer.</p><div class="overview"><div><strong>${total.toLocaleString()}</strong><span class="muted">answered</span></div><div><strong>${bank.length}</strong><span class="muted">study patterns</span></div><div><strong>No limit</strong><span class="muted">keep practicing</span></div></div></section><nav class="modes" aria-label="Practice modes">${modes.map(m=>{const s=stats(m.id),r=saved.sessions[m.id],w=weak(m.id);return `<button class="mode" data-mode="${m.id}"><span><span class="mode-title">${m.name}</span><span class="mode-desc">${m.desc}</span><span class="mode-meta"><span>${s.answered?Math.round(s.correct/s.answered*100)+'% accuracy':'No answers yet'}</span><span>Best 10: ${s.checkpoints?s.bestTen+'/10':'—'}</span><span>${s.checkpoints} checkpoints</span></span>${w.length?`<span class="mode-desc">Practice next: ${esc(w[0][0])}</span>`:''}${s.legacy?.completed?`<span class="mode-desc legacy">Original edition best ${s.legacy.best}/${m.legacyTotal} preserved</span>`:''}</span><span class="start">${r?'Resume · '+r.total+' answered':'Start practice'} →</span></button>`;}).join('')}</nav><div class="foot"><p>Pause any time. Progress saves after every answer. Every 10 answers brings a checkpoint, then keep going.</p><p>Research checked: <strong>${esc(research.checkedAt.slice(0,10))}</strong> · ${research.cases.length} research cases in this edition.</p><details><summary>How the research and practice work</summary><p>Documented events and primary-source guidance shape the lessons. “Historical case” uses reported facts; “Adapted” uses invented businesses or numbers to practice a documented lesson. Other questions teach researched fundamentals.</p><p>Numbers and decision-changing facts vary. Study patterns and historical cases eventually recur; this is continuous practice, not an infinite supply of unique real events. Missed concepts return more often.</p><p>Daily research updates publish a new edition when the research runner is available online. On the mobile website, reload to get the latest published edition. Downloaded or shared files need a refreshed copy. The date above identifies this edition, not a live connection.</p><p>10 XP per correct answer. Best 10 scores use full checkpoints; partial sessions still count toward accuracy. All explanations work offline; source links need internet.</p><p>The 6–10% occupancy band and 12%+ warning are screening heuristics. Invest means the fictional evidence and reviewed price support a deal; Investigate means key evidence is missing; Pass means reject the offered terms.</p></details><details><summary>Research library</summary>${Object.values(SOURCES).filter((s,i,a)=>a.findIndex(x=>x.url===s.url)===i).map(s=>`<p><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a><br>${esc(s.kind)}</p>`).join('')}</details></div>`;app.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>start(b.dataset.mode));focusMain();}
+function start(mode){let r=saved.sessions[mode];if(!r){r={mode,total:0,correct:0,streak:0,bestStreak:0,batch:[],current:null,chosen:null,checkpoint:false,recentIds:[]};r.current=createQuestion(mode,r);saved.sessions[mode]=r;}active=r;sync();if(r.checkpoint)checkpoint();else renderQuestion();}
+function header(r){const m=modes.find(m=>m.id===r.mode);return `<div class="toolbar"><button class="text-button" id="pause">Pause & modes</button><span class="muted">${esc(m.name)}</span></div><div class="quiz-meta"><span>Question ${r.total+(r.chosen===null?1:0)} · continuous practice</span><span>${r.correct}/${r.total} correct · Streak ${r.streak}</span></div><div class="checkpoint-line"><span>${r.batch.length} / 10 to checkpoint</span><span>${esc(r.current.concept)}</span></div><div class="progress" role="progressbar" aria-label="Answers toward checkpoint" aria-valuemin="0" aria-valuemax="10" aria-valuenow="${r.batch.length}"><span style="width:${r.batch.length*10}%"></span></div>`;}
+function statement(q){return q.stats&&q.stats.length?`<div class="statement"><table><caption>${esc(q.statsLabel||'Statement excerpt · fictional practice')}</caption><tbody>${q.stats.map(([k,v])=>`<tr><th scope="row">${esc(k)}</th><td>${esc(v)}</td></tr>`).join('')}</tbody></table>${q.note?`<p class="case-note">${esc(q.note)}</p>`:''}</div>`:q.note?`<p class="case-note standalone">${esc(q.note)}</p>`:'';}
+function renderQuestion(){const r=active,q=r.current;view='question';app.innerHTML=header(r)+`<div class="workspace ${q.stats?.length?'has-statement':''}"><div class="question-side"><section class="question"><h2 id="question">${esc(q.prompt)}</h2><p class="concept">${esc(q.caseType)}</p></section>${statement(q)}</div><div class="answer-side"><div id="answer-area"></div></div></div>`;document.getElementById('pause').onclick=()=>{sync();home();};if(r.chosen===null){document.getElementById('answer-area').innerHTML=`<div class="answers" role="group" aria-labelledby="question">${q.choices.map((o,i)=>`<button class="answer" data-choice="${i}"><span class="letter" aria-hidden="true">${i+1}</span><span>${esc(o.text)}</span></button>`).join('')}</div><p class="input-note muted">Choose one answer. <span class="desktop-hint">Keys 1–${q.choices.length} also work.</span></p><button class="text-button" id="finish">Finish & review</button>`;app.querySelectorAll('[data-choice]').forEach(b=>b.onclick=()=>answer(Number(b.dataset.choice)));document.getElementById('finish').onclick=()=>checkpoint(true);}else feedback();focusMain();}
+function answer(index){const r=active;if(!r||view!=='question'||r.chosen!==null)return;const q=r.current,c=q.choices[index];if(!c)return;r.chosen=index;r.total++;if(c.correct){r.correct++;r.streak++;saved.xp+=10;}else r.streak=0;r.bestStreak=Math.max(r.bestStreak,r.streak);r.batch.push({q,choice:index});const s=stats(r.mode);s.answered++;if(c.correct)s.correct++;s.bestStreak=Math.max(s.bestStreak,r.streak);const concept=s.concepts[q.concept]||(s.concepts[q.concept]={answered:0,correct:0});concept.answered++;if(c.correct)concept.correct++;if(r.batch.length===BATCH){s.checkpoints++;s.bestTen=Math.max(s.bestTen,r.batch.filter(a=>a.q.choices[a.choice].correct).length);}sync();renderQuestion();document.getElementById('answer-area').scrollIntoView({block:'start',behavior:'auto'});document.getElementById('next').focus({preventScroll:true});}
+function feedback(){const r=active,q=r.current,c=q.choices[r.chosen],right=q.choices.find(o=>o.correct);document.getElementById('answer-area').innerHTML=`<section class="feedback ${c.correct?'':'wrong'}" role="status" aria-live="polite"><h3>${c.correct?'Correct. +10 XP':'Not quite.'}</h3><p class="selected-answer"><strong>Selected:</strong> ${esc(c.text)}</p><p>${esc(c.why)}</p>${c.correct?'':`<p class="correct-text"><strong>Correct answer:</strong> ${esc(right.text)}</p>`}<p>${esc(q.explanation)}</p></section><div class="actions next-actions"><button class="primary" id="next">${r.batch.length===BATCH?'View checkpoint':'Next question'}</button><button class="secondary" id="finish">Finish & review</button></div><details class="choice-review"><summary>Why each answer is right or wrong</summary>${q.choices.map(o=>`<div class="reason"><strong class="${o.correct?'correct-text':'wrong-text'}">${o.correct?'Right':'Wrong'}: ${esc(o.text)}</strong><p>${esc(o.why)}</p></div>`).join('')}</details>${sourceHTML(q)}`;document.getElementById('next').onclick=next;document.getElementById('finish').onclick=()=>checkpoint(true);}
+function next(){const r=active;if(!r||r.chosen===null)return;if(r.batch.length===BATCH){r.checkpoint=true;sync();checkpoint();return;}r.current=createQuestion(r.mode,r);r.chosen=null;sync();renderQuestion();}
+function checkpoint(finishing=false){const r=active;if(!r)return;if(!r.total||!r.batch.length){delete saved.sessions[r.mode];sync();home();return;}view='checkpoint';r.checkpoint=true;sync();const missed=r.batch.filter(a=>!a.q.choices[a.choice].correct),groups={};for(const a of missed)(groups[a.q.concept]||=([])).push(a);const ranked=Object.entries(groups).sort((a,b)=>b[1].length-a[1].length),correct=r.batch.length-missed.length;app.innerHTML=`<section class="intro"><h1>${finishing?'Practice reviewed.':'Checkpoint.'}</h1><p class="muted">${esc(modes.find(m=>m.id===r.mode).name)} · continuous practice</p><div class="result-total">${correct} / ${r.batch.length}</div><p>This checkpoint · ${r.correct}/${r.total} correct this session · Best streak ${r.bestStreak}</p><p>${ranked.length?'Weak spot: '+esc(ranked.filter(x=>x[1].length===ranked[0][1].length).map(x=>x[0]).join(', '))+'.':'No misses in this checkpoint. Keep building the habit.'}</p><div class="actions"><button class="primary" id="continue">Keep practicing</button><button class="secondary" id="done">Finish session</button><button class="text-button" id="pause">Pause & modes</button></div></section><section class="review"><h2>${missed.length?'Review the missed calls':'Clean ledger.'}</h2>${ranked.map(([concept,items])=>`<section><h3>${esc(concept)} · ${items.length} missed</h3>${items.map(a=>{const c=a.q.choices[a.choice],right=a.q.choices.find(x=>x.correct);return `<article><strong>${esc(a.q.prompt)}</strong>${statement(a.q)}<p class="wrong-text">Selected: ${esc(c.text)}</p><p>${esc(c.why)}</p><p class="correct-text">Correct: ${esc(right.text)}</p><p>${esc(a.q.explanation)}</p>${sourceHTML(a.q)}</article>`;}).join('')}</section>`).join('')}${!missed.length?'<p class="muted">The next set brings fresh examples. There is no last round.</p>':''}</section>`;document.getElementById('continue').onclick=()=>{r.checkpoint=false;if(r.batch.length===BATCH)r.batch=[];if(r.chosen!==null){r.current=createQuestion(r.mode,r);r.chosen=null;}sync();renderQuestion();};document.getElementById('done').onclick=()=>{delete saved.sessions[r.mode];sync();home();};document.getElementById('pause').onclick=home;focusMain();}
+document.addEventListener('keydown',e=>{if(e.repeat||e.altKey||e.ctrlKey||e.metaKey)return;if(e.target.closest('input,textarea,select,summary'))return;if(view==='question'&&active?.chosen===null&&/^[1-4]$/.test(e.key)){e.preventDefault();answer(Number(e.key)-1);}});
+readSave();home();
+
+</script>
+</body>
+</html>
