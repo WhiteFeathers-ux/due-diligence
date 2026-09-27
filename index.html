@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-09-26T21:23:00.214125+00:00",
+  "checkedAt": "2026-09-27T16:06:40.270376+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -665,9 +665,138 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "In cases of high customer concentration, it’s helpful to meet those key clients.",
       "calculations": []
+    },
+    {
+      "id": "foundation-celsius-restricted-cash",
+      "mode": "foundation",
+      "concept": "Restricted cash and operating liquidity",
+      "caseType": "Historical case",
+      "prompt": "Celsius’s 2025 US annual filing describes Pepsi payments restricted to terminating former Alani Nu distributors, with unused amounts returnable. How should those funds affect an assessment of cash available for ordinary payroll?",
+      "choices": [
+        {
+          "text": "Exclude them from cash available for ordinary payroll.",
+          "why": "The disclosed restrictions earmark the funds for distributor termination payments."
+        },
+        {
+          "text": "Include them because Celsius has already received the cash.",
+          "why": "Receipt establishes possession, not permission to spend on unrelated operations."
+        },
+        {
+          "text": "Include them once the distributor payments are complete.",
+          "why": "Unused amounts must be returned to Pepsi."
+        },
+        {
+          "text": "Include them whenever reported earnings are positive.",
+          "why": "Profitability does not remove contractual cash restrictions."
+        }
+      ],
+      "explanation": "A cash balance can exist without being available for general operations. Read restrictions before treating cash as operating runway.",
+      "note": "United States SEC reporting; year ended December 31, 2025. The disclosed arrangement is real; the payroll question is an educational application.",
+      "stats": [],
+      "source": {
+        "title": "Celsius Holdings, Inc. — Form 10-K for the year ended December 31, 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1341766/000134176626000024/celh-20251231.htm",
+        "kind": "First-party annual filing",
+        "note": "The Restricted Cash accounting policy establishes the permitted purpose and return obligation. No company figures are invented."
+      },
+      "evidence": "are not available for general operating activities",
+      "calculations": []
+    },
+    {
+      "id": "lease-bakery-renewal-payback",
+      "mode": "lease",
+      "concept": "Renewal rights and renovation payback",
+      "caseType": "Adapted case",
+      "prompt": "A fictional Ontario bakery’s renovation plan only pays off if it stays beyond its initial lease term. The draft offers renewal solely by future mutual agreement. What should the owner do before relying on the longer occupancy period?",
+      "choices": [
+        {
+          "text": "Negotiate a renewal option with clear notice requirements and a defined rent-setting process.",
+          "why": "The plan needs a usable continuation right and assessable renewal costs."
+        },
+        {
+          "text": "Treat future mutual agreement as a tenant-controlled renewal option.",
+          "why": "The landlord has not committed to renew at the tenant’s election."
+        },
+        {
+          "text": "Assume good payment history guarantees another term.",
+          "why": "A reliable payment record does not supply the missing contractual right."
+        },
+        {
+          "text": "Use a longer accounting life for the renovations.",
+          "why": "Changing an accounting estimate does not extend occupancy rights."
+        }
+      ],
+      "explanation": "BDC advises checking when and how renewal works and securing an option where needed. The bakery should assess renovation recovery against occupancy it can contractually secure.",
+      "note": "The bakery and lease terms are fictional. This applies Canadian practitioner guidance to an Ontario scenario, not a court ruling or statement of US law.",
+      "stats": [],
+      "source": {
+        "title": "How to negotiate a commercial lease effectively",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-negotiate-commercial-lease-effectively",
+        "kind": "Practitioner guidance",
+        "note": "BDC discusses renewal and lease negotiation. The renovation-payback scenario and proposed negotiated protections are training applications."
+      },
+      "evidence": "Be sure to understand when and how the lease will be renewed.",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-supported-acquisition",
+      "mode": "verdict",
+      "concept": "A supported price and completed acquisition diligence",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Maple Hearth Bakery in Ontario is offered at CAD 420,000, below an independent CAD 470,000–510,000 valuation using verified maintainable cash flow. Financial, tax, legal, equipment, customer and lease checks are complete, with no material unresolved findings. Committed financing and funded working capital support closing; independently checked downside cash forecasts cover payroll, maintenance and debt payments while preserving reserves and meeting the buyer’s stated return hurdle. At these terms, what is the verdict?",
+      "choices": [
+        {
+          "text": "Invest",
+          "why": "The stated evidence supports both the price and operating resilience, with essential diligence completed."
+        },
+        {
+          "text": "Investigate",
+          "why": "That fits a material unanswered question; this scenario explicitly resolves the essential checks."
+        },
+        {
+          "text": "Pass",
+          "why": "The scenario identifies no verified unacceptable term or failure to meet the buyer’s criteria."
+        }
+      ],
+      "explanation": "BDC recommends examining financial statements, assets and liabilities and obtaining an independent valuation. In this fictional exercise, completed checks, supported pricing and funded downside resilience justify Invest; they do not guarantee success.",
+      "note": "Maple Hearth Bakery, all names, figures, diligence findings, valuation conclusions and financing assumptions are fictional. Monetary figures are Canadian dollars. The verdict applies only to the stipulated training transaction.",
+      "stats": [
+        [
+          "Revenue",
+          "CAD 1,200,000 annual; reconciled to records"
+        ],
+        [
+          "Margins",
+          "14% normalized operating margin after market-rate owner replacement pay"
+        ],
+        [
+          "Customer mix",
+          "Diversified retail and wholesale sales; largest customer 6%"
+        ],
+        [
+          "Occupancy",
+          "CAD 72,000 annual all-in cost; assignment consent and renewal rights confirmed"
+        ],
+        [
+          "Debt",
+          "CAD 250,000 acquisition loan; downside payment coverage verified"
+        ],
+        [
+          "AR days",
+          "18 days on credit sales; aging and subsequent receipts checked"
+        ]
+      ],
+      "source": {
+        "title": "The steps you need to take BEFORE buying a business",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/due-diligence-valuation",
+        "kind": "Practitioner guidance",
+        "note": "BDC establishes acquisition review and valuation principles. It does not describe or endorse this invented bakery transaction."
+      },
+      "evidence": "Get an independent business valuation",
+      "calculations": []
     }
   ],
-  "researchNote": "Three new cases prioritize verdict, foundation, and lease, the least-covered modes. Opened and read SEC enforcement reporting and BDC practitioner guidance, including its November 2025 update. Searches also covered 2026 developments, but attempted SEC filing opens failed; no questions rely on those inaccessible filings. Historical allegations and fictional assumptions are explicitly separated."
+  "researchNote": "Researched and opened primary sources for three additions covering the least-populated modes: verdict, foundation, and lease. The pack combines Celsius’s 2025 operational disclosures filed in 2026 with established BDC acquisition and lease guidance. Fictional assumptions are explicitly identified; no files, accounts, or production systems were accessed."
 }
 </script>
 <script>
