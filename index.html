@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-09-27T16:06:40.270376+00:00",
+  "checkedAt": "2026-09-28T15:36:56.885559+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -794,9 +794,138 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "Get an independent business valuation",
       "calculations": []
+    },
+    {
+      "id": "verdict-bakery-receivables-collectibility",
+      "mode": "verdict",
+      "concept": "Receivables collectibility and acquisition working capital",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Copper Oven's acquisition forecast depends on collecting overdue wholesale invoices. The seller says customers paid after year-end, but bank receipts have not been matched to invoices. The seller permits verification and will negotiate a working-capital adjustment if needed; other diligence is satisfactory. What is your verdict before committing?",
+      "choices": [
+        {
+          "text": "Investigate",
+          "why": "Match subsequent receipts to overdue invoices, check disputes and credit notes, and revise the working-capital forecast and purchase terms. The uncertainty is material but testable."
+        },
+        {
+          "text": "Invest",
+          "why": "Reported receivables and the seller's assurance do not establish that the cash needed after closing will be available."
+        },
+        {
+          "text": "Pass",
+          "why": "No unacceptable loss or funding gap has yet been verified, and the seller permits checks and possible adjustment. Immediate rejection skips a resolvable diligence issue."
+        }
+      ],
+      "explanation": "Receivables can support reported earnings before they provide spendable cash. Verify collections and remaining balances before relying on them to fund operations; unresolved collectibility supports Investigate while the evidence and terms remain open.",
+      "note": "Copper Oven, its Ontario setting, all figures and transaction circumstances are fictional training assumptions. No legal right to a purchase-price adjustment is assumed.",
+      "stats": [
+        [
+          "Revenue",
+          "CAD 960,000 annual sales"
+        ],
+        [
+          "Margins",
+          "Seller-reported EBITDA margin: 14%"
+        ],
+        [
+          "Customer mix",
+          "Retail and wholesale; largest customer: 12% of sales"
+        ],
+        [
+          "Occupancy",
+          "CAD 6,000 monthly all-in occupancy cost"
+        ],
+        [
+          "Debt",
+          "Proposed acquisition debt: CAD 250,000"
+        ],
+        [
+          "AR days",
+          "Seller-reported: 74 days; collections unverified"
+        ]
+      ],
+      "source": {
+        "title": "How to conduct due diligence when buying a business",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/buying-business-conducting-due-diligence",
+        "kind": "Practitioner guidance",
+        "note": "BDC's Canadian guidance supports reviewing receivables aging, bank statements, slow-paying customers and working capital. The bakery, figures, evidence gap and negotiable terms are invented."
+      },
+      "evidence": "accounts receivable and accounts payable aging",
+      "calculations": []
+    },
+    {
+      "id": "foundation-diamond-crop-cost-matching",
+      "mode": "foundation",
+      "concept": "Matching inventory costs to the related sales",
+      "caseType": "Historical case",
+      "prompt": "In its January 9, 2014 US action, the SEC alleged that Diamond Foods treated payments for prior walnut deliveries as advances on future crops. For walnuts already sold, which accounting treatment reflects the underlying transaction?",
+      "choices": [
+        {
+          "text": "Include the related walnut costs in cost of goods sold for the period of the sales.",
+          "why": "Costs attributable to sold inventory belong with the related sales; calling a payment an advance does not change what it purchased."
+        },
+        {
+          "text": "Retain the payments as prepaid assets because management labeled them advances.",
+          "why": "An accounting label cannot establish a future benefit when the payment actually relates to inventory already sold."
+        },
+        {
+          "text": "Recognize the costs only when the growers cash the payments.",
+          "why": "Accrual accounting does not let the cash settlement date determine the expense period for goods already sold."
+        },
+        {
+          "text": "Spread the payments over future periods because grower relationships benefit future crops.",
+          "why": "A continuing supplier relationship does not turn the acquisition cost of previously sold walnuts into a future-period asset."
+        }
+      ],
+      "explanation": "The SEC alleged that postponing walnut costs inflated Diamond's reported earnings. The lesson is to identify which goods a payment actually purchased and match the cost of sold goods to the related revenue, rather than follow the payment's label.",
+      "note": "US federal securities enforcement concerning fiscal 2010 and 2011 reporting. Diamond settled without admitting or denying the allegations; the cited release is not a trial judgment establishing them.",
+      "stats": [],
+      "source": {
+        "title": "SEC Charges Diamond Foods and Two Former Executives Following Accounting Scheme to Boost Earnings Growth",
+        "url": "https://www.sec.gov/newsroom/press-releases/2014-4",
+        "kind": "Historical enforcement case",
+        "note": "The January 9, 2014 release describes alleged deferral of prior-crop costs and Diamond's settlement without admission or denial. The teaching question adds no company metrics."
+      },
+      "evidence": "the payments were related to prior crop deliveries",
+      "calculations": []
+    },
+    {
+      "id": "investor-maximus-receivables-sales-cash-flow",
+      "mode": "investor",
+      "concept": "Receivables sales and operating cash-flow quality",
+      "caseType": "Historical case",
+      "prompt": "Maximus's US Form 10-Q for June 30, 2026 describes selling receivables to Wells Fargo and recording the transactions in operating cash flows. Before interpreting operating cash flow as evidence of faster customer payments, what should an analyst examine?",
+      "choices": [
+        {
+          "text": "Separate customer collections from receivables-sale proceeds and examine the program's timing, charges and availability.",
+          "why": "Selling invoices can bring cash forward without customers paying sooner. Program terms help assess how repeatable that liquidity is."
+        },
+        {
+          "text": "Treat all operating cash inflows as payments already received from customers.",
+          "why": "The filing explicitly identifies cash obtained from selling receivables to a bank."
+        },
+        {
+          "text": "Count the receivables-sale proceeds as additional service revenue.",
+          "why": "Monetizing an existing receivable does not represent another delivery of services or another customer sale."
+        },
+        {
+          "text": "Conclude that operating classification proves improper accounting.",
+          "why": "Classification alone does not establish misconduct. The filing discloses sale accounting and the cash-flow treatment."
+        }
+      ],
+      "explanation": "Maximus disclosed that it receives cash for transferred receivables less a financing charge and reports these transactions within operating cash flows. Analysts should distinguish cash raised by monetizing invoices from improvements in customer payment behavior when assessing cash-flow sustainability.",
+      "note": "Documented company practice in a US SEC quarterly filing for June 30, 2026. This is an analytical lesson, not an enforcement allegation or a current investment recommendation.",
+      "stats": [],
+      "source": {
+        "title": "mms-20260630",
+        "url": "https://www.sec.gov/Archives/edgar/data/1032220/000103222026000035/mms-20260630.htm",
+        "kind": "Official company quarterly filing",
+        "note": "Maximus's Form 10-Q, Note 10, describes the receivables purchase agreement, sale accounting, charges and operating cash-flow classification. The analytical choices are instructional."
+      },
+      "evidence": "We have recorded these transactions within our operating cash flows.",
+      "calculations": []
     }
   ],
-  "researchNote": "Researched and opened primary sources for three additions covering the least-populated modes: verdict, foundation, and lease. The pack combines Celsius’s 2025 operational disclosures filed in 2026 with established BDC acquisition and lease guidance. Fictional assumptions are explicitly identified; no files, accounts, or production systems were accessed."
+  "researchNote": "Researched and opened primary sources for three new questions: verdict, the least represented mode, plus foundation and investor, tied for next fewest. The pack combines a June 2026 company filing, an older SEC enforcement case, and Canadian acquisition guidance. Historical allegations are distinguished from admissions; fictional assumptions are explicitly labeled."
 }
 </script>
 <script>
