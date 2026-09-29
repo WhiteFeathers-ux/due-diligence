@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-09-28T15:36:56.885559+00:00",
+  "checkedAt": "2026-09-29T15:22:10.867209+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -923,9 +923,159 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "We have recorded these transactions within our operating cash flows.",
       "calculations": []
+    },
+    {
+      "id": "lease-blacks-service-charge-payment-timing",
+      "mode": "lease",
+      "concept": "Service-charge disputes and cash timing",
+      "caseType": "Historical case",
+      "prompt": "In its January 18, 2023 Blacks Outdoor Retail decision concerning English commercial leases, the UK Supreme Court required payment of certified service charges, subject to narrow defences, while preserving a later challenge to liability. What is the practical cash-planning lesson?",
+      "choices": [
+        {
+          "text": "Check payment timing separately from dispute rights and plan liquidity for charges payable before a challenge is resolved.",
+          "why": "A right to challenge the charge did not automatically postpone payment under these leases."
+        },
+        {
+          "text": "Treat a credible dispute as permission to retain the cash until judgment.",
+          "why": "The majority rejected that interpretation of the certification provision."
+        },
+        {
+          "text": "Treat payment as permanently accepting every item charged.",
+          "why": "The decision preserved the tenant's ability to contest underlying liability through a counterclaim."
+        },
+        {
+          "text": "Use the landlord's certificate only to estimate expenses, with no effect on cash timing.",
+          "why": "The certificate established an immediate payment obligation, subject to the permitted defences."
+        }
+      ],
+      "explanation": "The majority distinguished the obligation to pay a certified amount from ultimate liability for it. Lease diligence should examine both dispute procedures and the cash required while disputes proceed.",
+      "note": "Historical judicial decision concerning English leases, not an allegation or settlement. This contract-specific ruling is not a statement of US lease law; the financial lesson is an educational inference.",
+      "stats": [],
+      "source": {
+        "title": "Sara & Hossein Asset Holdings Ltd (a company incorporated in the British Virgin Islands) (Respondent) v Blacks Outdoor Retail Ltd (Appellant)",
+        "url": "https://supremecourt.uk/uploads/uksc_2021_0027_press_summary_1b348c2992.pdf",
+        "kind": "Official judgment press summary",
+        "note": "The court's summary establishes the majority's payment and counterclaim conclusions in [2023] UKSC 2. No company financial figures are invented."
+      },
+      "evidence": "payment of the certified sum does not preclude Blacks from later disputing liability for that payment.",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-vendor-note-maturity",
+      "mode": "verdict",
+      "concept": "Debt maturity and acquisition financing",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Birch Crumb can cover interest and routine operations, but its acquisition requires a seller note repayable in full after one year. Verified cash forecasts cannot fund that maturity; lenders have declined refinancing and no additional equity is available. The seller refuses instalments or a price change. At these terms, what is your verdict?",
+      "choices": [
+        {
+          "text": "Pass",
+          "why": "The required repayment is demonstrably unfunded, and the available financing and negotiation paths have been exhausted."
+        },
+        {
+          "text": "Invest",
+          "why": "Covering interest does not establish the ability to repay principal when it falls due."
+        },
+        {
+          "text": "Investigate",
+          "why": "The decisive cash shortfall and unavailable remedies are already verified; further investigation alone cannot fix these offered terms."
+        }
+      ],
+      "explanation": "BDC explains that overly short or inflexible acquisition financing can disrupt repayments. In this fictional deal, acceptable operating performance cannot overcome a verified, unfunded principal maturity.",
+      "note": "Birch Crumb, all figures, financing terms and diligence findings are fictional training assumptions. Canadian practitioner guidance supports the financing lesson, not a claim about a real bakery.",
+      "stats": [
+        [
+          "Revenue",
+          "CAD 960,000 annually"
+        ],
+        [
+          "Margins",
+          "12% normalized EBITDA margin"
+        ],
+        [
+          "Customer mix",
+          "Retail-led; largest wholesale customer 7% of sales"
+        ],
+        [
+          "Occupancy",
+          "8% of sales, including contractual additional rent"
+        ],
+        [
+          "Debt",
+          "CAD 300,000 seller note; principal due after one year"
+        ],
+        [
+          "AR days",
+          "18 days on credit sales"
+        ]
+      ],
+      "source": {
+        "title": "How to finance the sale of your business",
+        "url": "https://www.bdc.ca/en/articles-tools/change-ownership/sell-business/how-finance-sale-your-business",
+        "kind": "Practitioner guidance",
+        "note": "BDC discusses repayment risks from aggressive acquisition financing and short amortization. The bakery, balloon maturity and verified funding constraints are invented."
+      },
+      "evidence": "This could lead to an interruption of repayments of vendor financing.",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-untested-price-increase",
+      "mode": "verdict",
+      "concept": "Pricing assumptions, demand and valuation",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ohio bakery Juniper Counter's asking price is supported only by a forecast assuming a menu-price increase with unchanged transaction volume. Historical results are verified, but customer response is untested. The seller permits a pricing trial and will revisit valuation; other diligence is satisfactory. Before accepting the asking price, what is your verdict?",
+      "choices": [
+        {
+          "text": "Investigate",
+          "why": "The critical price-and-volume assumption is unresolved but testable, and the seller permits both testing and repricing."
+        },
+        {
+          "text": "Invest",
+          "why": "Verified historical earnings do not validate the untested improvement needed to support the asking price."
+        },
+        {
+          "text": "Pass",
+          "why": "Demand sensitivity is not yet established as unacceptable, and a practical route to resolve the uncertainty remains open."
+        }
+      ],
+      "explanation": "The National Restaurant Association's September 17, 2026 update describes operators' concern that passing through costs could weaken traffic. That industry evidence supports testing this fictional bakery's pricing assumptions; it does not establish how its customers will respond.",
+      "note": "Juniper Counter, all statistics, the proposed price increase and transaction conditions are fictional. The US industry update provides context, not bakery-specific evidence or a valuation.",
+      "stats": [
+        [
+          "Revenue",
+          "USD 840,000 annually"
+        ],
+        [
+          "Margins",
+          "9% historical normalized EBITDA margin"
+        ],
+        [
+          "Customer mix",
+          "Walk-in retail; no contracted wholesale accounts"
+        ],
+        [
+          "Occupancy",
+          "7% of historical sales"
+        ],
+        [
+          "Debt",
+          "Proposed USD 160,000 acquisition term loan"
+        ],
+        [
+          "AR days",
+          "0 days; payment at purchase"
+        ]
+      ],
+      "source": {
+        "title": "Affordability Pressures Mount, but Consumers Continue to Prioritize Restaurants",
+        "url": "https://www.restaurant.org/research-and-media/research/restaurant-economic-insights/analysis-commentary/affordability-pressures-mount,-but-consumers-continue-to-prioritize-restaurants/",
+        "kind": "First-party industry research",
+        "note": "Published September 17, 2026; describes pricing pressure and consumer demand concerns. The acquisition and proposed validation exercise are fictional adaptations."
+      },
+      "evidence": "Many operators remain reluctant to pass along higher costs for fear of further weakening already-soft traffic trends.",
+      "calculations": []
     }
   ],
-  "researchNote": "Researched and opened primary sources for three new questions: verdict, the least represented mode, plus foundation and investor, tied for next fewest. The pack combines a June 2026 company filing, an older SEC enforcement case, and Canadian acquisition guidance. Historical allegations are distinguished from admissions; fictional assumptions are explicitly labeled."
+  "researchNote": "Researched and opened public primary sources for three new cases in the two least-represented modes: verdict and lease. Sources include a September 17, 2026 industry update, a 2023 UK Supreme Court decision, and Canadian acquisition-financing guidance. Fictional assumptions are explicitly labeled; no files, accounts, or private data were accessed."
 }
 </script>
 <script>
