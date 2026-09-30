@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-09-29T15:22:10.867209+00:00",
+  "checkedAt": "2026-09-30T14:14:22.891982+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -1073,9 +1073,117 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "Many operators remain reluctant to pass along higher costs for fear of further weakening already-soft traffic trends.",
       "calculations": []
+    },
+    {
+      "id": "foundation-macys-delivery-accrual-correction",
+      "mode": "foundation",
+      "concept": "Expense accruals connect income and liabilities",
+      "caseType": "Historical case",
+      "prompt": "Macy's US annual report for the year ended February 1, 2025 describes corrections to delivery expense and its related accrual. In a simplified unpaid-delivery example, what happens if an incurred expense and corresponding liability are omitted?",
+      "choices": [
+        {
+          "text": "Profit is overstated and liabilities are understated; recording the accrual does not itself pay cash.",
+          "why": "The missing expense inflates profit, while the missing obligation understates liabilities. Recognition and payment are separate events."
+        },
+        {
+          "text": "Profit is overstated, but liabilities remain correct until the invoice is paid.",
+          "why": "An incurred unpaid obligation belongs in liabilities even before payment."
+        },
+        {
+          "text": "Profit remains correct because only paid delivery bills count as expenses.",
+          "why": "Accrual accounting recognizes incurred expenses rather than waiting for cash payment."
+        },
+        {
+          "text": "Correcting the accrual immediately reduces both profit and bank cash.",
+          "why": "Recording an unpaid expense reduces profit and adds a liability; cash changes when payment occurs."
+        }
+      ],
+      "explanation": "Macy's reported revisions for delivery-expense misstatements, including the related accrual and tax effects. The simplified exercise shows why reviewing expense recognition and liability completeness together matters, even when no cash moves at recognition.",
+      "note": "Documented company disclosure in a US SEC filing, not an enforcement judgment. The unpaid-delivery example is a training assumption; tax effects are excluded and no company amounts are invented.",
+      "stats": [],
+      "source": {
+        "title": "Macy's, Inc. Form 10-K for the fiscal year ended February 1, 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/794367/000162828025014315/m-20250201.htm",
+        "kind": "Historical company filing",
+        "note": "Note 1 documents delivery-expense corrections and related accrual and tax effects. The exercise invents a simplified unpaid-expense scenario."
+      },
+      "evidence": "to properly report delivery expense, the related accrual and tax effects.",
+      "calculations": []
+    },
+    {
+      "id": "investor-logitech-channel-concentration-2026",
+      "mode": "investor",
+      "concept": "Customer concentration versus end-user diversification",
+      "caseType": "Historical case",
+      "prompt": "Logitech's fiscal 2026 US filing identifies concentrated gross sales through Amazon, Ingram Micro and TD Synnex, without long-term commitments. Which diligence approach best assesses this risk despite many end users?",
+      "choices": [
+        {
+          "text": "Review channel terms and stress-test a major partner reducing orders, including replacement channels and cash effects.",
+          "why": "Many end users can still depend on a few commercial gateways; order reductions and changing terms can affect cash and margins."
+        },
+        {
+          "text": "Treat the end-user count as sufficient proof that customer concentration is immaterial.",
+          "why": "End-user diversity does not eliminate reliance on the intermediaries buying and distributing the products."
+        },
+        {
+          "text": "Assume established relationships guarantee orders throughout the valuation forecast.",
+          "why": "The filing explicitly says these customers lack long-term commitments."
+        },
+        {
+          "text": "Apply a lower valuation multiple without examining channel terms or replacement capacity.",
+          "why": "A generic discount does not establish the size, timing or recoverability of the operational exposure."
+        }
+      ],
+      "explanation": "Logitech's fiscal 2026 filing distinguishes a broad distribution network from concentrated sales through major partners. It also describes possible effects on pricing, inventory and payment terms, making a channel-specific downside review more useful than counting end users alone.",
+      "note": "Real fiscal 2026 disclosures by a Swiss company in a US SEC filing. The diligence choices are educational interpretations, not a current investment recommendation or a claim that any named partner has reduced orders.",
+      "stats": [],
+      "source": {
+        "title": "Logitech International S.A. Form 10-K for the fiscal year ended March 31, 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1032975/000103297526000021/logi-20260331.htm",
+        "kind": "Company annual filing",
+        "note": "Establishes major-channel concentration and lack of long-term commitments. The exercise proposes diligence; it invents no actual customer departure."
+      },
+      "evidence": "We do not have long-term commitments with those customers.",
+      "calculations": []
+    },
+    {
+      "id": "lease-bakery-base-rent-versus-occupancy",
+      "mode": "lease",
+      "concept": "Full occupancy cost and lease escalations",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Flour Lantern prefers a storefront with lower advertised base rent. Its draft also charges property taxes, common-area costs and scheduled rent increases. What should it compare before choosing the space?",
+      "choices": [
+        {
+          "text": "Compare all contractual occupancy costs over the lease term, using supporting bills and realistic bakery operating forecasts.",
+          "why": "Base rent alone omits expenses and increases that can change affordability over time."
+        },
+        {
+          "text": "Choose the lower base rent and assess additional charges after opening.",
+          "why": "Waiting until opening leaves contractual costs outside the decision that commits the bakery."
+        },
+        {
+          "text": "Use the previous tenant's total bill unchanged because the premises are identical.",
+          "why": "Bakery operations may use utilities differently, and historical bills do not capture every future increase."
+        },
+        {
+          "text": "Compare first-year total costs only because later sales growth should cover escalations.",
+          "why": "Unverified growth does not establish that future contractual increases are affordable."
+        }
+      ],
+      "explanation": "BDC advises reviewing incidentals, obtaining past bills and forecasting costs for each year of the lease. The bakery should test whether realistic revenues support the full occupancy commitment, including changes in usage and scheduled increases.",
+      "note": "Flour Lantern and all proposed lease circumstances are fictional. Canadian practitioner guidance informs an Ontario training scenario; this case asserts no statutory protection or US legal rule.",
+      "stats": [],
+      "source": {
+        "title": "How to budget effectively before leasing a commercial space",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-budget-effectively-before-leasing-commercial-space",
+        "kind": "Practitioner guidance",
+        "note": "BDC explains hidden occupancy costs, escalations, supporting bills and annual forecasts. The bakery and its proposed lease are invented."
+      },
+      "evidence": "Ask the landlord for copies of past bills.",
+      "calculations": []
     }
   ],
-  "researchNote": "Researched and opened public primary sources for three new cases in the two least-represented modes: verdict and lease. Sources include a September 17, 2026 industry update, a 2023 UK Supreme Court decision, and Canadian acquisition-financing guidance. Fictional assumptions are explicitly labeled; no files, accounts, or private data were accessed."
+  "researchNote": "All four supplied mode counts are tied at five. Added three distinct questions across foundation, investor and lease, using opened primary sources: a documented Macy's accounting correction, Logitech's fiscal 2026 customer-risk disclosures, and BDC commercial occupancy guidance. Searched current developments and older cases; no files changed or accounts accessed."
 }
 </script>
 <script>
