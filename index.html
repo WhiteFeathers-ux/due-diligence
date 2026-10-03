@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-09-30T14:14:22.891982+00:00",
+  "checkedAt": "2026-10-03T12:32:11.400146+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -1181,9 +1181,138 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "Ask the landlord for copies of past bills.",
       "calculations": []
+    },
+    {
+      "id": "verdict-bakery-essential-equipment-replacement",
+      "mode": "verdict",
+      "concept": "Essential capital expenditure and acquisition viability",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Willow Batch has verified earnings, but an independent equipment inspection confirms its essential oven needs replacement immediately after closing. Firm installation quotes and downtime are included in independently checked cash forecasts, which show unpaid payroll unless extra funding is secured. Lenders have declined, no additional equity is available, and the seller refuses a price reduction or funded replacement. At these offered terms, what is the verdict?",
+      "choices": [
+        {
+          "text": "Pass",
+          "why": "The essential replacement creates a verified funding shortfall, and the stated financing and negotiation routes are exhausted."
+        },
+        {
+          "text": "Investigate",
+          "why": "Inspection, replacement pricing and cash effects have already been verified; no unresolved, realistically resolvable funding question remains at these terms."
+        },
+        {
+          "text": "Invest",
+          "why": "Verified historical earnings do not fund the essential replacement or the resulting payroll shortfall."
+        }
+      ],
+      "explanation": "BDC advises buyers to assess equipment and account for changes whose costs can reduce investment returns. In this fictional case, essential replacement and downtime make the offered transaction unaffordable after verification, supporting Pass at these terms.",
+      "note": "Willow Batch, its Ontario location, all financial figures and every inspection, financing and negotiation outcome are fictional training assumptions. No Canadian legal protection is asserted.",
+      "stats": [
+        [
+          "Revenue",
+          "CAD 900,000 annually"
+        ],
+        [
+          "Margins",
+          "12% historical EBITDA margin, before oven replacement expenditure"
+        ],
+        [
+          "Customer mix",
+          "Retail-led; largest wholesale customer 8% of revenue"
+        ],
+        [
+          "Occupancy",
+          "Written assignable lease; CAD 60,000 annual total occupancy cost"
+        ],
+        [
+          "Debt",
+          "CAD 250,000 proposed acquisition loan; no additional funding available"
+        ],
+        [
+          "AR days",
+          "18 days"
+        ]
+      ],
+      "source": {
+        "title": "The steps you need to take BEFORE buying a business",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/due-diligence-valuation",
+        "kind": "Practitioner guidance",
+        "note": "BDC establishes the need to assess equipment condition and acquisition-related changes. The bakery, figures, failed funding routes and verdict scenario are invented."
+      },
+      "evidence": "a record of how well the machinery is working",
+      "calculations": []
+    },
+    {
+      "id": "investor-dxc-non-gaap-adjustment-substance",
+      "mode": "investor",
+      "concept": "Earnings quality and unsupported expense add-backs",
+      "caseType": "Historical case",
+      "prompt": "The SEC's March 14, 2023 US settled order found that DXC improperly excluded expenses as transaction, separation and integration costs in non-GAAP results. Before valuing a business using similarly adjusted earnings, which check best tests the add-backs?",
+      "choices": [
+        {
+          "text": "Trace excluded costs to supporting records, test their fit with the stated adjustment policy, and assess whether they recur.",
+          "why": "This tests the substance and sustainability of the exclusions rather than accepting their labels."
+        },
+        {
+          "text": "Accept all exclusions if the reconciliation correctly adds them back to GAAP earnings.",
+          "why": "A mathematically accurate reconciliation can still exclude costs that do not fit the disclosed rationale."
+        },
+        {
+          "text": "Accept expenses coded to an integration project as evidence that they are exceptional.",
+          "why": "An internal project code does not establish the expense's actual connection to a transaction or its recurrence."
+        },
+        {
+          "text": "Use adjusted earnings whenever they are higher, because they better represent the business's potential.",
+          "why": "Choosing the higher measure without examining exclusions can overstate sustainable earnings and support an excessive valuation."
+        }
+      ],
+      "explanation": "The SEC's settled order found that DXC's expense classifications were inconsistent with its disclosures and made non-GAAP results materially misleading. DXC settled without admitting or denying the findings, except jurisdiction; the transferable lesson is to verify adjustment substance before relying on adjusted earnings.",
+      "note": "US SEC administrative proceeding dated March 14, 2023, concerning reporting from fiscal 2018 through the third quarter of fiscal 2020. These are findings in a settled order, not an admission or a contested court judgment; the diligence choices are teaching applications.",
+      "stats": [],
+      "source": {
+        "title": "ORDER INSTITUTING CEASE-AND-DESIST PROCEEDINGS PURSUANT TO SECTION 8A OF THE SECURITIES ACT OF 1933 AND SECTION 21C OF THE SECURITIES EXCHANGE ACT OF 1934, MAKING FINDINGS, AND IMPOSING A CEASE-AND-DESIST ORDER",
+        "url": "https://www.sec.gov/litigation/admin/2023/33-11166.pdf",
+        "kind": "Historical enforcement case",
+        "note": "SEC order in the matter of DXC Technology Company, Release No. 11166. Establishes settled findings about misleading non-GAAP exclusions; no current valuation or investment recommendation is inferred."
+      },
+      "evidence": "DXC did not have a non-GAAP policy or adequate disclosure controls and procedures",
+      "calculations": []
+    },
+    {
+      "id": "foundation-mcgrath-equipment-cash-flow-classification",
+      "mode": "foundation",
+      "concept": "Capital expenditure and statement relationships",
+      "caseType": "Historical case",
+      "prompt": "McGrath's February 25, 2026 US earnings release places purchases of rental equipment under investing cash flows. In a simplified purchase paid entirely in cash and properly capitalized, what happens at purchase, before depreciation?",
+      "choices": [
+        {
+          "text": "Cash falls, equipment assets rise, and an investing cash outflow is recorded without an immediate purchase-price expense.",
+          "why": "Capitalization records an asset, while the cash-flow statement records the cash spent in investing activities."
+        },
+        {
+          "text": "Cash falls and the entire purchase price immediately reduces net income as an operating expense.",
+          "why": "This treats a properly capitalized asset purchase as an immediate expense rather than recognizing expense through later depreciation."
+        },
+        {
+          "text": "Equipment assets rise, but cash stays unchanged because capitalization postpones payment recognition.",
+          "why": "Capitalization changes expense timing; it does not erase a cash payment already made."
+        },
+        {
+          "text": "Cash falls and the purchase is a financing outflow because the equipment will earn future revenue.",
+          "why": "Expected future revenue does not make an asset purchase a financing transaction; this purchase is reported in investing activities."
+        }
+      ],
+      "explanation": "McGrath's 2026 release reports rental-equipment purchases as investing cash outflows. A properly capitalized cash purchase can therefore consume cash without immediately reducing net income by the purchase price, so earnings alone do not show equipment funding needs.",
+      "note": "Actual reporting: McGrath's release dated February 25, 2026, covering the year ended December 31, 2025, filed with the US SEC. The single cash purchase and timing before depreciation are simplified training assumptions, not a reconstruction of a particular McGrath transaction.",
+      "stats": [],
+      "source": {
+        "title": "McGrath Announces Results for Fourth Quarter 2025 and Announces 35th Annual Dividend Increase",
+        "url": "https://www.sec.gov/Archives/edgar/data/752714/000119312526071461/mgrc-ex99_1.htm",
+        "kind": "SEC-filed company earnings release",
+        "note": "The cash-flow statement places rental-equipment purchases under investing activities. The exercise invents a simplified properly capitalized, all-cash purchase to teach statement relationships."
+      },
+      "evidence": "Purchases of rental equipment",
+      "calculations": []
     }
   ],
-  "researchNote": "All four supplied mode counts are tied at five. Added three distinct questions across foundation, investor and lease, using opened primary sources: a documented Macy's accounting correction, Logitech's fiscal 2026 customer-risk disclosures, and BDC commercial occupancy guidance. Searched current developments and older cases; no files changed or accounts accessed."
+  "researchNote": "Researched and opened primary sources on 2026-10-03. Verdict had the fewest supplied cases; investor and foundation were tied with lease. Three additions cover verdict, investor and foundation, using 2026 company reporting, a 2023 settled SEC enforcement order and Canadian acquisition guidance. McGrath's full annual filing could not be fetched, so its opened SEC-filed earnings release supports the question instead. No scored arithmetic."
 }
 </script>
 <script>
