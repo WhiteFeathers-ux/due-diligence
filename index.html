@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-03T12:32:11.400146+00:00",
+  "checkedAt": "2026-10-04T12:02:30.254280+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -1310,9 +1310,174 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "Purchases of rental equipment",
       "calculations": []
+    },
+    {
+      "id": "lease-bakery-allowance-reimbursement-timing",
+      "mode": "lease",
+      "concept": "Tenant improvement allowances and opening cash requirements",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Amber Crust receives a renovation allowance payable only after completed work and approved invoices. Its opening budget treats that allowance as cash available to pay contractors upfront. What should the owner do before signing?",
+      "choices": [
+        {
+          "text": "Confirm reimbursement conditions and arrange funding for payments due before the allowance arrives.",
+          "why": "A contribution toward renovation costs does not eliminate the need to finance payments that precede reimbursement."
+        },
+        {
+          "text": "Deduct the allowance from upfront funding needs because the landlord has promised it.",
+          "why": "This confuses the ultimate cost contribution with the timing of available cash."
+        },
+        {
+          "text": "Assume contractors must wait until the landlord reimburses the bakery.",
+          "why": "The landlord's reimbursement terms do not establish the contractors' payment terms."
+        },
+        {
+          "text": "Replace the renovation cash forecast with an annual profit forecast.",
+          "why": "Annual profitability does not establish whether cash is available when construction bills fall due."
+        }
+      ],
+      "explanation": "BDC describes renovation allowances and recommends arranging appropriate financing before signing. In this exercise, reimbursement follows completed work, so the bakery must fund earlier payments and confirm eligible costs and payment conditions in writing.",
+      "note": "Amber Crust and all contract and budget assumptions are fictional. Canadian practitioner guidance supports the planning lesson; the reimbursement sequence is a training assumption, not a universal lease rule.",
+      "stats": [],
+      "source": {
+        "title": "Leasehold improvements: The 8 steps to follow",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-protect-your-business-when-making-lease-hold-improvements",
+        "kind": "Practitioner guidance",
+        "note": "Establishes that landlords may contribute renovation allowances and that tenants should arrange suitable financing. The bakery and reimbursement conditions are invented."
+      },
+      "evidence": "Before signing the lease, meet with your banker",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-prohibited-essential-buildout",
+      "mode": "verdict",
+      "concept": "Essential lease permissions as an acquisition condition",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Saffron Loaf is offered as an operating-business acquisition. Independent inspection confirms that continuing production requires a new exhaust installation. Counsel confirms the offered lease prohibits it; the landlord has refused written permission. No feasible alternative installation or relocation exists, and the seller refuses to change the deal. At these terms, what is the verdict?",
+      "choices": [
+        {
+          "text": "Pass",
+          "why": "An essential operating requirement conflicts with verified lease terms, and the stated alternatives and negotiations are exhausted."
+        },
+        {
+          "text": "Investigate",
+          "why": "The decisive permission issue has already been resolved adversely; the scenario identifies no remaining feasible remedy."
+        },
+        {
+          "text": "Invest",
+          "why": "Historical earnings cannot support an acquisition whose essential production installation is prohibited under the offered terms."
+        }
+      ],
+      "explanation": "BDC advises checking that the lease and zoning allow planned improvements. Here, the verified prohibition blocks an essential installation and no feasible remedy remains, making the offered deal unacceptable.",
+      "note": "Saffron Loaf, every financial statistic, inspection conclusion, legal review and negotiation outcome are fictional training assumptions. This is Canadian lease-planning practice, not a statement of US law.",
+      "stats": [
+        [
+          "Revenue",
+          "Fictional: CAD 780,000 annually"
+        ],
+        [
+          "Margins",
+          "Fictional: 12% historical operating margin"
+        ],
+        [
+          "Customer mix",
+          "Fictional: 70% retail, 30% wholesale"
+        ],
+        [
+          "Occupancy",
+          "Fictional: CAD 5,200 monthly all-in occupancy cost"
+        ],
+        [
+          "Debt",
+          "Fictional: CAD 160,000 proposed acquisition debt"
+        ],
+        [
+          "AR days",
+          "Fictional: 24 days"
+        ]
+      ],
+      "source": {
+        "title": "12 tips for negotiating a commercial lease",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-negotiate-commercial-lease-effectively",
+        "kind": "Practitioner guidance",
+        "note": "Establishes the need to verify permission for planned improvements. All acquisition facts, statistics and the confirmed lack of remedies are invented."
+      },
+      "evidence": "You should make sure the lease and zoning allow your planned leasehold improvements",
+      "calculations": []
+    },
+    {
+      "id": "foundation-csc-unapproved-contract-amendments",
+      "mode": "foundation",
+      "concept": "Contract evidence and supportable accounting estimates",
+      "caseType": "Historical case",
+      "prompt": "The SEC's June 5, 2015 US action described CSC basing NHS contract accounting models on proposed amendments that the customer repeatedly rejected. Which lesson best applies when estimating profit on a troubled contract?",
+      "choices": [
+        {
+          "text": "Use supportable contract rights and estimates; do not treat rejected price increases as agreed revenue.",
+          "why": "Expected customer concessions require evidence; rejected proposals cannot substitute for the actual contract."
+        },
+        {
+          "text": "Use management's preferred amendment if it would restore the contract's profitability.",
+          "why": "A desirable outcome does not establish an enforceable agreement or a supportable estimate."
+        },
+        {
+          "text": "Keep the original profit estimate until the entire contract is completed.",
+          "why": "Waiting for completion ignores evidence that can require revising estimates during performance."
+        },
+        {
+          "text": "Treat any customer prepayment as proof that the proposed higher price was accepted.",
+          "why": "Cash timing alone does not demonstrate agreement to different pricing or validate a profit estimate."
+        }
+      ],
+      "explanation": "The SEC described CSC avoiding earnings reductions by using proposed amendments instead of its actual NHS contract. The lesson is to test accounting estimates against documented rights and current evidence; CSC settled without admitting or denying the SEC's findings.",
+      "note": "Historical US SEC enforcement concerning a UK NHS contract. This describes the SEC's enforcement account and settlement status, not a final court judgment or a current investment verdict.",
+      "stats": [],
+      "source": {
+        "title": "SEC Charges CSC and Former Executives With Accounting Fraud",
+        "url": "https://www.sec.gov/newsroom/press-releases/2015-111",
+        "kind": "Historical enforcement case",
+        "note": "Describes accounting based on proposed contract amendments and repeated customer rejection. CSC and settling executives neither admitted nor denied the findings; the exercise invents only the answer alternatives."
+      },
+      "evidence": "rather than the actual contract",
+      "calculations": []
+    },
+    {
+      "id": "investor-intuitive-machines-backlog-conversion",
+      "mode": "investor",
+      "concept": "Backlog quality and conversion into revenue and cash",
+      "caseType": "Historical case",
+      "prompt": "Intuitive Machines' US annual filing for December 31, 2025, published in 2026, says backlog is not guaranteed revenue and describes appropriation and cancellation risks. Before using backlog to support a valuation, what should an analyst examine?",
+      "choices": [
+        {
+          "text": "Contract funding, cancellation rights, performance schedules and the timing of billing and collection.",
+          "why": "These determine whether estimated future work becomes earned revenue and usable cash."
+        },
+        {
+          "text": "Treat awarded backlog as cash already available to fund operations.",
+          "why": "An award for future performance is not an existing cash balance."
+        },
+        {
+          "text": "Value backlog exactly like recognized revenue because both arise from customer contracts.",
+          "why": "Backlog includes future work subject to performance and other uncertainties."
+        },
+        {
+          "text": "Add every unexercised contract option to the company's reported backlog.",
+          "why": "The filing explicitly excludes option periods that customers have not exercised."
+        }
+      ],
+      "explanation": "The filing defines backlog as estimated future revenue from awarded contracts and warns that it may differ from actual recognized revenue. Valuation diligence should test conversion conditions and cash timing rather than assume the full backlog is earned or collected.",
+      "note": "Real company disclosure for the year ended December 31, 2025, in a 2026 US filing. This asks for a financial lesson, not a current buy or sell recommendation; no missing company statistics were invented.",
+      "stats": [],
+      "source": {
+        "title": "Intuitive Machines, Inc. Form 10-K for the year ended December 31, 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1844452/000162828026019865/lunr-20251231.htm",
+        "kind": "Official company filing",
+        "note": "The Backlog section establishes its definition, excluded options, appropriation exposure and cancellation risks. The exercise invents only the diligence alternatives."
+      },
+      "evidence": "Although backlog is not a guarantee of future revenue",
+      "calculations": []
     }
   ],
-  "researchNote": "Researched and opened primary sources on 2026-10-03. Verdict had the fewest supplied cases; investor and foundation were tied with lease. Three additions cover verdict, investor and foundation, using 2026 company reporting, a 2023 settled SEC enforcement order and Canadian acquisition guidance. McGrath's full annual filing could not be fetched, so its opened SEC-filed earnings release supports the question instead. No scored arithmetic."
+  "researchNote": "Opened primary sources for a 2026 SEC-filed company report, a 2015 SEC enforcement action and Canadian commercial-lease guidance. Four new questions cover all modes, including the two least-populated modes, lease and verdict. Fictional assumptions are identified separately from source facts; no files, accounts or production systems were changed."
 }
 </script>
 <script>
