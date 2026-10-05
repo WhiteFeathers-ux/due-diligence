@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-04T12:02:30.254280+00:00",
+  "checkedAt": "2026-10-05T12:04:52.683402+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -1475,9 +1475,138 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "Although backlog is not a guarantee of future revenue",
       "calculations": []
+    },
+    {
+      "id": "lease-bakery-subletting-exit-assumption",
+      "mode": "lease",
+      "concept": "Subletting assumptions and continuing lease obligations",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Rye Window budgets an easy exit if sales disappoint: it assumes another tenant will take its space and rent payments will stop. The proposed lease prohibits subletting without landlord consent and provides no automatic release. What should the owner do before relying on that exit?",
+      "choices": [
+        {
+          "text": "Have counsel negotiate and document consent requirements, exit costs and any release of continuing obligations.",
+          "why": "The exit plan depends on contractual rights and obligations that the current draft does not provide."
+        },
+        {
+          "text": "Budget no further rent once a replacement tenant expresses interest.",
+          "why": "Interest from a replacement tenant does not establish landlord consent or release the bakery."
+        },
+        {
+          "text": "Assume permission to sublet also ends the bakery’s liability.",
+          "why": "Permission to use a subtenant and release from continuing obligations are separate matters to establish."
+        },
+        {
+          "text": "Treat the security deposit as the maximum possible exit cost.",
+          "why": "The deposit does not establish a contractual cap on remaining obligations."
+        }
+      ],
+      "explanation": "BDC advises checking termination conditions and whether subletting is permitted. This fictional Ontario lease requires a documented exit arrangement before the owner can count on avoiding further payments.",
+      "note": "Rye Window, its proposed lease and its exit budget are fictional training assumptions. Canadian practitioner guidance is used, without asserting an automatic legal right or applying foreign law to US leases.",
+      "stats": [],
+      "source": {
+        "title": "How to negotiate a commercial lease effectively",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-negotiate-commercial-lease-effectively",
+        "kind": "Practitioner guidance",
+        "note": "BDC recommends reviewing termination and subletting conditions. The bakery, consent restriction and absence of release are invented exercise facts."
+      },
+      "evidence": "Also, look at whether you can sublease the space.",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-inventory-condition-unverified",
+      "mode": "verdict",
+      "concept": "Inventory quality and acquisition working capital",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Oat Finch’s price includes ingredient inventory at recorded cost. Quantities are counted, but storage records and usable shelf life remain unverified; opening working capital assumes all stock is usable. The seller permits inspection and a closing adjustment for unusable stock. Other diligence is satisfactory. Before committing, what is the verdict?",
+      "choices": [
+        {
+          "text": "Investigate",
+          "why": "Inventory usability and its working-capital effect remain unresolved, but inspection and a price adjustment can resolve them."
+        },
+        {
+          "text": "Invest",
+          "why": "Counting stock verifies quantity, not condition or usable value; the opening funding assumption remains unsupported."
+        },
+        {
+          "text": "Pass",
+          "why": "No unacceptable condition has been verified, and the seller has provided a practical way to investigate and adjust the deal."
+        }
+      ],
+      "explanation": "BDC recommends checking inventory age, condition and obsolescence during acquisition diligence. Verify usable stock and revise the closing adjustment and opening cash forecast before accepting the price.",
+      "note": "Oat Finch, all statistics, seller cooperation and diligence findings are fictional training assumptions. Recorded margins and inventory quantities do not establish usable inventory value.",
+      "stats": [
+        [
+          "Revenue",
+          "CAD 780,000 annually"
+        ],
+        [
+          "Margins",
+          "Recorded gross margin 52%; operating margin 9%"
+        ],
+        [
+          "Customer mix",
+          "Retail 80%; wholesale 20%"
+        ],
+        [
+          "Occupancy",
+          "CAD 4,200 monthly contractual occupancy cost"
+        ],
+        [
+          "Debt",
+          "Proposed acquisition loan CAD 180,000"
+        ],
+        [
+          "AR days",
+          "Wholesale receivables average 24 days"
+        ]
+      ],
+      "source": {
+        "title": "The steps you need to take BEFORE buying a business",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/due-diligence-valuation",
+        "kind": "Practitioner guidance",
+        "note": "BDC identifies inventory condition and obsolescence checks. The company, numbers, unverified storage history and adjustable purchase terms are fictional."
+      },
+      "evidence": "check the age and condition of the stock",
+      "calculations": []
+    },
+    {
+      "id": "investor-leslies-seasonal-liquidity-2026",
+      "mode": "investor",
+      "concept": "Seasonal liquidity and uncommitted refinancing",
+      "caseType": "Historical case",
+      "prompt": "Leslie’s US Form 10-Q for July 4, 2026 describes reliance on third- and fourth-quarter operating cash and says management’s plans do not alleviate substantial going-concern doubt. Which diligence approach best tests cash runway?",
+      "choices": [
+        {
+          "text": "Examine cash forecasts through seasonal troughs, debt obligations and committed funding, separating proposed remedies from secured resources.",
+          "why": "Timing and funding certainty determine whether cash is available when operating and debt payments fall due."
+        },
+        {
+          "text": "Use expected peak-season receipts as evidence that liquidity is adequate throughout the year.",
+          "why": "Seasonal receipts do not establish that cash covers earlier or later payment obligations."
+        },
+        {
+          "text": "Treat lender discussions as committed refinancing.",
+          "why": "Exploring alternatives does not establish an executed financing agreement or available funds."
+        },
+        {
+          "text": "Treat preparation on a going-concern basis as confirmation that the liquidity problem is resolved.",
+          "why": "The filing uses that basis while explicitly stating that substantial doubt remains."
+        }
+      ],
+      "explanation": "Leslie’s disclosed seasonal dependence and concluded that management’s plans did not alleviate substantial doubt. The transferable lesson is to test payment timing and funding commitments rather than count proposed refinancing as available cash.",
+      "note": "Documented US company disclosure for the quarter ended July 4, 2026, reviewed on October 5, 2026. This is neither an enforcement allegation nor a bankruptcy judgment, and the question makes no current investment recommendation.",
+      "stats": [],
+      "source": {
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1821806/000119312526347169/lesl-20260704.htm",
+        "kind": "Company quarterly filing",
+        "note": "Leslie’s Note 1 documents seasonal cash dependence and unresolved going-concern doubt. The diligence choices are educational interpretations; no company metrics are invented."
+      },
+      "evidence": "management’s plans do not alleviate the substantial doubt",
+      "calculations": []
     }
   ],
-  "researchNote": "Opened primary sources for a 2026 SEC-filed company report, a 2015 SEC enforcement action and Canadian commercial-lease guidance. Four new questions cover all modes, including the two least-populated modes, lease and verdict. Fictional assumptions are identified separately from source facts; no files, accounts or production systems were changed."
+  "researchNote": "Opened primary sources for a 2026 Leslie’s liquidity disclosure and established BDC commercial-lease and acquisition guidance. Three new questions cover lease and verdict, the two least-populated modes, plus investor. Fictional assumptions are explicitly identified; no scored arithmetic is included."
 }
 </script>
 <script>
