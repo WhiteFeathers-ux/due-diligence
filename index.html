@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-05T12:04:52.683402+00:00",
+  "checkedAt": "2026-10-06T12:03:49.110005+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -1604,9 +1604,81 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "management’s plans do not alleviate the substantial doubt",
       "calculations": []
+    },
+    {
+      "id": "foundation-starbucks-2026-impairment-statement-links",
+      "mode": "foundation",
+      "concept": "Asset impairment, earnings and cash-flow relationships",
+      "caseType": "Historical case",
+      "prompt": "Starbucks's US Form 10-Q for June 28, 2026 describes impairment associated with its Reserve and Roastery locations. Isolating a noncash asset impairment and ignoring tax effects, what happens when it is recorded?",
+      "choices": [
+        {
+          "text": "Asset carrying value and earnings fall; the impairment itself does not use cash.",
+          "why": "The write-down reduces the recorded asset and creates an expense without a payment at recognition."
+        },
+        {
+          "text": "Earnings and cash fall together by the impairment amount.",
+          "why": "This confuses recognition of a noncash loss with paying a restructuring bill."
+        },
+        {
+          "text": "Only asset carrying value falls; earnings remain unchanged until disposal.",
+          "why": "An impairment loss affects earnings when recognized, rather than waiting for a sale."
+        },
+        {
+          "text": "Earnings fall and an equal new debt liability arises.",
+          "why": "A write-down does not itself create a borrowing or payment obligation."
+        }
+      ],
+      "explanation": "Starbucks reported asset impairment within its fiscal 2026 restructuring activity. In the isolated example, the loss reduces earnings and asset carrying value without an immediate cash outflow; severance and other restructuring costs require separate cash analysis.",
+      "note": "US company filing for the quarter ended June 28, 2026. The actual restructuring included multiple cost categories; isolating a noncash impairment and ignoring taxes are training assumptions, not a description of the entire charge.",
+      "stats": [],
+      "source": {
+        "title": "sbux-20260628",
+        "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922426000130/sbux-20260628.htm",
+        "kind": "Official company quarterly filing",
+        "note": "Note 17 documents restructuring and impairment involving Reserve and Roastery locations. The exercise isolates one accounting component and invents no company metrics."
+      },
+      "evidence": "resulting in a reassessment and impairment of the associated asset group.",
+      "calculations": []
+    },
+    {
+      "id": "lease-bakery-percentage-rent-growth",
+      "mode": "lease",
+      "concept": "Percentage rent and occupancy economics",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Poppy Kiln is considering a lease with base rent plus a percentage of gross sales above a stated threshold. Its expansion forecast holds rent constant as sales grow. What should the owner change before relying on that forecast?",
+      "choices": [
+        {
+          "text": "Model the sales-linked rent under each sales scenario and have counsel confirm the lease's sales definition and threshold.",
+          "why": "The rent clause makes occupancy costs responsive to sales; its exact wording determines the forecast inputs."
+        },
+        {
+          "text": "Keep rent constant because base rent is the only occupancy cost affected by the lease.",
+          "why": "This omits the explicitly proposed percentage-rent obligation."
+        },
+        {
+          "text": "Apply the percentage only to net profit above the threshold.",
+          "why": "The proposed clause uses gross sales, which differs from profit after expenses."
+        },
+        {
+          "text": "Assume percentage rent replaces base rent once sales exceed the threshold.",
+          "why": "The proposed terms require base rent plus the sales-linked amount, rather than a substitution."
+        }
+      ],
+      "explanation": "BDC describes percentage-rent leases as base rent plus a percentage of gross sales above a minimum. A growth forecast should therefore reflect the proposed variable rent and confirm contractual definitions before assessing expansion profitability.",
+      "note": "Poppy Kiln, its proposed lease and its forecast are fictional. This Canadian training scenario uses practitioner guidance, not a legal ruling or a claim about mandatory Ontario lease terms.",
+      "stats": [],
+      "source": {
+        "title": "How to negotiate a commercial lease effectively",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-negotiate-commercial-lease-effectively",
+        "kind": "Practitioner guidance",
+        "note": "BDC explains percentage rent and recommends commercial legal review. The bakery and specific forecast error are invented training assumptions."
+      },
+      "evidence": "you pay a base rent plus a percentage of your gross sales over a certain minimum.",
+      "calculations": []
     }
   ],
-  "researchNote": "Opened primary sources for a 2026 Leslie’s liquidity disclosure and established BDC commercial-lease and acquisition guidance. Three new questions cover lease and verdict, the two least-populated modes, plus investor. Fictional assumptions are explicitly identified; no scored arithmetic is included."
+  "researchNote": "Opened and read Starbucks's US Form 10-Q for June 28, 2026 and BDC's established Canadian commercial-lease guidance. Two new questions cover foundation and lease, both tied for the fewest research cases. The current operational case addresses impairment; the older practitioner guidance supports a distinct percentage-rent lesson. No files or accounts were accessed."
 }
 </script>
 <script>
