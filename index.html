@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-06T12:03:49.110005+00:00",
+  "checkedAt": "2026-10-07T12:12:20.268899+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -1676,9 +1676,138 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "you pay a base rent plus a percentage of your gross sales over a certain minimum.",
       "calculations": []
+    },
+    {
+      "id": "verdict-bakery-equipment-lien-release",
+      "mode": "verdict",
+      "concept": "Asset ownership, liens and closing conditions",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Elm Basket is offered as an asset purchase. A registry search identifies a lender's lien on essential equipment. The seller permits counsel to verify the payout and obtain a binding release at closing, but neither is confirmed yet. Price and other diligence are satisfactory. Before committing unconditionally, what is the verdict?",
+      "choices": [
+        {
+          "text": "Investigate",
+          "why": "The lien is a specific unresolved issue with a permitted verification and release process. Commitment should depend on satisfactory evidence and closing protections."
+        },
+        {
+          "text": "Invest",
+          "why": "A satisfactory price does not establish that the equipment will transfer free of the identified lender's claim."
+        },
+        {
+          "text": "Pass",
+          "why": "The scenario does not establish an unavoidable defect or refused remedy. A verified payout and enforceable release could resolve the issue."
+        }
+      ],
+      "explanation": "BDC's Canadian acquisition guidance recommends searching the relevant provincial registry for liens on purchased assets. Here, the identified claim needs a verified resolution before unconditional commitment; its existence alone does not establish that the offered transaction is unacceptable.",
+      "note": "Elm Basket, all financial figures and the transaction circumstances are fictional training assumptions. Ontario is the exercise jurisdiction; this is not a statement of US lien law.",
+      "stats": [
+        [
+          "Revenue",
+          "CAD 880,000 annually"
+        ],
+        [
+          "Margins",
+          "14% operating margin"
+        ],
+        [
+          "Customer mix",
+          "Retail 80%; wholesale 20%; largest customer 6%"
+        ],
+        [
+          "Occupancy",
+          "CAD 48,000 annually"
+        ],
+        [
+          "Debt",
+          "Proposed acquisition loan CAD 180,000; seller's secured payout unverified"
+        ],
+        [
+          "AR days",
+          "18 days"
+        ]
+      ],
+      "source": {
+        "title": "Buying a business? How to protect yourself from potential liabilities",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/owner-liability",
+        "kind": "Practitioner guidance",
+        "note": "Establishes Canadian registry searches for liens as acquisition diligence. The bakery, numbers, offered terms and possible closing release are invented."
+      },
+      "evidence": "to determine whether there are any liens on the assets you are about to purchase.",
+      "calculations": []
+    },
+    {
+      "id": "investor-express-operating-continuity-equity-recovery",
+      "mode": "investor",
+      "concept": "Operating liquidity versus shareholder recovery",
+      "caseType": "Historical case",
+      "prompt": "On April 22, 2024, Express announced Chapter 11 filings in Delaware, continued store operations and financing subject to court approval. It also warned of possible significant or complete shareholder losses. Which valuation lesson follows?",
+      "choices": [
+        {
+          "text": "Separate funding for continued operations from the value potentially remaining for common shareholders.",
+          "why": "Cash supporting the operating business does not establish common shareholders' recovery through a restructuring."
+        },
+        {
+          "text": "Treat continued store operations as evidence that common shares retain their previous value.",
+          "why": "Business continuity can coexist with severe shareholder losses, as the company's warning explicitly acknowledged."
+        },
+        {
+          "text": "Add the financing commitment directly to common equity value.",
+          "why": "A financing commitment has approval conditions and financing obligations; it is not automatically value available to common shareholders."
+        },
+        {
+          "text": "Use the announced sale interest as a guaranteed floor for common-share recovery.",
+          "why": "The letter of intent was non-binding and concerned a potential business sale, not a guaranteed shareholder distribution."
+        }
+      ],
+      "explanation": "Express's release described continued operations during a US court-supervised sale process while explicitly warning about shareholder losses. Valuation must distinguish the business's ability to keep trading from the recovery available to a particular class of investors.",
+      "note": "Historical company announcement dated April 22, 2024, involving the US Bankruptcy Court for the District of Delaware. Financing approval and sale prospects were conditional statements at that date, not established final outcomes or a current investment verdict.",
+      "stats": [],
+      "source": {
+        "title": "Express, Inc. Receives Letter of Intent from Consortium led by WHP Global for Sale of Business",
+        "url": "https://www.sec.gov/Archives/edgar/data/1483510/000119312524103828/d827429dex991.htm",
+        "kind": "First-party operational announcement filed with SEC",
+        "note": "Establishes the announced bankruptcy filings, continued operations, conditional financing and shareholder-risk warning. The choices supply a transferable valuation lesson."
+      },
+      "evidence": "The Company expects that its stockholders could experience a significant or complete loss on their investment",
+      "calculations": []
+    },
+    {
+      "id": "foundation-chargepoint-bundled-performance-obligations-2026",
+      "mode": "foundation",
+      "concept": "Allocating bundled contract revenue",
+      "caseType": "Historical case",
+      "prompt": "ChargePoint's US annual filing for January 31, 2026 describes contracts combining charging systems and distinct subscription services. How should the bundled transaction price be handled before recognizing revenue?",
+      "choices": [
+        {
+          "text": "Allocate it using relative standalone selling prices, then recognize each component as its obligation is satisfied.",
+          "why": "This connects the contract's total price to distinct promised goods and services and their respective delivery timing."
+        },
+        {
+          "text": "Allocate all of it to the charging system because hardware ships first.",
+          "why": "Shipping one component does not eliminate the distinct services promised in the same contract."
+        },
+        {
+          "text": "Divide it equally among components regardless of their standalone selling prices.",
+          "why": "Equal allocation can misstate the value assigned to components when their standalone selling prices differ."
+        },
+        {
+          "text": "Recognize the entire bundle when the initial invoice is issued.",
+          "why": "Billing timing does not establish that all distinct performance obligations have been satisfied."
+        }
+      ],
+      "explanation": "ChargePoint's filing describes relative standalone selling price allocation for multiple distinct obligations. It recognizes charging-system revenue when control transfers and subscription revenue over time, so one bundled invoice can support different revenue schedules.",
+      "note": "Based on ChargePoint's fiscal year ended January 31, 2026 annual filing under US reporting requirements. This tests allocation across distinct obligations rather than calculating revenue or assessing the company's current investment merits.",
+      "stats": [],
+      "source": {
+        "title": "ChargePoint Holdings, Inc. Form 10-K for the fiscal year ended January 31, 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1777393/000177739326000013/chpt-20260131.htm",
+        "kind": "Official company annual filing",
+        "note": "The revenue-recognition disclosures and audit discussion establish bundled obligations, allocation and recognition timing. No company metrics or hypothetical computed amounts are added."
+      },
+      "evidence": "the transaction price is allocated to the separate performance obligations on a relative standalone selling price basis.",
+      "calculations": []
     }
   ],
-  "researchNote": "Opened and read Starbucks's US Form 10-Q for June 28, 2026 and BDC's established Canadian commercial-lease guidance. Two new questions cover foundation and lease, both tied for the fewest research cases. The current operational case addresses impairment; the older practitioner guidance supports a distinct percentage-rent lesson. No files or accounts were accessed."
+  "researchNote": "Researched current 2026 filings and an older 2024 operational event, opening supporting primary sources. Added three distinct questions across verdict, investor and foundation; verdict has the fewest supplied cases and the other modes are tied. An ICON annual-report PDF could not be opened, so it was excluded. No files were modified."
 }
 </script>
 <script>
