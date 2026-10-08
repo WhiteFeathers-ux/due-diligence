@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-07T12:12:20.268899+00:00",
+  "checkedAt": "2026-10-08T12:19:55.599914+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -1805,9 +1805,138 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "the transaction price is allocated to the separate performance obligations on a relative standalone selling price basis.",
       "calculations": []
+    },
+    {
+      "id": "lease-bakery-competitor-exclusivity",
+      "mode": "lease",
+      "concept": "Competitive tenant mix and negotiated lease protection",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Honey Tile forecasts sales assuming it will be the shopping centre's only bakery. The proposed lease gives no exclusivity, and the landlord remains free to lease another unit to a competing bakery. What should the owner do before relying on that forecast?",
+      "choices": [
+        {
+          "text": "Model competing-tenant exposure and seek a clearly defined competitor clause reviewed by commercial counsel.",
+          "why": "The forecast depends on a protection the offered lease does not provide; negotiation and a downside scenario address that dependency."
+        },
+        {
+          "text": "Treat being the first bakery to open as sufficient protection against another bakery entering.",
+          "why": "Opening first does not create the missing contractual restriction."
+        },
+        {
+          "text": "Assume the landlord's desire for successful tenants guarantees it will reject a competitor.",
+          "why": "A presumed incentive does not bind the landlord or establish the future tenant mix."
+        },
+        {
+          "text": "Increase marketing spending while keeping the original sales forecast unchanged.",
+          "why": "Additional spending neither secures exclusivity nor establishes that sales will withstand competition."
+        }
+      ],
+      "explanation": "BDC recommends considering a competitor clause, particularly for retailers. Exclusivity must be negotiated and documented; until then, a forecast should account for potential competition.",
+      "note": "Honey Tile, its location, lease terms and forecast are fictional training assumptions. This Canadian exercise does not assert an automatic exclusivity right or a rule of US law.",
+      "stats": [],
+      "source": {
+        "title": "12 tips for negotiating a commercial lease",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-negotiate-commercial-lease-effectively",
+        "kind": "Practitioner guidance",
+        "note": "BDC describes negotiating a competitor clause. The bakery and its dependence on exclusivity are invented."
+      },
+      "evidence": "This may be particularly important to retailers.",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-owner-labour-valuation",
+      "mode": "verdict",
+      "concept": "Maintainable earnings after replacing seller labour",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Hearth Ribbon's seller works unpaid production shifts that the buyer cannot cover. Independent diligence confirms replacement staffing costs and revises maintainable cash flow downward. The seller accepts a price below the revised independent valuation. Financial, tax, legal, customer, equipment and lease checks are complete; committed financing, funded working capital and checked downside forecasts cover staffing, maintenance and debt while preserving reserves and meeting the buyer's return hurdle. At these revised terms, what is the verdict?",
+      "choices": [
+        {
+          "text": "Invest",
+          "why": "Replacement labour is included, the revised price is supported, and essential diligence and funding are explicitly complete."
+        },
+        {
+          "text": "Investigate",
+          "why": "The labour-cost concern has already been resolved through independent verification and revised valuation; no material unresolved issue is stated."
+        },
+        {
+          "text": "Pass",
+          "why": "The original earnings overstatement does not make the revised deal unacceptable when costs, price and financing have been corrected and verified."
+        }
+      ],
+      "explanation": "BDC advises considering the costs of changes following acquisition and obtaining an independent valuation. Here the buyer's inability to replace unpaid seller labour is explicitly priced into maintainable cash flow, and the revised deal satisfies the stated diligence and return requirements.",
+      "note": "Hearth Ribbon and every deal term, financial descriptor and verification result are fictional training assumptions. The verdict applies only to this fully specified scenario.",
+      "stats": [
+        [
+          "Revenue",
+          "Fictional: verified recurring bakery sales"
+        ],
+        [
+          "Margins",
+          "Fictional: normalized for paid replacement staffing"
+        ],
+        [
+          "Customer mix",
+          "Fictional: diversified; customer continuity verified"
+        ],
+        [
+          "Occupancy",
+          "Fictional: lease continuity and full costs verified"
+        ],
+        [
+          "Debt",
+          "Fictional: committed financing; downside payments covered"
+        ],
+        [
+          "AR days",
+          "Fictional: verified collection cycle; no material overdue balance"
+        ]
+      ],
+      "source": {
+        "title": "The steps you need to take BEFORE buying a business",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/due-diligence-valuation",
+        "kind": "Practitioner guidance",
+        "note": "BDC supports diligence, independent valuation and accounting for post-acquisition changes. It does not document this fictional acquisition or recommend investing in it."
+      },
+      "evidence": "their cost may substantially reduce the return on the capital you have invested.",
+      "calculations": []
+    },
+    {
+      "id": "investor-borgwarner-unestimated-contingencies",
+      "mode": "investor",
+      "concept": "Loss contingencies and unsupported claims of estimation uncertainty",
+      "caseType": "Historical case",
+      "prompt": "The SEC's August 26, 2020 US settled order found that BorgWarner had not sufficiently analyzed historical claims data before concluding that future asbestos liabilities could not be estimated. Which diligence request best addresses this lesson?",
+      "choices": [
+        {
+          "text": "Request the claims history, estimation analysis and support for any conclusion that probable losses cannot be reasonably estimated.",
+          "why": "This tests whether asserted uncertainty follows substantive analysis of available evidence."
+        },
+        {
+          "text": "Treat the absence of a recorded reserve as evidence that future claims have no financial value.",
+          "why": "A missing reserve does not establish that the underlying exposure is absent."
+        },
+        {
+          "text": "Use only filed claims because unreported claims can never support an accounting estimate.",
+          "why": "The order concerns incurred but unreported liabilities and the failure to analyze available historical evidence."
+        },
+        {
+          "text": "Require an exact final settlement amount before assessing any liability.",
+          "why": "Reasonable estimation does not require knowing the exact eventual payment."
+        }
+      ],
+      "explanation": "The SEC found that BorgWarner relied on untested qualitative assumptions despite extensive historical claims data, and later restated prior periods. The company settled without admitting or denying the findings, except jurisdiction; the lesson is to examine the evidence behind estimation uncertainty.",
+      "note": "United States, SEC administrative settled order dated August 26, 2020, concerning accounting beginning in 2012. These are settled findings, not a company admission or a current investment verdict.",
+      "stats": [],
+      "source": {
+        "title": "BorgWarner Inc.",
+        "url": "https://www.sec.gov/litigation/admin/2020/34-89677.pdf",
+        "kind": "Historical enforcement case",
+        "note": "The order establishes the SEC's findings about insufficient contingency analysis and subsequent restatement. The diligence choices are educational applications."
+      },
+      "evidence": "BorgWarner came to this conclusion without conducting sufficient analysis,",
+      "calculations": []
     }
   ],
-  "researchNote": "Researched current 2026 filings and an older 2024 operational event, opening supporting primary sources. Added three distinct questions across verdict, investor and foundation; verdict has the fewest supplied cases and the other modes are tied. An ICON annual-report PDF could not be opened, so it was excluded. No files were modified."
+  "researchNote": "Three new questions prioritize lease and verdict, the two least-covered modes, and add an older SEC enforcement lesson. Primary supporting pages were opened and read. Current 2026 filings were also searched and opened, but no current-development question was added because the reviewed material either overlapped existing lessons or had unreliable text extraction. No files were modified."
 }
 </script>
 <script>
