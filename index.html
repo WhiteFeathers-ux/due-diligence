@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-08T12:19:55.599914+00:00",
+  "checkedAt": "2026-10-09T12:29:37.913102+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -1934,9 +1934,117 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "BorgWarner came to this conclusion without conducting sufficient analysis,",
       "calculations": []
+    },
+    {
+      "id": "foundation-unfi-2026-payables-cash-versus-expense",
+      "mode": "foundation",
+      "concept": "Paying accrued expenses links the balance sheet and operating cash flow",
+      "caseType": "Adapted case",
+      "prompt": "UNFI's US annual filing for August 1, 2026 identifies declining accounts payable as a working-capital cash drag. In a simplified training example, a business pays a supplier invoice for an expense correctly recorded last quarter. What happens at payment?",
+      "choices": [
+        {
+          "text": "Cash and accounts payable decrease; the payment creates no new expense.",
+          "why": "The expense was already recognized. Payment settles the existing liability and uses operating cash."
+        },
+        {
+          "text": "Cash decreases and the expense is recorded again this quarter.",
+          "why": "This would count the same expense twice and understate current earnings."
+        },
+        {
+          "text": "Accounts payable decreases and current profit increases.",
+          "why": "Settling a valid liability at its recorded amount does not produce income."
+        },
+        {
+          "text": "Cash decreases under financing activities because the supplier extended credit.",
+          "why": "Payment of an ordinary operating supplier invoice belongs in operating cash flow under the stated assumptions."
+        }
+      ],
+      "explanation": "UNFI identified declining accounts payable among the reasons working capital generated less cash in fiscal 2026. In the simplified example, expense recognition and cash settlement occur in different periods: payment reduces cash and the liability without recording the expense again.",
+      "note": "The supplier invoice and its prior-quarter expense recognition are fictional training assumptions. This does not assert that UNFI's entire accounts-payable movement involved previously expensed invoices.",
+      "stats": [],
+      "source": {
+        "title": "United Natural Foods, Inc. Form 10-K for the fiscal year ended August 1, 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1020859/000102085926000025/unfi-20260801.htm",
+        "kind": "Official company filing",
+        "note": "Establishes UNFI's explanation of working-capital cash movements. The exercise invents a simplified supplier-payment transaction."
+      },
+      "evidence": "a decrease in Accounts payable related to lower inventory levels",
+      "calculations": []
+    },
+    {
+      "id": "foundation-groupon-2011-agent-revenue-versus-billings",
+      "mode": "foundation",
+      "concept": "Agent revenue differs from gross customer billings",
+      "caseType": "Historical case",
+      "prompt": "Groupon's US annual report for December 31, 2011 distinguishes gross billings from revenue and describes acting as merchants' agent. Why would treating all customer billings as Groupon revenue misrepresent its reported business?",
+      "choices": [
+        {
+          "text": "Billings include merchants' shares; the disclosed agent revenue is the net amount Groupon retains.",
+          "why": "The filing distinguishes total customer collections from the amount attributable to Groupon's service."
+        },
+        {
+          "text": "Revenue must equal every customer payment because Groupon collects the cash.",
+          "why": "Collecting cash does not establish that the entire transaction belongs in the collector's revenue."
+        },
+        {
+          "text": "Merchants' shares reduce revenue only when Groupon actually pays them.",
+          "why": "The disclosed net presentation follows Groupon's role as agent, rather than the timing of merchant payments."
+        },
+        {
+          "text": "The amount Groupon retains is its net profit.",
+          "why": "Revenue still has to cover processing costs and operating expenses; it is not net profit."
+        }
+      ],
+      "explanation": "Groupon disclosed net revenue because it acted as an agent of the merchant. Gross billings measure a different transaction volume, so substituting them for revenue would obscure the distinction between money collected and revenue earned.",
+      "note": "Historical first-party accounting disclosure for the 2011 reporting period in a US SEC filing. No enforcement finding, fictional financial statistics or current investment verdict is asserted.",
+      "stats": [],
+      "source": {
+        "title": "Groupon, Inc. Form 10-K for the fiscal year ended December 31, 2011",
+        "url": "https://www.sec.gov/Archives/edgar/data/1490281/000144530512000922/groupon10-k.htm",
+        "kind": "Historical company filing",
+        "note": "Establishes Groupon's distinction between gross billings and net agent revenue. Only the question and answer alternatives are constructed."
+      },
+      "evidence": "Revenue is recorded on a net basis because the Company is acting as an agent of the merchant",
+      "calculations": []
+    },
+    {
+      "id": "lease-bakery-free-rent-concession-scope",
+      "mode": "lease",
+      "concept": "A rent concession's scope determines opening cash needs",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Grain Porch receives a draft offering an opening base-rent holiday. Separate clauses require common-area charges and property-tax reimbursements during that period. Its opening budget assumes no landlord payments. What should the owner do?",
+      "choices": [
+        {
+          "text": "Budget the continuing charges and negotiate an explicit written waiver if broader relief is needed.",
+          "why": "The stated concession covers base rent; the draft separately preserves other payments."
+        },
+        {
+          "text": "Keep landlord payments at zero because any rent holiday covers every occupancy charge.",
+          "why": "That assumption contradicts the concession's stated scope and the separate payment clauses."
+        },
+        {
+          "text": "Move the continuing charges to the first month after the holiday.",
+          "why": "A base-rent waiver does not itself defer other charges that remain payable."
+        },
+        {
+          "text": "Treat the waived base rent as cash received to pay the continuing charges.",
+          "why": "An avoided payment preserves cash but does not supply an additional cash receipt."
+        }
+      ],
+      "explanation": "BDC discusses rent-free inducements alongside the need to review incidental lease costs. Here, the fictional draft expressly preserves those charges, so the opening budget must fund them unless the parties agree to broader relief.",
+      "note": "Grain Porch, its Ontario location and all proposed lease terms are fictional. This is a contract-reading and cash-planning exercise, not a statement of automatic Canadian or US legal protections.",
+      "stats": [],
+      "source": {
+        "title": "12 tips for negotiating a commercial lease",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-negotiate-commercial-lease-effectively",
+        "kind": "Practitioner guidance",
+        "note": "Establishes that rent-free inducements can be negotiated and incidental costs require review. The exercise invents a base-rent-only concession with continuing charges."
+      },
+      "evidence": "Carefully review the incidentals you are being asked to pay for",
+      "calculations": []
     }
   ],
-  "researchNote": "Three new questions prioritize lease and verdict, the two least-covered modes, and add an older SEC enforcement lesson. Primary supporting pages were opened and read. Current 2026 filings were also searched and opened, but no current-development question was added because the reviewed material either overlapped existing lessons or had unreliable text extraction. No files were modified."
+  "researchNote": "Opened primary sources for three new questions across foundation and lease, both tied for the fewest existing research cases. Includes UNFI's fiscal 2026 US filing, Groupon's historical 2011 US filing and Canadian BDC lease guidance. No scored arithmetic or fictional company financial statistics."
 }
 </script>
 <script>
