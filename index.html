@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-09T12:29:37.913102+00:00",
+  "checkedAt": "2026-10-10T12:10:12.193316+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -2042,9 +2042,138 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "Carefully review the incidentals you are being asked to pay for",
       "calculations": []
+    },
+    {
+      "id": "investor-krispy-kreme-2026-vendor-finance-comparability",
+      "mode": "investor",
+      "concept": "Working-capital financing and operating cash-flow comparability",
+      "caseType": "Historical case",
+      "prompt": "Krispy Kreme's US Form 10-Q for March 29, 2026 places supply-chain financing cash flows in operating activities and structured-payables cash flows in financing activities. Before comparing operating cash generation with another bakery business, what should an analyst examine?",
+      "choices": [
+        {
+          "text": "Reconcile both programs' obligations, payment terms and cash-flow classifications before judging cash generation.",
+          "why": "Different financing arrangements and classifications can affect the apparent comparison; the underlying obligations and settlement timing also matter."
+        },
+        {
+          "text": "Use operating cash flow alone because all supplier-related payments must appear there.",
+          "why": "The filing expressly classifies structured-payables cash flows as financing activities."
+        },
+        {
+          "text": "Exclude structured payables from liquidity analysis because they are outside operating cash flow.",
+          "why": "Classification does not eliminate the obligation to repay or its effect on liquidity."
+        },
+        {
+          "text": "Treat a vendor's sale of its invoice as cancellation of the company's payable.",
+          "why": "The filing says vendors' participation does not change the company's contractual settlement obligations."
+        }
+      ],
+      "explanation": "The filing distinguishes supplier-financing arrangements by their terms and cash-flow presentation. A useful comparison follows the underlying payment obligations across classifications before drawing conclusions about sustainable cash generation.",
+      "note": "Real US issuer disclosure for the quarter ended March 29, 2026. The comparison with another bakery is a training scenario; no comparative financial metrics are supplied or assumed.",
+      "stats": [],
+      "source": {
+        "title": "Krispy Kreme, Inc. Form 10-Q for the quarterly period ended March 29, 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1857154/000185715426000029/dnut-20260329.htm",
+        "kind": "Company regulatory filing",
+        "note": "Note 9 establishes the programs' obligations and differing cash-flow classifications. The analyst comparison is invented."
+      },
+      "evidence": "the associated cash flows are included in financing activities",
+      "calculations": []
+    },
+    {
+      "id": "investor-belden-warehouse-control-revenue-cutoff",
+      "mode": "investor",
+      "concept": "Revenue quality and customer acceptance at period-end",
+      "caseType": "Historical case",
+      "prompt": "The SEC's December 14, 2020 US settled action found that Belden's Grass Valley business prematurely recognized sales through warehouses it controlled when customers were not ready to take possession. Which diligence check best addresses this mechanism?",
+      "choices": [
+        {
+          "text": "Match period-end sales to contract terms, customer acceptance and evidence that delivery obligations were satisfied.",
+          "why": "These records test whether the underlying transaction supported recognition, beyond a shipment entry."
+        },
+        {
+          "text": "Accept shipment records as sufficient whenever goods left the manufacturing facility.",
+          "why": "Moving goods to a seller-controlled warehouse did not establish that these customers were ready to take possession."
+        },
+        {
+          "text": "Validate annual sales totals without examining transactions around quarter-end.",
+          "why": "Annual aggregation can obscure premature recognition in individual reporting periods."
+        },
+        {
+          "text": "Use gross margin consistency as the main evidence that recorded sales were valid.",
+          "why": "A plausible margin does not establish customer acceptance or proper revenue timing."
+        }
+      ],
+      "explanation": "The SEC's settled order found premature recognition involving seller-controlled warehouses. Revenue diligence should test contractual performance and customer evidence around reporting cutoffs; Belden and the executive settled without admitting or denying the findings.",
+      "note": "Historical US settled administrative findings concerning 2017 transactions, announced December 14, 2020. This asks for a diligence lesson, not a current investment verdict.",
+      "stats": [],
+      "source": {
+        "title": "SEC Charges Telecommunications Company and Executive with Revenue Recognition Violations",
+        "url": "https://www.sec.gov/enforcement-litigation/administrative-proceedings/33-10903-s",
+        "kind": "Historical enforcement case",
+        "note": "Summarizes the settled order's warehouse-control findings and non-admission terms. The proposed diligence choices are educational applications."
+      },
+      "evidence": "shipping goods to warehouses that it paid for and controlled",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-prepaid-orders-closing-obligation",
+      "mode": "verdict",
+      "concept": "Customer prepayments and post-closing fulfillment cash",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Finch Tin has collected deposits for catering orders due after closing. Counsel confirms the buyer must fulfill those orders, while the seller will retain the deposits. Independently checked forecasts include the remaining fulfillment costs and show an unfunded payroll shortfall. No additional financing is available, and the seller refuses a deposit transfer, price adjustment or change in obligations. At these offered terms, what is the verdict?",
+      "choices": [
+        {
+          "text": "Pass",
+          "why": "The verified obligations and unavailable funding make the offered terms unacceptable; the seller has rejected remedies."
+        },
+        {
+          "text": "Investigate",
+          "why": "The central obligation and cash shortfall have already been verified, and feasible contractual or funding remedies are unavailable."
+        },
+        {
+          "text": "Invest",
+          "why": "Booked orders do not fund fulfillment when the seller retains their deposits and the buyer cannot cover the remaining cash needs."
+        }
+      ],
+      "explanation": "A purchase assessment must connect contractual obligations with the cash available to meet them after closing. Here the verified shortfall and refused remedies support Pass at the offered terms, even though historical earnings are positive.",
+      "note": "Finch Tin, Ontario location, all figures, legal conclusions and deal conditions are fictional training assumptions. No Canadian legal rule about deposit transfers is asserted.",
+      "stats": [
+        [
+          "Revenue",
+          "Fictional annual revenue: CAD 900,000"
+        ],
+        [
+          "Margins",
+          "Fictional historical operating margin: 9%"
+        ],
+        [
+          "Customer mix",
+          "Fictional mix: 65% retail, 35% catering"
+        ],
+        [
+          "Occupancy",
+          "Fictional annual occupancy expense: CAD 72,000"
+        ],
+        [
+          "Debt",
+          "Fictional acquisition debt: CAD 240,000"
+        ],
+        [
+          "AR days",
+          "Fictional historical receivables days: 18"
+        ]
+      ],
+      "source": {
+        "title": "How to conduct due diligence when buying a business",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/buying-business-conducting-due-diligence",
+        "kind": "Practitioner guidance",
+        "note": "BDC guidance, updated November 24, 2025, supports reviewing financial sustainability and customer contracts. The deposit arrangement, funding failure and every company statistic are invented."
+      },
+      "evidence": "customer and supplier agreements and warranties",
+      "calculations": []
     }
   ],
-  "researchNote": "Opened primary sources for three new questions across foundation and lease, both tied for the fewest existing research cases. Includes UNFI's fiscal 2026 US filing, Groupon's historical 2011 US filing and Canadian BDC lease guidance. No scored arithmetic or fictional company financial statistics."
+  "researchNote": "Opened primary SEC and BDC sources. Three new questions cover investor and verdict, among the least represented modes, using a 2026 filing, an older settled enforcement case and a fictional acquisition scenario. No files were modified."
 }
 </script>
 <script>
