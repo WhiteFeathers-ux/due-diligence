@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-10T12:10:12.193316+00:00",
+  "checkedAt": "2026-10-11T12:09:10.706097+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -2171,9 +2171,138 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "customer and supplier agreements and warranties",
       "calculations": []
+    },
+    {
+      "id": "investor-seaport-2026-termination-rent-normalization",
+      "mode": "investor",
+      "concept": "Recurring earnings versus lease termination income",
+      "caseType": "Historical case",
+      "prompt": "Seaport Entertainment Group's US filing for June 30, 2026 reports lease termination income and accelerated rents within its landlord segment's rental revenue. Before using that revenue to value continuing operations, what should an analyst do?",
+      "choices": [
+        {
+          "text": "Separate termination-related amounts and assess revenue supported by continuing leases.",
+          "why": "A termination-related receipt does not establish an ongoing rental stream; continuing contracts and replacement occupancy need separate examination."
+        },
+        {
+          "text": "Apply the same recurring-revenue multiple to all reported rental revenue.",
+          "why": "The reporting category alone does not establish that every component will recur."
+        },
+        {
+          "text": "Treat accelerated rent recognition as proof of improved recurring tenant demand.",
+          "why": "Acceleration associated with a termination concerns payment or recognition timing, rather than evidence of continuing demand."
+        },
+        {
+          "text": "Exclude the entire landlord segment because one lease terminated.",
+          "why": "A termination calls for component-level analysis; it does not establish that all continuing leases lack value."
+        }
+      ],
+      "explanation": "Seaport disclosed termination income and accelerated rents associated with one lease termination in its 2026 landlord results. Valuation should distinguish those amounts from revenue supported by continuing leases and examine replacement occupancy before assuming recurrence.",
+      "note": "United States, quarter ended June 30, 2026. This is a company-reported operational event, not an enforcement allegation or a current investment recommendation.",
+      "stats": [],
+      "source": {
+        "title": "Seaport Entertainment Group Inc. — Form 10-Q for the quarterly period ended June 30, 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/2009684/000110465926091217/seg-20260630x10q.htm",
+        "kind": "Official company quarterly filing",
+        "note": "The Landlord Operations discussion establishes termination-related rental revenue. The diligence choices are educational inferences; no undisclosed company figures are supplied."
+      },
+      "evidence": "lease termination income and accelerated rents associated with one lease termination",
+      "calculations": []
+    },
+    {
+      "id": "lease-bakery-landlord-termination-renovation-recovery",
+      "mode": "lease",
+      "concept": "Landlord termination rights and renovation recovery",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Clover Slate plans substantial renovations. Its draft lets the landlord terminate for redevelopment before the expected renovation payback, with no reimbursement. What should the owner do before committing?",
+      "choices": [
+        {
+          "text": "Have counsel negotiate termination protection or reimbursement and assess the remaining early-exit exposure.",
+          "why": "This addresses the landlord's contractual exit right and the bakery's risk of losing its renovation investment."
+        },
+        {
+          "text": "Rely on the renewal option to prevent early termination.",
+          "why": "An end-of-term renewal option does not itself override a separate earlier termination right."
+        },
+        {
+          "text": "Assume the landlord must repay renovation costs because it benefits from them.",
+          "why": "The scenario supplies no such contractual protection; a benefit to the landlord does not establish reimbursement."
+        },
+        {
+          "text": "Budget reimbursement at the renovations' recorded book value.",
+          "why": "An accounting carrying amount does not create a contractual payment obligation."
+        }
+      ],
+      "explanation": "BDC advises reviewing either party's termination rights and seeking reimbursement of improvements if the landlord breaks the lease. The bakery should negotiate those protections and evaluate unrecovered costs under the actual written terms before committing.",
+      "note": "The bakery, proposed terms and payback assumptions are fictional. Canadian practitioner guidance informs this Ontario exercise; it establishes no automatic reimbursement entitlement.",
+      "stats": [],
+      "source": {
+        "title": "How to negotiate a commercial lease effectively",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-negotiate-commercial-lease-effectively",
+        "kind": "Practitioner guidance",
+        "note": "BDC recommends checking termination conditions and seeking improvement reimbursement if the landlord breaks the lease. The redevelopment clause and bakery are invented."
+      },
+      "evidence": "Check the circumstances under which either party may terminate the lease.",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-share-purchase-tax-exposure",
+      "mode": "verdict",
+      "concept": "Share acquisition and verified unrecorded liabilities",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Wren Proof is offered only as a share purchase. Tax counsel verifies an unpaid final corporate tax assessment omitted from the books. Checked forecasts including payment show an unfunded payroll shortfall. No financing is available; the seller refuses repayment, a funded escrow, a price adjustment or an asset sale. At these terms, what is your verdict?",
+      "choices": [
+        {
+          "text": "Pass",
+          "why": "The liability and funding shortfall are verified, and the seller refuses changes that could make the offered transaction viable."
+        },
+        {
+          "text": "Investigate",
+          "why": "The decisive liability and cash consequences have already been verified; no unresolved factual question is identified that could cure the offered terms."
+        },
+        {
+          "text": "Invest",
+          "why": "Positive operating results do not provide the missing cash needed to pay both the assessment and payroll."
+        }
+      ],
+      "explanation": "BDC cautions that buying shares includes exposure to the company's liabilities, including liabilities absent from its books. Here the assessment and resulting cash shortfall are verified training facts, making Pass appropriate at the seller's fixed terms.",
+      "note": "All names, figures, assessment status, professional conclusions and transaction terms are fictional Ontario training assumptions. The stat rows describe fictional historical operations and do not override the checked post-acquisition funding shortfall.",
+      "stats": [
+        [
+          "Revenue",
+          "CAD 900,000 annually"
+        ],
+        [
+          "Margins",
+          "12% reported operating margin before the omitted assessment"
+        ],
+        [
+          "Customer mix",
+          "Retail-led; largest wholesale customer represents 8% of sales"
+        ],
+        [
+          "Occupancy",
+          "CAD 72,000 annual contractual occupancy costs"
+        ],
+        [
+          "Debt",
+          "CAD 140,000 existing bank debt; tax assessment is a separate liability"
+        ],
+        [
+          "AR days",
+          "24 days"
+        ]
+      ],
+      "source": {
+        "title": "The steps you need to take BEFORE buying a business",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/due-diligence-valuation",
+        "kind": "Practitioner guidance",
+        "note": "BDC explains share purchasers' exposure to recorded and unrecorded liabilities and specifically discusses tax reassessments. The bakery, statistics and verified inability to fund the liability are invented."
+      },
+      "evidence": "whether they are recorded on the company books or not.",
+      "calculations": []
     }
   ],
-  "researchNote": "Opened primary SEC and BDC sources. Three new questions cover investor and verdict, among the least represented modes, using a 2026 filing, an older settled enforcement case and a fictional acquisition scenario. No files were modified."
+  "researchNote": "Opened primary sources for three new cases covering lease and verdict, the two least-populated modes, plus investor. Research includes Seaport's June 2026 filing and established BDC practitioner guidance; company disclosures are distinguished from fictional training assumptions."
 }
 </script>
 <script>
