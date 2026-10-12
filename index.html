@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-11T12:09:10.706097+00:00",
+  "checkedAt": "2026-10-12T12:28:01.877356+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -2300,9 +2300,117 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "whether they are recorded on the company books or not.",
       "calculations": []
+    },
+    {
+      "id": "foundation-microsoft-budgeted-marketing-reserves",
+      "mode": "foundation",
+      "concept": "Supported accruals versus budget-driven earnings smoothing",
+      "caseType": "Historical case",
+      "prompt": "The SEC's June 3, 2002 US settled order found that Microsoft recorded unsupported budget-based marketing accruals and reversed them at fiscal year-end. Which accounting lesson follows?",
+      "choices": [
+        {
+          "text": "Accrue expenses from supported incurred obligations, rather than adjusting them to match a spending budget.",
+          "why": "A budget describes planned spending; accrual accounting requires evidence supporting expenses incurred in the reporting period."
+        },
+        {
+          "text": "Use budgeted expense whenever it produces a steadier quarterly margin.",
+          "why": "A smooth margin does not substantiate the expense or liability being recorded."
+        },
+        {
+          "text": "Record marketing expense only when suppliers receive cash.",
+          "why": "Incurred but unpaid marketing obligations can require expense recognition before payment."
+        },
+        {
+          "text": "Accept unsupported quarterly accruals if their reversal leaves annual earnings unchanged.",
+          "why": "An annual reversal does not repair misleading quarterly financial statements."
+        }
+      ],
+      "explanation": "The SEC found that Microsoft's budget-based marketing accrual lacked sufficient support and distorted quarterly reporting. An incurred but unpaid expense needs a supported accrual; planned spending alone does not create an obligation.",
+      "note": "US SEC settled findings concerning fiscal years 1995–1998. Microsoft settled without admitting or denying the findings, except jurisdiction; this was not a trial judgment.",
+      "stats": [],
+      "source": {
+        "title": "Microsoft Corporation",
+        "url": "https://www.sec.gov/enforcement-litigation/administrative-proceedings/34-46017",
+        "kind": "Historical enforcement case",
+        "note": "The June 3, 2002 settled order establishes unsupported marketing accruals and year-end reversals. The choices are educational interpretations; no company statistics are invented."
+      },
+      "evidence": "At the end of each fiscal year, Microsoft reversed the marketing accrual and released it into income.",
+      "calculations": []
+    },
+    {
+      "id": "foundation-carpenter-2026-lifo-reserve-not-cash",
+      "mode": "foundation",
+      "concept": "Inventory measurement versus available cash",
+      "caseType": "Historical case",
+      "prompt": "Carpenter Technology's US fiscal 2026 inventory disclosure says inventory would have been higher under FIFO than LIFO. What does that disclosed difference represent?",
+      "choices": [
+        {
+          "text": "A difference in inventory carrying value under alternative accounting cost methods.",
+          "why": "The disclosure compares measurement methods applied to inventory, rather than identifying a separate cash asset."
+        },
+        {
+          "text": "Cash set aside in a reserve account for purchasing replacement inventory.",
+          "why": "An inventory accounting difference does not establish that cash has been segregated or is available."
+        },
+        {
+          "text": "Extra physical inventory omitted from the warehouse count.",
+          "why": "Changing the accounting cost method changes reported valuation, not the quantity physically held."
+        },
+        {
+          "text": "A guaranteed gain available when the inventory is sold.",
+          "why": "Actual sale proceeds and profit depend on selling prices and costs; a carrying-value comparison guarantees neither."
+        }
+      ],
+      "explanation": "The disclosure compares inventory values under LIFO and FIFO. The difference is not additional physical stock or spendable cash, so liquidity analysis still requires cash balances and expected collections and payments.",
+      "note": "Documented US company disclosure for the year ended June 30, 2026. This asks about the accounting lesson, not an investment verdict or an assumed change in accounting policy.",
+      "stats": [],
+      "source": {
+        "title": "Inventories",
+        "url": "https://www.sec.gov/Archives/edgar/data/17843/000001784326000034/R16.htm",
+        "kind": "Official company filing",
+        "note": "Carpenter Technology's fiscal 2026 inventory note describes its cost methods and alternative FIFO carrying values. The exercise adds conceptual answer choices, without invented company metrics."
+      },
+      "evidence": "Cost for inventories is principally determined using the LIFO costing method.",
+      "calculations": []
+    },
+    {
+      "id": "lease-bakery-move-downtime-working-capital",
+      "mode": "lease",
+      "concept": "Transition downtime and opening liquidity",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Linen Crust can afford its proposed rent and renovation invoices. Its move budget assumes uninterrupted sales and uses nearly all cash for the fit-out, although production must stop during relocation. What should the owner do before committing?",
+      "choices": [
+        {
+          "text": "Forecast the transition downtime and fund enough cash for payroll, inventory and reopening.",
+          "why": "Affordable premises can still create a cash shortage when sales pause and transition costs consume operating funds."
+        },
+        {
+          "text": "Proceed because affordable ongoing rent proves the move is affordable.",
+          "why": "Steady-state rent affordability does not establish that the business can survive the transition."
+        },
+        {
+          "text": "Treat capitalized renovation costs as having no effect on opening cash.",
+          "why": "Capitalization changes expense timing; paying contractors still consumes cash."
+        },
+        {
+          "text": "Assume extra production after reopening will pay obligations falling due during the shutdown.",
+          "why": "Later sales cannot fund earlier payments unless a reliable bridge is available."
+        }
+      ],
+      "explanation": "BDC advises businesses to plan for improvements and production downtime and warns that a move can drain working capital. The bakery should test the timing of receipts and payments and secure transition funding before relying on the new location's ongoing economics.",
+      "note": "The bakery name, lease proposal, cash position and shutdown are fictional training assumptions. Canadian guidance supports the planning lesson; no statutory lease protection or entitlement to financing is assumed.",
+      "stats": [],
+      "source": {
+        "title": "How to lease commercial real estate",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-lease-commercial-real-estate",
+        "kind": "Practitioner guidance",
+        "note": "BDC Corporate Financing Director Reese Jenkins discusses transition planning and cash shortages from moving. The bakery scenario is fictional."
+      },
+      "evidence": "Many businesses make the mistake of using their working capital to pay for leasehold improvements and moving expenses.",
+      "calculations": []
     }
   ],
-  "researchNote": "Opened primary sources for three new cases covering lease and verdict, the two least-populated modes, plus investor. Research includes Seaport's June 2026 filing and established BDC practitioner guidance; company disclosures are distinguished from fictional training assumptions."
+  "researchNote": "Opened primary sources for three new questions covering foundation and lease, both tied for the fewest existing cases. The pack combines a 2026 inventory disclosure, a historical US SEC settlement, and Canadian practitioner guidance. No scored arithmetic or invented historical financial statistics."
 }
 </script>
 <script>
