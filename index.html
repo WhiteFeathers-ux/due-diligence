@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-12T12:28:01.877356+00:00",
+  "checkedAt": "2026-10-13T13:57:07.097733+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -2408,9 +2408,102 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "Many businesses make the mistake of using their working capital to pay for leasehold improvements and moving expenses.",
       "calculations": []
+    },
+    {
+      "id": "lease-brinker-divested-restaurant-guarantees-2026",
+      "mode": "lease",
+      "concept": "Lease assignment versus release of guarantees",
+      "caseType": "Historical case",
+      "prompt": "Brinker’s US annual report for June 24, 2026 describes lease guarantees remaining after restaurant sales and assignments, plus lawsuits when current tenants failed to pay. What should an exiting retail operator learn?",
+      "choices": [
+        {
+          "text": "Verify a binding release of retained lease guarantees before treating the sale as ending exposure.",
+          "why": "Brinker reported continuing exposure after assignments; release must be verified separately."
+        },
+        {
+          "text": "Treat assignment to the buyer as sufficient evidence that the seller’s guarantee has ended.",
+          "why": "The filing explicitly describes assigned leases for which Brinker remained a guarantor or secondarily liable."
+        },
+        {
+          "text": "Treat the buyer’s indemnity as equivalent to a landlord’s release.",
+          "why": "An indemnity may support recovery from the buyer after payment, but does not itself eliminate exposure to the landlord."
+        },
+        {
+          "text": "Exclude the guarantee from exit planning while the buyer remains current on rent.",
+          "why": "Current payments do not remove a contingent obligation that can become costly after a later default."
+        }
+      ],
+      "explanation": "Brinker reported that some restaurant disposals left lease guarantees outstanding and that tenant nonpayment had led to default notices and lawsuits. Assignment, indemnification and release serve different purposes; an exit plan should verify the actual release terms and assess any retained exposure.",
+      "note": "US corporate disclosure for fiscal 2026, including earlier operational experience. This is a financial lesson, not a judgment about any pending lawsuit or a universal rule governing lease assignments.",
+      "stats": [],
+      "source": {
+        "title": "Brinker International, Inc. Form 10-K for the fiscal year ended June 24, 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/703351/000070335126000029/eat-20260624.htm",
+        "kind": "First-party operational disclosure",
+        "note": "Note 8 establishes retained guarantees after restaurant disposals, assigned leases and default-related lawsuits. The exercise adds no company metrics or litigation outcomes."
+      },
+      "evidence": "have not been released from lease guarantees for the related restaurants",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-required-conversion-return-hurdle",
+      "mode": "verdict",
+      "concept": "Acquisition price plus required changes and investment return",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Moss Apron requires a production conversion to serve the buyer’s intended market. Independent quotes and checked forecasts include its costs and downtime. Although operations and debt remain fundable, the resulting return falls below the buyer’s fixed investment hurdle. No feasible cheaper conversion exists, and the seller refuses a lower price. At these offered terms, what is the verdict?",
+      "choices": [
+        {
+          "text": "Pass",
+          "why": "Verified required conversion costs make the offered investment fail the buyer’s stated hurdle, with no available change to remedy it."
+        },
+        {
+          "text": "Investigate",
+          "why": "The decisive costs, downtime and resulting return have already been verified; no unresolved, resolvable issue is identified."
+        },
+        {
+          "text": "Invest",
+          "why": "Being able to pay operating costs and debt does not establish an acceptable return on the acquisition and required conversion."
+        }
+      ],
+      "explanation": "BDC advises buyers to include intended changes because their costs can substantially reduce investment returns. Here the verified total investment fails an explicit hurdle, so funding sufficiency alone does not justify accepting the offered terms.",
+      "note": "Fictional Canadian training adaptation. The bakery name, all numbers, conversion requirements, forecasts, negotiations and buyer hurdle are invented assumptions; BDC reports no such transaction.",
+      "stats": [
+        [
+          "Revenue",
+          "Fictional annual revenue: CAD 900,000"
+        ],
+        [
+          "Margins",
+          "Fictional historical operating margin: 12%; conversion evaluated separately"
+        ],
+        [
+          "Customer mix",
+          "Fictional mix: 75% retail, 25% wholesale"
+        ],
+        [
+          "Occupancy",
+          "Fictional annual occupancy cost: CAD 72,000; lease diligence complete"
+        ],
+        [
+          "Debt",
+          "Fictional acquisition debt: CAD 180,000; scheduled payments covered in checked forecasts"
+        ],
+        [
+          "AR days",
+          "Fictional wholesale receivable days: 24"
+        ]
+      ],
+      "source": {
+        "title": "The steps you need to take BEFORE buying a business",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/due-diligence-valuation",
+        "kind": "Practitioner guidance",
+        "note": "BDC establishes that planned changes and their costs belong in acquisition assessment. All deal facts and the unacceptable return conclusion are fictional training assumptions."
+      },
+      "evidence": "their cost may substantially reduce the return on the capital you have invested.",
+      "calculations": []
     }
   ],
-  "researchNote": "Opened primary sources for three new questions covering foundation and lease, both tied for the fewest existing cases. The pack combines a 2026 inventory disclosure, a historical US SEC settlement, and Canadian practitioner guidance. No scored arithmetic or invented historical financial statistics."
+  "researchNote": "Opened primary sources for two new cases in lease and verdict, the modes with the fewest supplied research cases. Brinker’s fiscal 2026 filing provides current disclosure and documented earlier lease-guarantee experience; BDC guidance supports a fictional acquisition exercise. No files or accounts were accessed."
 }
 </script>
 <script>
