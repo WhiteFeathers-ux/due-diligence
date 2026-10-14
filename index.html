@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-13T13:57:07.097733+00:00",
+  "checkedAt": "2026-10-14T12:19:40.749184+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -2501,9 +2501,138 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "their cost may substantially reduce the return on the capital you have invested.",
       "calculations": []
+    },
+    {
+      "id": "verdict-bakery-integration-savings-unverified",
+      "mode": "verdict",
+      "concept": "Acquisition synergies, integration costs and valuation",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Slate Spoon's asking price meets the buyer's return hurdle only if production merges into the buyer's existing kitchen. Shared oven capacity, overlapping delivery schedules and integration costs remain unverified. The seller permits an operational trial and price renegotiation; other diligence is satisfactory. Before committing, what is the verdict?",
+      "choices": [
+        {
+          "text": "Investigate",
+          "why": "Test kitchen capacity and delivery compatibility, obtain integration quotes and revise the valuation. Access to evidence and price renegotiation makes the uncertainty resolvable."
+        },
+        {
+          "text": "Invest",
+          "why": "Verified standalone results do not establish that the proposed operational savings are feasible or sufficient to support the asking price."
+        },
+        {
+          "text": "Pass",
+          "why": "The savings have not been disproved, and the seller allows verification and revised terms. There is no confirmed unacceptable condition requiring rejection yet."
+        }
+      ],
+      "explanation": "BDC advises examining operations during acquisition diligence and planning for integration to require additional money, time or people. Here, the price depends on operational savings that still need testing, so the appropriate next step is to resolve those assumptions before committing.",
+      "note": "Slate Spoon, its Ontario setting, all financial figures and all transaction conditions are fictional training assumptions. Canadian practitioner guidance informs the diligence process; it establishes no legal entitlement to renegotiate.",
+      "stats": [
+        [
+          "Revenue",
+          "Fictional annual revenue: CAD 900,000"
+        ],
+        [
+          "Margins",
+          "Fictional standalone operating margin: 8%; integration savings excluded"
+        ],
+        [
+          "Customer mix",
+          "Fictional mix: retail 70%, wholesale 30%"
+        ],
+        [
+          "Occupancy",
+          "Fictional existing annual occupancy costs: CAD 72,000; consolidation feasibility unverified"
+        ],
+        [
+          "Debt",
+          "Fictional proposed acquisition debt: CAD 240,000; financing approval conditional"
+        ],
+        [
+          "AR days",
+          "Fictional wholesale receivable days: 25"
+        ]
+      ],
+      "source": {
+        "title": "What are the steps to buying a business?",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/what-are-steps-buying-business",
+        "kind": "Practitioner guidance",
+        "note": "Updated July 28, 2025. BDC identifies operational diligence and integration contingencies; the bakery, metrics, proposed consolidation and verdict conditions are invented."
+      },
+      "evidence": "you may need more money, time and/or people than expected.",
+      "calculations": []
+    },
+    {
+      "id": "investor-ge-contract-estimate-profit-growth",
+      "mode": "investor",
+      "concept": "Earnings quality and changes in contract cost estimates",
+      "caseType": "Historical case",
+      "prompt": "The SEC's December 9, 2020 US settled order found that GE failed to explain how reduced estimated future service-contract costs increased GE Power's reported profits during 2016–2017. Before treating similar profit growth as repeatable operating improvement, what should an analyst request?",
+      "choices": [
+        {
+          "text": "A profit bridge separating estimate revisions from operating performance, with evidence supporting the revised remaining costs.",
+          "why": "This identifies earnings arising from changed forecasts and tests whether the anticipated savings are supported by actual performance and credible cost estimates."
+        },
+        {
+          "text": "Only the current period's cash payments to suppliers.",
+          "why": "Current payments alone cannot validate cost assumptions covering the remaining life of long-term service contracts."
+        },
+        {
+          "text": "Confirmation that no new customer contracts were needed to produce the profit growth.",
+          "why": "Profit growth without new contracts can arise from estimate revisions; that fact does not establish repeatability."
+        },
+        {
+          "text": "The headline segment margin, assuming all reported improvement reflects savings already achieved.",
+          "why": "This confuses revised expectations of future costs with completed operating improvements."
+        }
+      ],
+      "explanation": "Under GE's contract accounting method, changing estimated lifetime margins could increase revenue and earnings in the revision period. Analysts should distinguish those effects from recurring performance and validate the remaining-cost assumptions; GE settled without admitting or denying the SEC's findings.",
+      "note": "Historical US SEC settled findings concerning 2016–2017 reporting, not a current investment verdict or an admission by GE. The diligence choices are educational applications of the documented mechanism.",
+      "stats": [],
+      "source": {
+        "title": "General Electric Company",
+        "url": "https://www.sec.gov/files/litigation/admin/2020/33-10899.pdf",
+        "kind": "Historical enforcement case",
+        "note": "SEC administrative order dated December 9, 2020, Release No. 10899. Establishes settled findings about undisclosed contract-estimate effects; the exercise invents no company metrics."
+      },
+      "evidence": "these reductions in cost estimates resulted in large revenue and earnings increases",
+      "calculations": []
+    },
+    {
+      "id": "foundation-zscaler-2026-stock-compensation-cash-reconciliation",
+      "mode": "foundation",
+      "concept": "Net income, operating cash flow and noncash compensation",
+      "caseType": "Historical case",
+      "prompt": "Zscaler's US Form 10-Q for April 30, 2026 reports positive operating cash flow despite a net loss, with stock-based compensation among its noncash adjustments. Why is stock-based compensation added back when reconciling net income to operating cash flow?",
+      "choices": [
+        {
+          "text": "It reduced accounting earnings without an equivalent current operating cash payment.",
+          "why": "The indirect reconciliation reverses a noncash expense already included in net income to derive operating cash flow."
+        },
+        {
+          "text": "Issuing compensation shares generated cash from customers.",
+          "why": "Share-based employee compensation is not a customer cash receipt."
+        },
+        {
+          "text": "The expense belongs exclusively on the balance sheet and should never reduce earnings.",
+          "why": "An expense can reduce earnings while its payment mechanism does not involve current operating cash."
+        },
+        {
+          "text": "Adding it back proves the compensation has no economic cost to shareholders.",
+          "why": "A cash-flow adjustment does not eliminate the compensation's economic cost or potential dilution."
+        }
+      ],
+      "explanation": "Operating cash flow and net income measure different things, so positive operating cash flow can coexist with a net loss. Adding back noncash compensation reconciles the statements; it does not make employee compensation economically free.",
+      "note": "Documented 2026 US filing disclosure, with a conceptual accounting question rather than a computed answer. No invented Zscaler figures or judgment about its current valuation.",
+      "stats": [],
+      "source": {
+        "title": "Zscaler, Inc. Form 10-Q for the quarterly period ended April 30, 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000096/zs-20260430.htm",
+        "kind": "Company regulatory filing",
+        "note": "The Operating Activities discussion identifies stock-based compensation among noncash charges reconciling net loss to operating cash flow. Answer choices apply that disclosure without inventing metrics."
+      },
+      "evidence": "Non-cash charges primarily consisted of $610.3 million for stock-based compensation expense",
+      "calculations": []
     }
   ],
-  "researchNote": "Opened primary sources for two new cases in lease and verdict, the modes with the fewest supplied research cases. Brinker’s fiscal 2026 filing provides current disclosure and documented earlier lease-guarantee experience; BDC guidance supports a fictional acquisition exercise. No files or accounts were accessed."
+  "researchNote": "Researched and opened primary sources on October 14, 2026, including a 2026 SEC filing, an older SEC settled enforcement order and BDC acquisition guidance. Three new questions cover verdict, the least-populated mode, plus foundation and investor, tied among the remaining modes. No computed answers or current investment recommendations are included."
 }
 </script>
 <script>
