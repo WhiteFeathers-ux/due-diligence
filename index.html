@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-14T12:19:40.749184+00:00",
+  "checkedAt": "2026-10-15T12:01:39.691403+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -2630,9 +2630,102 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "Non-cash charges primarily consisted of $610.3 million for stock-based compensation expense",
       "calculations": []
+    },
+    {
+      "id": "lease-darden-2026-closure-does-not-cancel-rent",
+      "mode": "lease",
+      "concept": "Store closure versus contractual occupancy obligations",
+      "caseType": "Historical case",
+      "prompt": "Darden's US annual report for May 31, 2026 describes Bahama Breeze closures and warns that ongoing leases at closed locations can hurt results. What should a retail operator learn when comparing continued operation with closing a loss-making store?",
+      "choices": [
+        {
+          "text": "Compare both cash-flow paths, including rent that survives closure and any negotiated termination payment.",
+          "why": "Closing can remove operating costs without eliminating the lease. The decision needs the cash obligations under each alternative."
+        },
+        {
+          "text": "Treat all future rent as avoided once the store stops trading.",
+          "why": "Stopping operations does not itself establish that the landlord has released the tenant."
+        },
+        {
+          "text": "Keep the store open whenever rent cannot be cancelled, regardless of its other cash losses.",
+          "why": "Unavoidable rent alone does not justify additional avoidable operating losses; compare the complete alternatives."
+        },
+        {
+          "text": "Use the asset impairment charge as the estimate of remaining cash rent.",
+          "why": "An asset write-down measures an accounting loss, not the contractual schedule of future landlord payments."
+        }
+      ],
+      "explanation": "Darden reported closing Bahama Breeze locations during fiscal 2026 and separately warned about continuing lease obligations at closed or underperforming restaurants. A closure forecast should distinguish avoidable operating costs from rent and exit payments that remain contractually payable.",
+      "note": "United States, fiscal year ended May 31, 2026. This is a financial-planning lesson from company disclosures, not a finding of misconduct or a claim that every closed Darden location retained its lease.",
+      "stats": [],
+      "source": {
+        "title": "Darden Restaurants, Inc. Form 10-K for the fiscal year ended May 31, 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/940944/000094094426000025/dri-20260531.htm",
+        "kind": "Official company annual filing",
+        "note": "Documents Bahama Breeze closures and warns that continuing lease obligations can impair results. The exercise supplies alternative decision approaches, not undisclosed closure costs."
+      },
+      "evidence": "ongoing lease obligations at closed or underperforming restaurant locations could impair our results of operations.",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-expiring-supplier-discount-repriced",
+      "mode": "verdict",
+      "concept": "Maintainable earnings after an expiring supplier concession",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Hazel Pan's discounted flour contract expires at closing. Binding replacement quotes establish higher costs, which independent diligence includes in maintainable earnings. The seller accepts a price below the revised independent valuation. Financial, tax, legal, customer, equipment and lease checks are complete with no material unresolved findings. Committed financing and funded working capital support closing; checked downside forecasts cover replacement flour costs, payroll, maintenance and debt while preserving reserves and meeting the buyer's return hurdle. At these revised terms, what is the verdict?",
+      "choices": [
+        {
+          "text": "Invest",
+          "why": "The expiring concession has been verified, normalized in earnings and reflected in price. Essential diligence, funding and downside affordability are explicitly supported."
+        },
+        {
+          "text": "Investigate",
+          "why": "That would fit an unresolved replacement cost or valuation assumption. Here binding quotes and completed independent checks resolve the identified issue."
+        },
+        {
+          "text": "Pass",
+          "why": "A supplier cost increase does not automatically make a deal unacceptable when the revised price and verified cash flows satisfy the buyer's requirements."
+        }
+      ],
+      "explanation": "BDC advises buyers to inspect supplier contracts and agreements that could reduce asset value or restrict operations. In this fictional exercise, the temporary purchasing benefit has been removed from maintainable earnings, and the revised deal explicitly meets the buyer's valuation and funding requirements.",
+      "note": "Hazel Pan, its Ontario transaction, all figures and all diligence outcomes are fictional training assumptions. Invest applies only to the fully specified revised transaction.",
+      "stats": [
+        [
+          "Revenue",
+          "CAD 1.3 million annually, fictional"
+        ],
+        [
+          "Margins",
+          "Maintainable operating margin 11% after replacement flour pricing, fictional"
+        ],
+        [
+          "Customer mix",
+          "Largest customer 7% of revenue, fictional"
+        ],
+        [
+          "Occupancy",
+          "CAD 72,000 annually including additional rent, fictional"
+        ],
+        [
+          "Debt",
+          "CAD 210,000 acquisition term loan, fictional"
+        ],
+        [
+          "AR days",
+          "16 days, fictional"
+        ]
+      ],
+      "source": {
+        "title": "The steps you need to take before buying a business",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/due-diligence-valuation",
+        "kind": "Practitioner acquisition guidance",
+        "note": "Supports examining supplier contracts and restrictive agreements during acquisition diligence. The bakery, expiring discount, replacement quotes, financial figures, valuation and successful checks are invented."
+      },
+      "evidence": "You need to know if the company has signed agreements that might lower the value of the assets",
+      "calculations": []
     }
   ],
-  "researchNote": "Researched and opened primary sources on October 14, 2026, including a 2026 SEC filing, an older SEC settled enforcement order and BDC acquisition guidance. Three new questions cover verdict, the least-populated mode, plus foundation and investor, tied among the remaining modes. No computed answers or current investment recommendations are included."
+  "researchNote": "Researched the two least-populated modes, lease and verdict, using opened primary sources. The pack combines Darden's fiscal 2026 operational disclosures with established BDC acquisition guidance. Fictional deal assumptions are explicitly identified; no current investment recommendation is made."
 }
 </script>
 <script>
