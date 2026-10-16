@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-15T12:01:39.691403+00:00",
+  "checkedAt": "2026-10-16T12:01:38.665702+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -2723,9 +2723,81 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "You need to know if the company has signed agreements that might lower the value of the assets",
       "calculations": []
+    },
+    {
+      "id": "foundation-nike-2026-anticipated-refunds",
+      "mode": "foundation",
+      "concept": "Anticipated sales reductions link revenue and liabilities",
+      "caseType": "Historical case",
+      "prompt": "NIKE's US annual report for May 31, 2026 describes estimated returns, discounts and claims reducing revenue when sales are recognized. Isolating that revenue-side entry, why record a liability before paying a refund?",
+      "choices": [
+        {
+          "text": "The business expects to owe customers part of the invoiced amount, so revenue falls and accrued liabilities rise.",
+          "why": "The entry reflects expected customer concessions when revenue is recognized, before the related cash payment."
+        },
+        {
+          "text": "Expected refunds reduce revenue only when customers receive cash.",
+          "why": "Waiting for payment would omit the anticipated reduction and liability from the period of the sale."
+        },
+        {
+          "text": "The estimated refund increases receivables because customers might purchase again.",
+          "why": "A possible future purchase does not create a receivable or offset an expected refund obligation."
+        },
+        {
+          "text": "The liability sets aside an equal amount of cash in a separate reserve account.",
+          "why": "An accounting liability records an obligation; this entry does not itself transfer or segregate cash."
+        }
+      ],
+      "explanation": "NIKE reports anticipated sales reductions against revenue with an offsetting increase in accrued liabilities when revenue is recognized. This connects the income statement and balance sheet before cash settlement; the separate accounting for expected returned inventory is outside this question.",
+      "note": "Real US company disclosure for fiscal 2026. The exercise isolates the revenue-side entry and does not allege an accounting error or invent company metrics.",
+      "stats": [],
+      "source": {
+        "title": "NIKE, Inc. — Form 10-K for the fiscal year ended May 31, 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000088/nke-20260531.htm",
+        "kind": "Company annual filing",
+        "note": "Note 1 establishes the revenue reduction and accrued-liability treatment for anticipated returns, discounts and claims. The exercise isolates that entry."
+      },
+      "evidence": "with an offsetting increase to Accrued liabilities at the time revenues are recognized.",
+      "calculations": []
+    },
+    {
+      "id": "investor-iconix-licensee-financial-support",
+      "mode": "investor",
+      "concept": "Customer collections funded by the seller",
+      "caseType": "Historical case",
+      "prompt": "In its December 5, 2019 US action, the SEC alleged that Iconix concealed transactions temporarily supporting distressed licensees that owed royalties. What should an analyst check before treating similar customer receipts as evidence of healthy demand?",
+      "choices": [
+        {
+          "text": "Trace receipts alongside payments, loans and other support to those customers, and assess their independent ability to pay.",
+          "why": "Cash received can provide misleading reassurance if the seller supplied the customer with the means to make the payment."
+        },
+        {
+          "text": "Confirm that receipts reached the bank, then treat the customers' ability to pay as established.",
+          "why": "Bank receipt verification establishes arrival of cash but leaves its economic funding source unresolved."
+        },
+        {
+          "text": "Compare royalty contract rates with competitors and accept collections if the rates look typical.",
+          "why": "Market-rate contract terms do not establish that customers can fund their obligations independently."
+        },
+        {
+          "text": "Focus on the number of licensees because a broad roster establishes collection quality.",
+          "why": "Customer count does not reveal financial distress or support arrangements affecting individual receipts."
+        }
+      ],
+      "explanation": "The SEC alleged that Iconix used undisclosed transactions to temporarily bolster failing licensees' finances. The transferable diligence lesson is to examine both sides of customer cash movements before relying on collections as evidence of sustainable earnings.",
+      "note": "Historical US civil enforcement allegations announced December 5, 2019. Iconix agreed to settle without admitting or denying the allegations; the announcement said court approval remained pending. This question does not assert a final judgment or describe later proceedings.",
+      "stats": [],
+      "source": {
+        "title": "SEC Charges Iconix Brand Group and Former Top Executives With Accounting Fraud",
+        "url": "https://www.sec.gov/newsroom/press-releases/2019-251",
+        "kind": "Historical enforcement case",
+        "note": "Establishes the SEC's allegations about concealed licensee support and the announced settlement posture. The analyst's diligence procedure is a teaching inference."
+      },
+      "evidence": "transactions to secretly and temporarily bolster its licensees’ finances",
+      "calculations": []
     }
   ],
-  "researchNote": "Researched the two least-populated modes, lease and verdict, using opened primary sources. The pack combines Darden's fiscal 2026 operational disclosures with established BDC acquisition guidance. Fictional deal assumptions are explicitly identified; no current investment recommendation is made."
+  "researchNote": "All four modes were tied at 15 cases; this pack adds foundation and investor material. Opened primary SEC sources cover NIKE's fiscal 2026 reporting and the SEC's historical 2019 Iconix allegations. Questions address anticipated refunds and seller-supported customer collections, distinct from the supplied library. No files or accounts were accessed."
 }
 </script>
 <script>
