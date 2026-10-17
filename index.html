@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-16T12:01:38.665702+00:00",
+  "checkedAt": "2026-10-17T14:01:08.873349+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -2795,9 +2795,102 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "transactions to secretly and temporarily bolster its licensees’ finances",
       "calculations": []
+    },
+    {
+      "id": "lease-el-pollo-loco-2026-renovation-option-reassessment",
+      "mode": "lease",
+      "concept": "Renovations can change the expected occupancy horizon and lease accounting",
+      "caseType": "Historical case",
+      "prompt": "El Pollo Loco's US quarterly filing for April 1, 2026 describes reassessing restaurant lease terms after events including significant improvements lasting beyond lease expiration. What should an operator learn before approving a similar renovation?",
+      "choices": [
+        {
+          "text": "Reassess expected option exercise and the accounting lease term alongside the renovation decision.",
+          "why": "A substantial investment benefiting later periods can change whether exercising an existing renewal option is reasonably certain."
+        },
+        {
+          "text": "Keep the accounting lease term unchanged until a renewal option is formally exercised.",
+          "why": "This ignores triggering events that can require reassessment before formal exercise."
+        },
+        {
+          "text": "Include every available renewal option whenever any renovation occurs.",
+          "why": "The filing describes a reasonable-certainty assessment, rather than automatic inclusion of every option."
+        },
+        {
+          "text": "Treat the renovation's useful life as automatically extending the contractual lease.",
+          "why": "An accounting reassessment does not itself create additional contractual occupancy rights."
+        }
+      ],
+      "explanation": "El Pollo Loco reported lease-term reassessments following operational decisions, including significant improvements extending beyond existing lease expiration. Renovation approval should connect expected occupancy, existing contractual options and accounting estimates; spending on improvements does not itself extend a lease.",
+      "note": "Documented US first-party operational experience for the quarter ended April 1, 2026. The similar operator decision is a training application, not an allegation of improper accounting or a claim about Canadian lease law.",
+      "stats": [],
+      "source": {
+        "title": "EL POLLO LOCO HOLDINGS, INC._April 1, 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1606366/000160636626000038/loco-20260401x10q.htm",
+        "kind": "First-party quarterly filing",
+        "note": "The lease note documents reassessments and explains when renewal options enter the accounting lease term. The exercise invents no company metrics."
+      },
+      "evidence": "significant leasehold improvements that have a useful life that extend past the original lease term",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-brand-rights-excluded",
+      "mode": "verdict",
+      "concept": "The assets actually transferred must support the acquisition valuation",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Fern Bell's price assumes continued use of its established brand and recipes. Counsel confirms the offered asset agreement excludes both; the seller refuses a licence or transfer. An independent valuation and checked rebranding forecast show the offered price fails the buyer's fixed return hurdle. No workable alternative rights arrangement exists, and the seller refuses repricing. At these terms, what is the verdict?",
+      "choices": [
+        {
+          "text": "Pass",
+          "why": "Verified exclusions undermine the valuation, the revised economics fail the stated hurdle, and the seller refuses remedies."
+        },
+        {
+          "text": "Investigate",
+          "why": "The ownership scope and economic consequences are already verified; no unresolved, resolvable diligence question remains."
+        },
+        {
+          "text": "Invest",
+          "why": "Historical branded earnings cannot justify paying this price for a purchase that excludes the essential rights supporting those earnings."
+        }
+      ],
+      "explanation": "BDC recommends establishing exactly which assets are being sold, including the business name and intellectual property. Here, verified exclusions and checked replacement economics make the offered terms unacceptable under the buyer's stated hurdle.",
+      "note": "Fern Bell, its Ontario transaction, all deal findings and all stat-row descriptions are fictional training assumptions. BDC supplies the asset-scope diligence principle, not evidence about an actual bakery or a legal conclusion about recipe ownership.",
+      "stats": [
+        [
+          "Revenue",
+          "Fictional: historical sales rely on the excluded brand"
+        ],
+        [
+          "Margins",
+          "Fictional: rebranding forecast fails the return hurdle"
+        ],
+        [
+          "Customer mix",
+          "Fictional: retail and wholesale customers"
+        ],
+        [
+          "Occupancy",
+          "Fictional: lease diligence complete"
+        ],
+        [
+          "Debt",
+          "Fictional: financing availability verified"
+        ],
+        [
+          "AR days",
+          "Fictional: collection timing verified; no unresolved issue"
+        ]
+      ],
+      "source": {
+        "title": "The steps you need to take BEFORE buying a business",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/due-diligence-valuation",
+        "kind": "Practitioner guidance",
+        "note": "BDC recommends identifying the precise assets transferred and obtaining an independent valuation. The excluded rights, seller refusals and failed return hurdle are fictional assumptions."
+      },
+      "evidence": "Get a detailed list of exactly what the vendor is selling",
+      "calculations": []
     }
   ],
-  "researchNote": "All four modes were tied at 15 cases; this pack adds foundation and investor material. Opened primary SEC sources cover NIKE's fiscal 2026 reporting and the SEC's historical 2019 Iconix allegations. Questions address anticipated refunds and seller-supported customer collections, distinct from the supplied library. No files or accounts were accessed."
+  "researchNote": "Opened and read primary sources for the two least-populated modes, lease and verdict. This pack combines a 2026 first-party restaurant filing with established BDC acquisition guidance. All fictional deal facts are explicitly identified; no scored arithmetic is required."
 }
 </script>
 <script>
