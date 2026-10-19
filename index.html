@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-17T14:01:08.873349+00:00",
+  "checkedAt": "2026-10-19T13:46:27.113732+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -2888,9 +2888,81 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "Get a detailed list of exactly what the vendor is selling",
       "calculations": []
+    },
+    {
+      "id": "foundation-ngs-2026-reserved-inventory-disposal",
+      "mode": "foundation",
+      "concept": "Inventory allowances versus subsequent disposal",
+      "caseType": "Adapted case",
+      "prompt": "Natural Gas Services Group's US June 2026 inventory disclosure describes disposing of previously reserved inventory during 2025. In a simplified training example, inventory is already fully written down through an allowance and is then discarded without proceeds or disposal costs. What happens at disposal?",
+      "choices": [
+        {
+          "text": "Gross inventory and its allowance decrease together; net inventory, profit and cash do not change.",
+          "why": "The loss was recognized when the allowance was established. Removing fully reserved inventory uses that allowance without recording the same loss again."
+        },
+        {
+          "text": "A new inventory expense reduces profit by the original cost.",
+          "why": "This would recognize the loss again even though the inventory's carrying value was already fully reduced."
+        },
+        {
+          "text": "Releasing the allowance increases profit while gross inventory is removed without an offset.",
+          "why": "The allowance offsets the removal of gross inventory; it does not become income simply because disposal occurs."
+        },
+        {
+          "text": "Operating cash decreases by the original purchase cost.",
+          "why": "The original purchase payment belongs to its payment period. The assumed disposal involves no cash transaction."
+        }
+      ],
+      "explanation": "An inventory loss can affect earnings before the goods are physically discarded. Under the stated assumptions, disposal clears gross inventory against its allowance without a further expense or cash payment.",
+      "note": "The fully reserved item, absence of proceeds and absence of disposal costs are fictional training assumptions. They are not claims about the precise accounting for every item in the company's disclosed disposal.",
+      "stats": [],
+      "source": {
+        "title": "Inventory",
+        "url": "https://www.sec.gov/Archives/edgar/data/1084991/000108499126000079/R11.htm",
+        "kind": "Company quarterly filing disclosure",
+        "note": "The June 30, 2026 disclosure establishes that the 2025 allowance write-off reflected disposal of previously reserved inventory at the Midland, Texas facility. The exercise supplies simplified assumptions to isolate the accounting mechanism."
+      },
+      "evidence": "items that were previously held and reserved at our former fabrication, repair and overhaul facility",
+      "calculations": []
+    },
+    {
+      "id": "investor-satyam-independent-cash-verification",
+      "mode": "investor",
+      "concept": "Independent verification of cash supporting valuation",
+      "caseType": "Historical case",
+      "prompt": "In its April 5, 2011 US action against India-based Satyam, the SEC alleged that bogus bank statements supported fictitious cash. Before subtracting a similar company's reported cash from its acquisition price to assess effective cost, which diligence step best addresses this risk?",
+      "choices": [
+        {
+          "text": "Obtain bank confirmations through independently verified channels and reconcile confirmed balances to the ledger.",
+          "why": "Evidence obtained independently of management directly tests whether the cash used in the valuation exists."
+        },
+        {
+          "text": "Match management's bank-statement copies to management's cash spreadsheet.",
+          "why": "Agreement between documents from the same potentially compromised source does not independently establish the bank balance."
+        },
+        {
+          "text": "Check that reported interest income is consistent with reported cash.",
+          "why": "Plausible relationships within reported accounts cannot establish that the underlying cash exists."
+        },
+        {
+          "text": "Compare the reported cash balance with industry peers before accepting it.",
+          "why": "Peer comparisons can flag unusual balances but cannot verify an individual company's bank deposits."
+        }
+      ],
+      "explanation": "Cash credited in an acquisition valuation needs independent support because internally consistent documents can still be false. Satyam settled the SEC action without admitting or denying the allegations; the cited release describes allegations, not a trial judgment.",
+      "note": "The SEC complaint was filed in US District Court in Washington, D.C., concerning an Indian issuer with US-traded depositary shares. The acquisition-price application is a teaching inference, not a reported Satyam transaction or current investment recommendation.",
+      "stats": [],
+      "source": {
+        "title": "SEC Charges Satyam Computer Services With Financial Fraud",
+        "url": "https://www.sec.gov/newsroom/press-releases/2011-81-sec-charges-satyam-computer-services-financial-fraud",
+        "kind": "Historical enforcement case",
+        "note": "Establishes the SEC's allegations concerning false invoices and bank statements, and the settlement without admission or denial. The diligence choices and acquisition-valuation application are instructional."
+      },
+      "evidence": "Satyam employees created bogus bank statements to reflect payment of the sham invoices.",
+      "calculations": []
     }
   ],
-  "researchNote": "Opened and read primary sources for the two least-populated modes, lease and verdict. This pack combines a 2026 first-party restaurant filing with established BDC acquisition guidance. All fictional deal facts are explicitly identified; no scored arithmetic is required."
+  "researchNote": "All four modes were tied at 16 cases. Added two distinct lessons in foundation and investor, using an opened 2026 SEC filing disclosure and an opened historical SEC enforcement release. No scored arithmetic or invented company metrics."
 }
 </script>
 <script>
