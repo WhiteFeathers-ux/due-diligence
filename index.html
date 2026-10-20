@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-19T13:46:27.113732+00:00",
+  "checkedAt": "2026-10-20T12:16:57.314767+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -2960,9 +2960,102 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "Satyam employees created bogus bank statements to reflect payment of the sham invoices.",
       "calculations": []
+    },
+    {
+      "id": "lease-tanger-2026-cotenancy-triggers",
+      "mode": "lease",
+      "concept": "Co-tenancy protections depend on contractual triggers",
+      "caseType": "Historical case",
+      "prompt": "Tanger's US annual report for December 31, 2025, filed in 2026, describes leases allowing rent reductions or termination under specified co-tenancy conditions. What should a bakery operator learn before assuming an anchor store's departure permits lower rent?",
+      "choices": [
+        {
+          "text": "Have counsel check the signed lease's qualifying triggers, conditions and remedies before budgeting relief.",
+          "why": "Tanger describes protections in certain agreements tied to specified occupancy levels or named tenants; the actual contract determines whether relief applies."
+        },
+        {
+          "text": "Reduce rent whenever an anchor closes, because reduced foot traffic establishes entitlement.",
+          "why": "Commercial harm alone does not establish that the lease grants a rent reduction."
+        },
+        {
+          "text": "Treat the centre's overall occupancy rate as the only relevant test.",
+          "why": "A provision may instead depend on retaining specified named tenants, with different conditions."
+        },
+        {
+          "text": "Assume a qualifying departure automatically terminates the lease.",
+          "why": "The disclosed provisions may permit reduced rent, termination or other conditional outcomes; those remedies are not interchangeable."
+        }
+      ],
+      "explanation": "Tanger reports that certain leases link relief to occupancy, named tenants or sales targets. A tenant should model the remedy its own agreement actually provides and verify the conditions before changing payments.",
+      "note": "Real first-party lease disclosure from a US SEC filing covering December 31, 2025. The bakery application is hypothetical; no universal US tenant protection or actual Tanger tenant dispute is asserted.",
+      "stats": [],
+      "source": {
+        "title": "Tanger Inc. and Tanger Properties Limited Partnership — Form 10-K for the year ended December 31, 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/899715/000162828026012252/skt-20251231.htm",
+        "kind": "First-party operational disclosure",
+        "note": "Establishes that certain Tanger leases contain conditional co-tenancy or sales-based remedies. The exercise invents only the bakery application."
+      },
+      "evidence": "if we fail to maintain certain occupancy levels or retain specified named tenants",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-conflicting-internal-forecast",
+      "mode": "verdict",
+      "concept": "Reconcile selling forecasts with internal operating plans",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ohio bakery Acorn Ledger's asking price meets the buyer's return hurdle using its sales presentation forecast. A newly supplied internal operating plan projects weaker earnings; management says the documents use different assumptions but has not reconciled them. The seller permits independent reconciliation and repricing; other diligence is satisfactory. Before committing, what is your verdict?",
+      "choices": [
+        {
+          "text": "Investigate",
+          "why": "Reconcile forecast dates, assumptions and actual performance, then reassess value and funding. The discrepancy is material but remains resolvable."
+        },
+        {
+          "text": "Invest",
+          "why": "The price depends on a forecast whose relationship to management's own operating plan remains unexplained."
+        },
+        {
+          "text": "Pass",
+          "why": "The evidence does not yet establish unacceptable final terms or deliberate deception, and the seller permits verification and repricing."
+        }
+      ],
+      "explanation": "In its September 28, 2018 US settled order, the SEC found that Walgreens inadequately disclosed increased risk to an earnings goal despite weaker internal forecasts; respondents settled without admitting or denying the findings. In this fictional acquisition, reconcile the conflicting forecasts before deciding whether the price is supportable.",
+      "note": "Acorn Ledger, its location, financial figures and deal circumstances are fictional training assumptions. The adaptation borrows the forecast-reconciliation lesson, not Walgreens' conduct or financial results.",
+      "stats": [
+        [
+          "Revenue",
+          "Fictional trailing annual sales: USD 960,000"
+        ],
+        [
+          "Margins",
+          "Fictional trailing operating margin: 9%; forecasts unreconciled"
+        ],
+        [
+          "Customer mix",
+          "Fictional mix: 75% retail, 25% wholesale"
+        ],
+        [
+          "Occupancy",
+          "Fictional annual all-in occupancy cost: USD 84,000"
+        ],
+        [
+          "Debt",
+          "Fictional proposed acquisition debt: USD 220,000"
+        ],
+        [
+          "AR days",
+          "Fictional reported receivable days: 18"
+        ]
+      ],
+      "source": {
+        "title": "Walgreens Boots Alliance, Inc., Gregory D. Wasson and Wade D. Miquelon",
+        "url": "https://www.sec.gov/litigation/admin/2018/33-10562.pdf",
+        "kind": "Historical settled enforcement order",
+        "note": "SEC order dated September 28, 2018 establishes settled findings about earnings-goal disclosures and weaker internal forecasts. Respondents did not admit or deny the findings; all bakery details are invented."
+      },
+      "evidence": "Walgreens’ internal forecasts continued to fall short of the FY16 EBIT Goal",
+      "calculations": []
     }
   ],
-  "researchNote": "All four modes were tied at 16 cases. Added two distinct lessons in foundation and investor, using an opened 2026 SEC filing disclosure and an opened historical SEC enforcement release. No scored arithmetic or invented company metrics."
+  "researchNote": "Researched the two least-covered modes, lease and verdict, using opened primary sources. Tanger's 2026 filing provides first-party operational evidence; the SEC's 2018 Walgreens order supplies an older forecasting lesson. Fictional training assumptions are explicitly identified."
 }
 </script>
 <script>
