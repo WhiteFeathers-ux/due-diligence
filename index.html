@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-20T12:16:57.314767+00:00",
+  "checkedAt": "2026-10-21T12:10:23.814985+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -3053,9 +3053,81 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "Walgreens’ internal forecasts continued to fall short of the FY16 EBIT Goal",
       "calculations": []
+    },
+    {
+      "id": "foundation-loan-principal-statement-relationships",
+      "mode": "foundation",
+      "concept": "Loan principal repayment links cash flow and the balance sheet without reducing earnings",
+      "caseType": "Research-informed practice",
+      "prompt": "In a simplified US training example, a bakery makes a cash payment consisting entirely of bank-loan principal, with no interest, fees or penalties. Which statement relationship is correct?",
+      "choices": [
+        {
+          "text": "Cash and loan liabilities fall; net income is unchanged, and the payment is a financing cash outflow.",
+          "why": "Repaying principal settles an existing borrowing rather than creating an expense."
+        },
+        {
+          "text": "Cash and net income fall; the payment is an operating cash outflow.",
+          "why": "This confuses repayment of borrowed principal with an expense such as interest."
+        },
+        {
+          "text": "Cash falls and equipment assets rise; the payment is an investing cash outflow.",
+          "why": "Repaying the lender does not itself purchase or capitalize equipment, even if the original borrowing financed equipment."
+        },
+        {
+          "text": "Cash and loan liabilities fall; net income rises because the business owes less.",
+          "why": "Paying a debt at its recorded principal amount creates no gain; debt forgiveness would be a different transaction."
+        }
+      ],
+      "explanation": "Principal repayment reduces cash and the recorded loan liability without passing through the income statement. A business can therefore report a profit while scheduled principal payments consume cash, making repayment schedules essential to debt-coverage analysis.",
+      "note": "The bakery and transaction are fictional training assumptions. The example excludes interest, fees, penalties and debt extinguishment gains or losses.",
+      "stats": [],
+      "source": {
+        "title": "Beginners' Guide to Financial Statement",
+        "url": "https://www.sec.gov/investor/pubs/begfinstmtguide.htm",
+        "kind": "Regulator educational guidance",
+        "note": "SEC guidance dated February 4, 2007 explains balance-sheet obligations and financing cash flows, including bank-loan repayments. The simplified bakery transaction is invented."
+      },
+      "evidence": "Likewise, paying back a bank loan would show up as a use of cash flow.",
+      "calculations": []
+    },
+    {
+      "id": "investor-build-a-bear-2026-breakage-estimate-quality",
+      "mode": "investor",
+      "concept": "Gift-card breakage estimates and sustainable revenue",
+      "caseType": "Historical case",
+      "prompt": "Build-A-Bear's US annual report for January 31, 2026 describes pandemic-related changes in gift-card redemption behavior and adjustments to data used for breakage estimates. Before treating similar breakage revenue as sustainable, what should an analyst examine?",
+      "choices": [
+        {
+          "text": "Redemption history by issuance period, changes to estimation inputs, and revenue sensitivity to the assumed breakage rate.",
+          "why": "These checks test whether expected nonredemption reflects durable customer behavior and how strongly revenue depends on judgment."
+        },
+        {
+          "text": "Current gift-card cash sales alone, treating them as equivalent to current breakage revenue.",
+          "why": "Card-sale receipts and estimated revenue from unredeemed balances occur through different accounting mechanisms."
+        },
+        {
+          "text": "Only redemption behavior during pandemic store closures, because lower redemptions prove permanently higher breakage.",
+          "why": "A temporary disruption may distort long-term behavior; the filing specifically discusses adjusting pandemic-affected historical data."
+        },
+        {
+          "text": "The audit opinion alone, assuming audited breakage revenue must recur at the same level.",
+          "why": "An audit does not guarantee future customer behavior or remove sensitivity to estimation assumptions."
+        }
+      ],
+      "explanation": "The filing describes altered redemption behavior and says changes in breakage estimates affect revenue prospectively. The diligence lesson is to test the underlying behavior and estimation sensitivity before projecting recurrence; the disclosure itself is not evidence of misconduct.",
+      "note": "Documented company experience from a US Form 10-K for the fiscal year ended January 31, 2026. The analyst's task and alternative answers are educational constructions; no company metrics are invented.",
+      "stats": [],
+      "source": {
+        "title": "BUILD-A-BEAR WORKSHOP, INC. — Form 10-K for the fiscal year ended January 31, 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1113809/000143774926012501/bbw20251218c_10k.htm",
+        "kind": "Company annual report",
+        "note": "Revenue-recognition disclosures document redemption-pattern changes and breakage-estimation judgments. The exercise asks for a transferable diligence lesson, not a present investment verdict."
+      },
+      "evidence": "Changes to breakage estimates impact revenue recognition prospectively.",
+      "calculations": []
     }
   ],
-  "researchNote": "Researched the two least-covered modes, lease and verdict, using opened primary sources. Tanger's 2026 filing provides first-party operational evidence; the SEC's 2018 Walgreens order supplies an older forecasting lesson. Fictional training assumptions are explicitly identified."
+  "researchNote": "All four modes were tied at 17 cases; this pack adds foundation and investor questions. Opened and read a 2026 company filing documenting gift-card redemption experience and the SEC's older financial-statement guidance. These lessons differ from the supplied existing prompts. No files or private data were accessed."
 }
 </script>
 <script>
