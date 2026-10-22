@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-21T12:10:23.814985+00:00",
+  "checkedAt": "2026-10-22T15:38:50.538801+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -3125,9 +3125,102 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "Changes to breakage estimates impact revenue recognition prospectively.",
       "calculations": []
+    },
+    {
+      "id": "lease-arnold-service-charge-escalator",
+      "mode": "lease",
+      "concept": "Contractual service-charge escalation versus actual costs",
+      "caseType": "Historical case",
+      "prompt": "In Arnold v Britton, decided June 10, 2015, the UK Supreme Court upheld escalating fixed service charges for holiday chalets in Wales despite adverse financial consequences. What practical lesson transfers to reviewing a bakery lease?",
+      "choices": [
+        {
+          "text": "Check whether service charges follow actual costs or a fixed escalator, and model the written obligation throughout the term.",
+          "why": "The distinction determines occupancy exposure; a charge described as paying for services need not operate as reimbursement of actual expenditure."
+        },
+        {
+          "text": "Budget only actual maintenance costs because the service-charge label automatically limits payment to those costs.",
+          "why": "That assumes a cost limitation that the contractual wording may not contain."
+        },
+        {
+          "text": "Accept an aggressive escalator because a court will reduce it if it becomes commercially burdensome.",
+          "why": "The judgment illustrates the danger of relying on adverse financial consequences to overcome contractual wording."
+        },
+        {
+          "text": "Review base-rent increases alone because service-charge escalation affects the landlord's accounting rather than tenant cash.",
+          "why": "Service charges are payment obligations and can materially change the tenant's occupancy cash requirements."
+        }
+      ],
+      "explanation": "The Court dismissed the tenants' appeal and upheld the landlord's interpretation of the service-charge provisions. The transferable diligence lesson is to examine and forecast the precise payment formula before signing; this Welsh chalet decision does not establish US commercial lease law.",
+      "note": "Final UK Supreme Court judgment concerning holiday chalet leases in Wales, not a commercial bakery dispute. The bakery application is a training analogy; no company financial statistics or calculated outcomes are supplied.",
+      "stats": [],
+      "source": {
+        "title": "Arnold (Respondent) v Britton and others (Appellants) [2015] UKSC 36",
+        "url": "https://supremecourt.uk/uploads/uksc_2013_0193_press_summary_01b3c02385.pdf",
+        "kind": "Official judgment press summary",
+        "note": "Establishes the dispute over fixed service-charge escalation and the final dismissal of the tenants' appeal. The exercise supplies the practical bakery-review analogy."
+      },
+      "evidence": "The Supreme Court holds that the Respondent is correct and therefore dismisses the tenants’ appeal",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-key-baker-retention-unverified",
+      "mode": "verdict",
+      "concept": "Key-employee transition risk and maintainable earnings",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Alder Whisk's valuation assumes its specialist head baker stays after closing. Production trials confirm that other staff cannot yet make its core products consistently. The baker's plans and retention terms remain unverified. The seller permits a meeting, a training trial and repricing; other diligence is satisfactory. Before committing, what is your verdict?",
+      "choices": [
+        {
+          "text": "Investigate",
+          "why": "Meet the baker, verify feasible retention or replacement arrangements, and test training costs and disruption before accepting the earnings forecast and price."
+        },
+        {
+          "text": "Invest",
+          "why": "Verified historical earnings do not establish that production and earnings can continue through the ownership transition."
+        },
+        {
+          "text": "Pass",
+          "why": "A material uncertainty remains, but the seller allows practical verification and repricing; an unavoidable failure at fixed offered terms has not been established."
+        }
+      ],
+      "explanation": "BDC identifies key-employee continuity as acquisition diligence and recommends meetings and potential retention incentives. Here the essential production capability remains unresolved but testable, supporting Investigate before an unconditional commitment.",
+      "note": "Alder Whisk, its circumstances and every stat below are fictional training assumptions. Ontario supplies scenario context; the source provides Canadian practitioner guidance, not a legal guarantee of employee retention.",
+      "stats": [
+        [
+          "Revenue",
+          "Fictional: CAD 950,000 annually"
+        ],
+        [
+          "Margins",
+          "Fictional: 11% operating margin, assuming head-baker retention"
+        ],
+        [
+          "Customer mix",
+          "Fictional: mainly walk-in retail; no dominant wholesale customer"
+        ],
+        [
+          "Occupancy",
+          "Fictional: transferable lease independently verified"
+        ],
+        [
+          "Debt",
+          "Fictional: financing committed; coverage assumes uninterrupted production"
+        ],
+        [
+          "AR days",
+          "Fictional: 8 days"
+        ]
+      ],
+      "source": {
+        "title": "How to conduct due diligence when buying a business",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/buying-business-conducting-due-diligence",
+        "kind": "Practitioner guidance",
+        "note": "Updated November 24, 2025. Establishes the importance of checking key employees' intentions and mitigating transition risk. The bakery, financial profile and diligence findings are invented."
+      },
+      "evidence": "You may need to meet key employees to get more information about their role",
+      "calculations": []
     }
   ],
-  "researchNote": "All four modes were tied at 17 cases; this pack adds foundation and investor questions. Opened and read a 2026 company filing documenting gift-card redemption experience and the SEC's older financial-statement guidance. These lessons differ from the supplied existing prompts. No files or private data were accessed."
+  "researchNote": "Two additions target lease and verdict, tied for the fewest cases. Opened primary sources support an older final UK judgment and Canadian acquisition guidance updated November 24, 2025. A search for current 2026 operational disclosures located a filing, but opening it returned HTTP 429; no new 2026 development is asserted. No files or private sources were accessed."
 }
 </script>
 <script>
