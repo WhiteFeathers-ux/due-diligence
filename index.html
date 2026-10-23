@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-22T15:38:50.538801+00:00",
+  "checkedAt": "2026-10-23T12:26:01.108044+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -3218,9 +3218,81 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "You may need to meet key employees to get more information about their role",
       "calculations": []
+    },
+    {
+      "id": "foundation-acadia-2026-inventory-classification",
+      "mode": "foundation",
+      "concept": "Current versus long-term inventory and working capital",
+      "caseType": "Historical case",
+      "prompt": "Acadia Pharmaceuticals' US Form 10-Q for June 30, 2026 presents inventory separately as current and long-term assets. When assessing near-term working capital, how should an analyst treat the long-term portion?",
+      "choices": [
+        {
+          "text": "Exclude it from current assets and separately examine when it can support sales and cash receipts.",
+          "why": "The filing presents it outside current assets; its usefulness for liquidity depends on conversion timing."
+        },
+        {
+          "text": "Include it in current assets because all inventory belongs in working capital.",
+          "why": "That overrides the filing's explicit distinction between current and long-term inventory."
+        },
+        {
+          "text": "Treat its carrying value as cash available for near-term bills.",
+          "why": "Inventory must pass through production or sale and collection before it supplies cash."
+        },
+        {
+          "text": "Deduct it from current liabilities because it supports future production.",
+          "why": "An operating asset does not offset an unrelated obligation merely because it may support future sales."
+        }
+      ],
+      "explanation": "Acadia presents long-term inventory outside total current assets and identifies it primarily as raw materials. Working-capital analysis should respect that classification, while cash planning separately tests production, sale and collection timing.",
+      "note": "Real company disclosure for June 30, 2026, in a US SEC filing. The analytical question is a training exercise; it does not assert that Acadia has a liquidity shortfall.",
+      "stats": [],
+      "source": {
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1070494/000119312526333243/acad-20260630.htm",
+        "kind": "Company quarterly filing",
+        "note": "Acadia Pharmaceuticals Inc., balance sheet and Note 5, establish separate current and long-term inventory presentation. No company metrics or transactions are invented."
+      },
+      "evidence": "Amount reported as long-term inventory primarily consists of raw materials",
+      "calculations": []
+    },
+    {
+      "id": "investor-mimedx-distributor-side-arrangements",
+      "mode": "investor",
+      "concept": "Distributor payment conditions and earnings quality",
+      "caseType": "Historical case",
+      "prompt": "In its November 26, 2019 US MiMedx action, the SEC alleged undisclosed distributor arrangements permitting returns or payment only after resale. Before valuing similar distributor revenue, which diligence step best tests whether invoiced shipments represent earned sales?",
+      "choices": [
+        {
+          "text": "Confirm return and payment terms directly with distributors, including side arrangements, and reconcile them to revenue recognition.",
+          "why": "This tests whether the actual obligations differ from the invoiced terms on which accounting relied."
+        },
+        {
+          "text": "Match invoices to shipping records and accept revenue whenever dispatch is documented.",
+          "why": "Shipment evidence alone does not resolve return rights or payment conditions."
+        },
+        {
+          "text": "Review only the standard signed contracts because informal concessions cannot affect earnings quality.",
+          "why": "Undisclosed arrangements can change the economic substance despite standard written terms."
+        },
+        {
+          "text": "Apply a lower valuation multiple without investigating whether the sales qualify as revenue.",
+          "why": "A discount leaves the underlying earnings base unverified and may conceal a larger recognition problem."
+        }
+      ],
+      "explanation": "The SEC alleged that undisclosed distributor arrangements caused premature revenue recognition during 2013–2017. Its release reported a proposed company settlement without admission or denial, subject to court approval; the transferable lesson is to verify actual customer obligations before relying on reported sales.",
+      "note": "Historical allegations filed in the Southern District of New York on November 26, 2019; this exercise does not characterize them as final judicial findings. The diligence question is instructional and makes no current investment recommendation.",
+      "stats": [],
+      "source": {
+        "title": "SEC Charges Biotech Company and Executives With Accounting Fraud",
+        "url": "https://www.sec.gov/newsroom/press-releases/2019-243",
+        "kind": "Historical enforcement case",
+        "note": "Establishes the SEC's allegations concerning distributor side arrangements and the announced settlement posture. The exercise invents no company financial statistics."
+      },
+      "evidence": "These side arrangements allowed distributors to return product to MiMedx or conditioned distributors’ payment obligations on sales to end users.",
+      "calculations": []
     }
   ],
-  "researchNote": "Two additions target lease and verdict, tied for the fewest cases. Opened primary sources support an older final UK judgment and Canadian acquisition guidance updated November 24, 2025. A search for current 2026 operational disclosures located a filing, but opening it returned HTTP 429; no new 2026 development is asserted. No files or private sources were accessed."
+  "researchNote": "All four modes were tied at 18 cases. Selected foundation and investor for two additions, using an opened 2026 company filing and an opened historical SEC enforcement release. Checked against the supplied prompts; no files or accounts were accessed."
 }
 </script>
 <script>
