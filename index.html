@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-23T12:26:01.108044+00:00",
+  "checkedAt": "2026-10-24T12:20:11.431902+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -3290,9 +3290,138 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "These side arrangements allowed distributors to return product to MiMedx or conditioned distributors’ payment obligations on sales to end users.",
       "calculations": []
+    },
+    {
+      "id": "lease-seres-2026-relocation-operating-protections",
+      "mode": "lease",
+      "concept": "Landlord relocation rights and operational continuity",
+      "caseType": "Historical case",
+      "prompt": "Seres Therapeutics' May 1, 2026 amendment for Cambridge, Massachusetts premises permits landlord relocation subject to space, notice, cost and readiness conditions. What should a bakery operator learn when reviewing a relocation clause?",
+      "choices": [
+        {
+          "text": "Negotiate suitable replacement premises, notice, moving-cost allocation and readiness before surrendering the original space.",
+          "why": "These terms address whether relocation is operationally feasible and who funds it; the disclosed agreement expressly addresses comparable facilities, costs and availability."
+        },
+        {
+          "text": "Accept relocation if replacement floor area is similar, without checking utilities or permitted operations.",
+          "why": "Similar size alone does not establish that a replacement space can support production or the intended retail use."
+        },
+        {
+          "text": "Treat a promise to reimburse moving expenses as protection against all relocation losses.",
+          "why": "Moving-cost reimbursement does not itself establish operational readiness or compensation for interrupted sales."
+        },
+        {
+          "text": "Budget for uninterrupted production whenever the landlord gives advance notice.",
+          "why": "Notice provides planning time but does not establish that replacement facilities will be usable before the move."
+        }
+      ],
+      "explanation": "The amendment requires comparable facilities, landlord payment or reimbursement of reasonable relocation costs, and replacement space available before the tenant must vacate. A bakery should negotiate protections suited to its equipment and trading needs, then assess any remaining disruption risk.",
+      "note": "Real Massachusetts office/laboratory agreement dated May 1, 2026. The bakery application is a training inference, not an actual Seres bakery operation or a statement of automatic tenant rights.",
+      "stats": [],
+      "source": {
+        "title": "FIRST AMENDMENT TO LEASE",
+        "url": "https://www.sec.gov/Archives/edgar/data/1609809/000119312526258366/d156701dex102.htm",
+        "kind": "First-party lease agreement",
+        "note": "Section 8 establishes negotiated relocation conditions. The exercise transfers the review lesson to a hypothetical bakery without asserting that these terms apply to other leases."
+      },
+      "evidence": "Landlord shall pay or reimburse Tenant for all reasonable costs of relocation",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-insurance-renewal-exclusion",
+      "mode": "verdict",
+      "concept": "Maintainable earnings and replacement operating costs",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Bramble Rack's seller supplied earnings that omit insurance paid by its parent company. Independent diligence verifies binding standalone coverage quotes and includes those costs in maintainable earnings. The seller accepts a price below the revised independent valuation. All essential financial, tax, legal, customer, equipment and lease checks are complete. Committed financing and funded working capital support closing; checked downside forecasts cover insurance, payroll, maintenance and debt, preserve reserves and meet the buyer's fixed return hurdle. At these revised terms, what is the verdict?",
+      "choices": [
+        {
+          "text": "Invest",
+          "why": "The omitted standalone cost has been verified, incorporated into cash forecasts and reflected in a supported price; essential diligence and funding are explicitly complete."
+        },
+        {
+          "text": "Investigate",
+          "why": "Further investigation would be appropriate if coverage, costs or valuation remained unresolved, but the exercise states that these checks are complete."
+        },
+        {
+          "text": "Pass",
+          "why": "The initial earnings omission required correction, but the verified replacement cost and revised price do not establish an unacceptable deal under the stated assumptions."
+        }
+      ],
+      "explanation": "A buyer should value the operations it will actually own, including costs previously borne elsewhere. Here the omitted expense has been resolved and the revised price, financing and downside cash coverage explicitly support proceeding.",
+      "note": "Bramble Rack, its Ontario location, financial descriptors, insurance arrangements, diligence findings and transaction terms are entirely fictional training assumptions. BDC supplies the valuation and diligence principles, not evidence about this business.",
+      "stats": [
+        [
+          "Revenue",
+          "Fictional: verified historical sales"
+        ],
+        [
+          "Margins",
+          "Fictional: adjusted for standalone insurance"
+        ],
+        [
+          "Customer mix",
+          "Fictional: retention and concentration reviewed"
+        ],
+        [
+          "Occupancy",
+          "Fictional: lease costs and rights verified"
+        ],
+        [
+          "Debt",
+          "Fictional: committed financing; downside payments covered"
+        ],
+        [
+          "AR days",
+          "Fictional: collection timing independently verified"
+        ]
+      ],
+      "source": {
+        "title": "The steps you need to take BEFORE buying a business",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/due-diligence-valuation",
+        "kind": "Practitioner guidance",
+        "note": "BDC recommends expert diligence and independent valuation using past results and forecast cash flow or earnings. The insurance omission and favorable final verdict are invented training assumptions."
+      },
+      "evidence": "A valuator determines the company’s value by reviewing past results and forecasted cash flow or earnings.",
+      "calculations": []
+    },
+    {
+      "id": "investor-ruby-tuesday-2013-sale-leaseback-cash",
+      "mode": "investor",
+      "concept": "Asset monetization versus recurring operating cash generation",
+      "caseType": "Historical case",
+      "prompt": "Ruby Tuesday's US fiscal 2013 annual report describes raising cash by selling restaurant real estate and leasing it back. Before treating that liquidity as evidence of stronger recurring restaurant economics, what should an analyst examine?",
+      "choices": [
+        {
+          "text": "Separate property-sale proceeds from restaurant cash generation and assess the resulting rent commitments.",
+          "why": "Selling property releases capital while leasing it back creates continuing occupancy obligations; neither fact alone demonstrates improved restaurant trading."
+        },
+        {
+          "text": "Include the property-sale proceeds in recurring restaurant sales because the restaurants continued operating.",
+          "why": "Continuing operations do not turn a real-estate disposal into customer revenue."
+        },
+        {
+          "text": "Treat debt reduction funded by property sales as proof that restaurants generated enough cash to repay debt.",
+          "why": "Debt can be repaid with asset-sale proceeds even when underlying operating cash generation has not improved."
+        },
+        {
+          "text": "Exclude future rent from coverage analysis because the company no longer owns the properties.",
+          "why": "The leaseback preserves an occupancy payment obligation that matters when assessing future cash coverage."
+        }
+      ],
+      "explanation": "Ruby Tuesday disclosed that sale-leaseback proceeds supported purposes including capital expenditures, debt reduction and share repurchases. The transferable lesson is to distinguish releasing invested capital from generating repeatable operating cash, while incorporating the new lease commitments.",
+      "note": "Documented historical US company transactions disclosed in the annual report for the year ended June 4, 2013. This is a cash-quality lesson, not an allegation of misconduct or a current investment recommendation.",
+      "stats": [],
+      "source": {
+        "title": "RUBY TUESDAY, INC. Form 10-K for the Fiscal Year Ended June 4, 2013",
+        "url": "https://www.sec.gov/Archives/edgar/data/68270/000006827013000036/form10k_fy13.htm",
+        "kind": "Historical company annual report",
+        "note": "The sale-leaseback discussion and Note 18 document property monetization, uses of proceeds and leaseback terms. The exercise invents no company metrics."
+      },
+      "evidence": "The sale-leaseback proceeds were utilized for general corporate purposes, including capital expenditures, debt reduction",
+      "calculations": []
     }
   ],
-  "researchNote": "All four modes were tied at 18 cases. Selected foundation and investor for two additions, using an opened 2026 company filing and an opened historical SEC enforcement release. Checked against the supplied prompts; no files or accounts were accessed."
+  "researchNote": "Opened primary sources covering a May 2026 Massachusetts lease amendment, Ruby Tuesday's 2013 sale-leasebacks, and BDC acquisition guidance. Three new questions prioritize lease and verdict, the two least represented modes, with one complementary investor case. No scored arithmetic."
 }
 </script>
 <script>
