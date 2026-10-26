@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-24T12:20:11.431902+00:00",
+  "checkedAt": "2026-10-26T16:16:11.609911+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -3419,9 +3419,81 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "The sale-leaseback proceeds were utilized for general corporate purposes, including capital expenditures, debt reduction",
       "calculations": []
+    },
+    {
+      "id": "foundation-dr-horton-2026-capitalized-interest",
+      "mode": "foundation",
+      "concept": "Capitalized interest connects inventory costs with later cost of sales",
+      "caseType": "Historical case",
+      "prompt": "D.R. Horton's US quarterly filing for June 30, 2026 describes capitalizing interest during active construction. When related homes are delivered, how does that previously capitalized interest affect the statements?",
+      "choices": [
+        {
+          "text": "It leaves inventory and becomes cost of sales, reducing gross profit.",
+          "why": "The filing explicitly describes releasing capitalized interest to cost of sales as related inventory is delivered."
+        },
+        {
+          "text": "It remains in inventory permanently because interest is a financing cost.",
+          "why": "Capitalization defers expense recognition; the cost does not remain an asset after the related inventory is delivered."
+        },
+        {
+          "text": "It reduces loan principal without affecting profit.",
+          "why": "Recognizing an inventory cost as expense does not repay the lender or reduce borrowing principal."
+        },
+        {
+          "text": "It is charged directly to retained earnings, bypassing current earnings.",
+          "why": "The disclosed policy puts this cost through cost of sales, which affects current earnings."
+        }
+      ],
+      "explanation": "Capitalization includes eligible interest in inventory rather than immediately expensing it. Delivery releases that cost into cost of sales, so current gross profit can include interest incurred during earlier construction periods.",
+      "note": "Documented US accounting policy from the quarter ended June 30, 2026; this is not an allegation of improper accounting. The question isolates the interest component and makes no assertion about cash-payment timing.",
+      "stats": [],
+      "source": {
+        "title": "D.R. Horton, Inc. — Form 10-Q for the quarterly period ended June 30, 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/882184/000088218426000096/dhi-20260630.htm",
+        "kind": "Company quarterly filing",
+        "note": "Note E establishes capitalization during active development and release to cost of sales upon delivery. No company figures or transactions are invented."
+      },
+      "evidence": "Capitalized interest is charged to cost of sales as the related inventory is delivered to the buyer.",
+      "calculations": []
+    },
+    {
+      "id": "lease-bakery-parking-capacity-sales-assumption",
+      "mode": "lease",
+      "concept": "Shared parking availability can constrain occupancy economics",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Copper Sieve forecasts strong pickup sales at a shopping centre. Visits show neighbouring tenants occupy most shared parking during its planned pickup hours; the draft promises no allocated spaces. What should the owner do before relying on the forecast?",
+      "choices": [
+        {
+          "text": "Test parking availability during pickup hours, seek written parking arrangements and revise sales assumptions if access remains constrained.",
+          "why": "This checks a specific operating dependency and links any negotiated access to a supportable revenue forecast."
+        },
+        {
+          "text": "Keep projected pickup sales unchanged because shared parking appears on the site plan.",
+          "why": "The existence of parking does not establish that customers can find spaces when needed."
+        },
+        {
+          "text": "Treat a reduction in common-area charges as proof the pickup forecast is achievable.",
+          "why": "Lower occupancy costs may help profitability but do not create parking capacity or validate sales."
+        },
+        {
+          "text": "Assume the bakery may reserve shared spaces after opening because it pays rent.",
+          "why": "The fictional draft grants no allocated spaces; paying rent alone does not establish the assumed arrangement."
+        }
+      ],
+      "explanation": "BDC advises checking whether other tenants leave enough parking for the proposed business. Parking access affects achievable pickup volume, so both the lease arrangements and revenue assumptions need verification before commitment.",
+      "note": "Copper Sieve, its Ontario location, observed parking conditions and proposed lease are fictional training assumptions. This exercise applies Canadian practitioner guidance and asserts no automatic legal right to parking.",
+      "stats": [],
+      "source": {
+        "title": "How to negotiate a commercial lease effectively",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-negotiate-commercial-lease-effectively",
+        "kind": "Practitioner guidance",
+        "note": "BDC's Brett Prikker draws on commercial-financing experience and recommends examining other tenants' parking use. The bakery and its operating circumstances are invented."
+      },
+      "evidence": "If other tenants use most of the parking spaces, will you have enough for your needs?",
+      "calculations": []
     }
   ],
-  "researchNote": "Opened primary sources covering a May 2026 Massachusetts lease amendment, Ruby Tuesday's 2013 sale-leasebacks, and BDC acquisition guidance. Three new questions prioritize lease and verdict, the two least represented modes, with one complementary investor case. No scored arithmetic."
+  "researchNote": "Opened primary sources for two additions covering foundation and lease, both tied for the fewest cases. The pack combines a 2026 company filing with established Canadian practitioner guidance grounded in firsthand commercial-financing experience. No files or private data were accessed."
 }
 </script>
 <script>
