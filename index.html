@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-27T12:26:58.413002+00:00",
+  "checkedAt": "2026-10-28T12:22:50.198504+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -3584,9 +3584,117 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "characterizing what were essentially loan proceeds as cash from operating activities.",
       "calculations": []
+    },
+    {
+      "id": "investor-view-warranty-fulfillment-cost-scope",
+      "mode": "investor",
+      "concept": "Warranty estimates must include the full promised remedy",
+      "caseType": "Historical case",
+      "prompt": "The SEC's July 3, 2023 US settled action found that View included replacement-window manufacturing costs in warranty disclosures but omitted shipping and installation it had decided to cover. Which diligence check best addresses this risk?",
+      "choices": [
+        {
+          "text": "Reconcile the reserve to the complete customer remedy, including shipping and installation commitments.",
+          "why": "Testing every promised component addresses costs omitted from an otherwise recorded warranty estimate."
+        },
+        {
+          "text": "Compare the reserve only with the factory cost of replacement windows.",
+          "why": "This repeats the incomplete cost boundary identified in the SEC action."
+        },
+        {
+          "text": "Treat installation costs as irrelevant until customers submit paid invoices.",
+          "why": "An existing obligation can require recognition before cash payment or receipt of a final invoice."
+        },
+        {
+          "text": "Accept the estimate if the company has already disclosed a warranty liability.",
+          "why": "Disclosure of some liability does not establish that its scope or amount is complete."
+        }
+      ],
+      "explanation": "A reserve can exist while omitting important fulfillment costs, understating obligations and overstating earnings. The SEC's settled order found such omissions at View; the company settled without admitting or denying the findings.",
+      "note": "Historical US corporate settlement, announced July 3, 2023. This exercise addresses the company's settled findings and makes no claim about the outcome of separate litigation against its former CFO.",
+      "stats": [],
+      "source": {
+        "title": "SEC Charges “Smart” Window Manufacturer, View Inc., with Failing to Disclose $28 Million Liability",
+        "url": "https://www.sec.gov/newsroom/press-releases/2023-126",
+        "kind": "Historical enforcement case",
+        "note": "Establishes the omitted shipping and installation costs and settlement status. The diligence question is an educational application; no company statistics are invented."
+      },
+      "evidence": "View failed to include in its disclosures the additional cost to ship and install the new windows",
+      "calculations": []
+    },
+    {
+      "id": "investor-fluor-2026-credit-facility-drawability",
+      "mode": "investor",
+      "concept": "Headline credit commitments versus usable borrowing capacity",
+      "caseType": "Historical case",
+      "prompt": "Fluor's US annual report for December 31, 2025, filed in 2026, describes outstanding letters of credit, a cash-advance sub-limit and financial covenants within its credit facility. Before counting the facility's headline commitment as cash runway, what should an analyst verify?",
+      "choices": [
+        {
+          "text": "Actual drawable cash capacity after sub-limits, existing usage and covenant conditions.",
+          "why": "The facility's overall commitment does not establish how much cash can actually be borrowed."
+        },
+        {
+          "text": "Only whether the company has outstanding cash borrowings under the facility.",
+          "why": "No cash borrowings does not eliminate letters-of-credit usage, sub-limits or borrowing conditions."
+        },
+        {
+          "text": "Add outstanding letters of credit to cash because banks have already committed them.",
+          "why": "Letters of credit support specified obligations; they are not cash deposited for ordinary operating spending."
+        },
+        {
+          "text": "Use the full headline commitment whenever the facility has not yet matured.",
+          "why": "An unexpired facility can still have restrictions that limit available cash advances."
+        }
+      ],
+      "explanation": "Cash-runway analysis needs usable financing rather than the largest facility number in a filing. Fluor's disclosure illustrates why analysts must distinguish cash advances from other facility uses and check the conditions governing access.",
+      "note": "US filing-based historical snapshot, not a statement of Fluor's borrowing capacity on October 28, 2026. No distress or covenant breach is inferred.",
+      "stats": [],
+      "source": {
+        "title": "Fluor Corporation — Form 10-K for the fiscal year ended December 31, 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1124198/000112419826000007/flr-20251231.htm",
+        "kind": "Company annual filing",
+        "note": "Liquidity and Capital Resources describes letters of credit, a cash-advance sub-limit, borrowing capacity and covenants. The exercise supplies an analytical lesson without inventing financial metrics."
+      },
+      "evidence": "We have a sub-limit of up to $1.0 billion in aggregate cash advances and financial letters of credit",
+      "calculations": []
+    },
+    {
+      "id": "lease-bakery-maintenance-capital-replacement-scope",
+      "mode": "lease",
+      "concept": "Responsibility for major building-system replacement",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Cinder Pear's draft lease makes it responsible for maintaining the premises but is unclear about replacing the building's aging heating system. Its budget includes routine servicing only. What should the owner do before signing?",
+      "choices": [
+        {
+          "text": "Have counsel clarify replacement responsibility in the lease, inspect the system and budget any resulting exposure.",
+          "why": "The owner needs both a clear contractual allocation and evidence about the potential cost."
+        },
+        {
+          "text": "Assume the landlord pays because the heating system belongs to the building.",
+          "why": "Ownership alone does not establish how the proposed lease allocates costs."
+        },
+        {
+          "text": "Rely on the lease's advertised category to determine replacement responsibility.",
+          "why": "Lease labels do not reliably resolve the specific obligations written into the agreement."
+        },
+        {
+          "text": "Keep only routine servicing in the budget until the system actually fails.",
+          "why": "Deferring the analysis leaves a potentially material occupancy obligation outside the signing decision."
+        }
+      ],
+      "explanation": "BDC cautions that actual cost allocations can differ from standard lease categories and recommends reviewing tenant and landlord responsibilities. Clarifying major replacement obligations before signing makes the occupancy budget more useful and creates an opportunity to negotiate.",
+      "note": "Cinder Pear, its location, equipment condition, draft terms and budget are fictional training assumptions. Canadian practitioner guidance supports contract review; the exercise asserts no automatic Ontario legal protection.",
+      "stats": [],
+      "source": {
+        "title": "How to negotiate a commercial lease effectively",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-negotiate-commercial-lease-effectively",
+        "kind": "Practitioner guidance",
+        "note": "BDC explains that lease cost allocations vary and recommends legal review of each party's responsibilities. The heating-system scenario is invented."
+      },
+      "evidence": "It’s vital to carefully review this document and the proposed responsibilities of the tenant and landlord.",
+      "calculations": []
     }
   ],
-  "researchNote": "Researched current 2026 SEC material and older enforcement and operator sources. Selected two distinct lessons for verdict, the least represented mode, and foundation, tied for next fewest. Opened the supporting primary sources; no current-development claim is needed for these questions."
+  "researchNote": "Opened primary sources for a historical SEC settlement, a 2026-filed company report and Canadian lease guidance. Three new questions cover investor and lease, both tied for the fewest existing research cases. No files or accounts were accessed."
 }
 </script>
 <script>
