@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-28T12:22:50.198504+00:00",
+  "checkedAt": "2026-10-29T12:19:13.738730+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -3692,9 +3692,138 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "It’s vital to carefully review this document and the proposed responsibilities of the tenant and landlord.",
       "calculations": []
+    },
+    {
+      "id": "foundation-latch-2026-contract-collectability",
+      "mode": "foundation",
+      "concept": "Revenue recognition requires assessing collectability",
+      "caseType": "Historical case",
+      "prompt": "The SEC's October 1, 2026 US settled action found that Latch recognized revenue through distributors unable to pay. Which lesson applies when evaluating a new distributor contract?",
+      "choices": [
+        {
+          "text": "Assess probable collection of the consideration before treating the contract as qualifying for revenue recognition.",
+          "why": "A signed contract alone does not establish that the customer can pay; collectability requires assessment."
+        },
+        {
+          "text": "Recognize revenue because a signed contract establishes the distributor's ability to pay.",
+          "why": "An enforceable promise and the customer's financial capacity are separate matters."
+        },
+        {
+          "text": "Always wait for cash because accrual accounting prohibits revenue before collection.",
+          "why": "Accrual accounting can recognize revenue before payment when the applicable recognition requirements are satisfied."
+        },
+        {
+          "text": "Recognize revenue if the distributor's order is large enough to support the sales forecast.",
+          "why": "Order size and forecast usefulness do not establish collectability."
+        }
+      ],
+      "explanation": "The SEC's settled order identified inadequate controls over distributor collectability as one cause of improper revenue recognition. Latch settled without admitting the allegations; the lesson is to assess recognition requirements rather than equate an order with earned revenue.",
+      "note": "US SEC administrative settlement dated October 1, 2026. The question isolates collectability from the action's other revenue issues and makes no current investment recommendation.",
+      "stats": [],
+      "source": {
+        "title": "SEC Institutes Settled Order as to Latch, Inc. (now d/b/a Door) for Fraud, Books and Records, Internal Control, and Proxy-Related Violations",
+        "url": "https://www.sec.gov/enforcement-litigation/administrative-proceedings/33-11450-s",
+        "kind": "Historical enforcement case",
+        "note": "Establishes settled findings concerning distributor collectability and other revenue controls, and states that Latch did not admit the allegations. Choices are educational applications."
+      },
+      "evidence": "resulting in Latch recognizing revenue for sales through distributors who did not have the ability to pay",
+      "calculations": []
+    },
+    {
+      "id": "foundation-akorn-inventory-allowance-not-cash-reserve",
+      "mode": "foundation",
+      "concept": "Inventory valuation allowances versus cash reserves",
+      "caseType": "Historical case",
+      "prompt": "Akorn's US annual report for December 31, 2019 describes an allowance for obsolete inventory and inventory costing more than its net realizable value. What does that allowance represent?",
+      "choices": [
+        {
+          "text": "A reduction of inventory's carrying value, rather than cash set aside to replace it.",
+          "why": "The allowance adjusts the asset's reported value for expected losses in recoverability."
+        },
+        {
+          "text": "A separate cash account available to buy replacement inventory.",
+          "why": "Recording a valuation allowance does not create or segregate cash."
+        },
+        {
+          "text": "A payable requiring a future cash payment to suppliers.",
+          "why": "The allowance concerns inventory valuation, not an obligation to pay another party."
+        },
+        {
+          "text": "Additional inventory available for sale beyond the reported net balance.",
+          "why": "The allowance reduces the reported asset; it does not represent extra physical stock."
+        }
+      ],
+      "explanation": "Akorn described using sales activity, expiration risk and wholesaler information to assess inventory recoverability. A valuation allowance reduces the inventory asset and does not itself provide cash for replacement purchases.",
+      "note": "Historical first-party operational disclosure, not an enforcement allegation. The question tests the meaning of an allowance rather than repeating the library's already-reserved inventory disposal example.",
+      "stats": [],
+      "source": {
+        "title": "Akorn, Inc. — Form 10-K for the year ended December 31, 2019",
+        "url": "https://www.sec.gov/Archives/edgar/data/3116/000162828020002314/akorn10k12312019.htm",
+        "kind": "Historical company annual report",
+        "note": "The inventory accounting policy and Note 4 establish the allowance's valuation purpose and operational estimation inputs. No missing company metrics are invented."
+      },
+      "evidence": "Inventories are stated at the lower of cost and net realizable value",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-equipment-financing-preserves-operating-line",
+      "mode": "verdict",
+      "concept": "Financing structure and working-capital headroom",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Marigold Bench initially planned to fund an oven purchase from its operating credit line. The revised acquisition uses committed equipment financing, leaving verified line availability for seasonal inventory and collections delays. All essential financial, tax, legal, customer, equipment and lease checks are complete. The agreed price is below an independent valuation; funded working capital and independently checked downside forecasts cover operations, maintenance and all debt payments, preserve reserves and meet the buyer's fixed return hurdle. At these revised terms, what is your verdict?",
+      "choices": [
+        {
+          "text": "Invest",
+          "why": "Essential diligence, price and downside funding are explicitly supported, including preservation of operating liquidity."
+        },
+        {
+          "text": "Investigate",
+          "why": "Further investigation would be appropriate for unresolved funding or diligence issues, but none is identified here."
+        },
+        {
+          "text": "Pass",
+          "why": "The original funding weakness has been resolved, and the verified revised terms satisfy the stated requirements."
+        }
+      ],
+      "explanation": "BDC warns that using operating credit for long-term investments can leave insufficient funds for ordinary business needs. In this fictional exercise, committed equipment financing resolves that mismatch, while price, diligence and downside cash coverage independently support Invest.",
+      "note": "Marigold Bench, its financing, valuation and all operating facts are fictional training assumptions. Canadian practitioner guidance supplies the financing lesson, not an endorsement of an actual acquisition.",
+      "stats": [
+        [
+          "Revenue",
+          "Fictional: seasonal bakery sales verified"
+        ],
+        [
+          "Margins",
+          "Fictional: downside forecast includes ingredient and staffing pressure"
+        ],
+        [
+          "Customer mix",
+          "Fictional: diversified retail and wholesale demand verified"
+        ],
+        [
+          "Occupancy",
+          "Fictional: lease costs and operating rights verified"
+        ],
+        [
+          "Debt",
+          "Fictional: committed equipment financing; all payments covered in downside forecasts"
+        ],
+        [
+          "AR days",
+          "Fictional: collection timing verified and seasonal delays funded"
+        ]
+      ],
+      "source": {
+        "title": "What’s the difference between line of credit and working capital loan?",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/get-financing/what-is-the-difference-between-line-of-credit-and-working-capital-loan",
+        "kind": "Practitioner guidance",
+        "note": "Establishes the risk of using operating credit for long-term investments and identifies dedicated financing for equipment. The acquisition, underwriting conclusions and six stat rows are fictional."
+      },
+      "evidence": "Businesses should avoid using their line of credit for larger or longer-term investments.",
+      "calculations": []
     }
   ],
-  "researchNote": "Opened primary sources for a historical SEC settlement, a 2026-filed company report and Canadian lease guidance. Three new questions cover investor and lease, both tied for the fewest existing research cases. No files or accounts were accessed."
+  "researchNote": "Opened primary sources covering an October 2026 SEC settlement, Akorn's historical operational inventory disclosures, and BDC financing guidance. Three new questions prioritize foundation and verdict, the least-populated modes. Historical facts and fictional training assumptions are distinguished; no files or accounts were accessed."
 }
 </script>
 <script>
