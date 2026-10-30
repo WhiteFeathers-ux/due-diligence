@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-29T12:19:13.738730+00:00",
+  "checkedAt": "2026-10-30T12:03:05.283978+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -3821,9 +3821,138 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "Businesses should avoid using their line of credit for larger or longer-term investments.",
       "calculations": []
+    },
+    {
+      "id": "lease-bakery-occupancy-benchmark-not-approval",
+      "mode": "lease",
+      "concept": "Occupancy benchmarks versus site-specific affordability",
+      "caseType": "Research-informed practice",
+      "prompt": "A fictional Ohio bakery's broker says its proposed occupancy cost is below a national restaurant survey median, so the lease must be affordable. The bakery's sales forecast and staffing costs have not been validated. What should the owner do?",
+      "choices": [
+        {
+          "text": "Test site-specific sales, total occupancy costs and operating cash flow; use the median only as context.",
+          "why": "A descriptive industry median cannot establish whether this bakery can fund its particular lease and operations."
+        },
+        {
+          "text": "Sign because being below the median establishes an adequate profit margin.",
+          "why": "Occupancy is only one expense category, and a median provides no guarantee about profit."
+        },
+        {
+          "text": "Replace the bakery's forecast with the surveyed restaurants' typical performance.",
+          "why": "Different locations, formats and cost structures make the survey unsuitable as a substitute for a supported forecast."
+        },
+        {
+          "text": "Negotiate rent to the median before evaluating the lease.",
+          "why": "The median is neither a recommended rent target nor evidence that higher spending would improve the deal."
+        }
+      ],
+      "explanation": "The National Restaurant Association's September 3, 2025 US analysis explicitly says its operating data are management tools rather than standards or goals. Lease affordability requires credible sales and a complete operating budget, even when occupancy compares favorably with a survey.",
+      "note": "The Ohio bakery and broker's claim are fictional. The source reports restaurant survey findings, not bakery-specific targets or legal protections.",
+      "stats": [],
+      "source": {
+        "title": "Restaurant occupancy costs were more than 5% of sales in 2024",
+        "url": "https://www.restaurant.org/research-and-media/research/restaurant-economic-insights/analysis-commentary/restaurant-occupancy-costs-were-more-than-5-of-sales-in-2024/",
+        "kind": "First-party operator survey analysis",
+        "note": "Establishes that occupancy varies by restaurant setting and survey results are not individual operating targets; the proposed bakery lease is invented."
+      },
+      "evidence": "not intended to represent standards or goals for individual restaurants",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-sales-recovery-current-costs",
+      "mode": "verdict",
+      "concept": "Nominal sales recovery versus sustainable acquisition returns",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ohio bakery Briar Tin's sales have recovered to their pre-pandemic level. Independent diligence nevertheless verifies that current wages, ingredients and other recurring costs leave insufficient cash for acquisition debt payments. No feasible operating changes or additional funding close the gap, and the seller refuses repricing. At these offered terms, what is your verdict?",
+      "choices": [
+        {
+          "text": "Pass",
+          "why": "Verified current economics cannot support the acquisition debt, and the stated financing and negotiation routes are exhausted."
+        },
+        {
+          "text": "Invest",
+          "why": "Recovered nominal sales do not establish recovered profitability or debt-paying capacity when recurring costs have risen."
+        },
+        {
+          "text": "Investigate",
+          "why": "The decisive cash shortfall is already independently verified; the scenario identifies no unresolved, resolvable issue that could make the offered terms acceptable."
+        }
+      ],
+      "explanation": "The National Restaurant Association's 2026 cost analysis shows why unchanged sales can coexist with substantially weaker restaurant economics. Here, the fictional buyer's verified cash forecast establishes an unacceptable deal at the offered terms.",
+      "note": "Briar Tin, Ohio location, all deal conditions and all stat-row values are fictional training assumptions. Industry cost pressures motivate the exercise but do not establish this bakery's results.",
+      "stats": [
+        [
+          "Revenue",
+          "Back to pre-pandemic nominal sales; fictional"
+        ],
+        [
+          "Margins",
+          "Current recurring costs leave inadequate acquisition debt coverage; fictional"
+        ],
+        [
+          "Customer mix",
+          "Retail counter customers; fictional"
+        ],
+        [
+          "Occupancy",
+          "Existing lease costs included in verified forecast; fictional"
+        ],
+        [
+          "Debt",
+          "Proposed acquisition payments exceed available operating cash; fictional"
+        ],
+        [
+          "AR days",
+          "Not material to the verified shortfall; fictional"
+        ]
+      ],
+      "source": {
+        "title": "Inflation is Straining Restaurant Operations",
+        "url": "https://restaurant.org/research-and-media/research/inflation",
+        "kind": "First-party industry economic analysis",
+        "note": "Discusses US restaurant cost increases through 2026 and their effect on profitability; the bakery, forecast and acquisition terms are invented."
+      },
+      "evidence": "the impact varies significantly depending on a restaurant’s current sales compared to pre-pandemic levels.",
+      "calculations": []
+    },
+    {
+      "id": "investor-monsanto-rebate-classification-gross-margin",
+      "mode": "investor",
+      "concept": "Gross-margin quality and customer rebate classification",
+      "caseType": "Historical case",
+      "prompt": "The SEC's February 9, 2016 US settled Monsanto action found that certain overseas customer rebates were classified as selling expenses rather than rebates, boosting reported Roundup gross profits. Before interpreting a similar gross-margin advantage as pricing power, what should an analyst examine?",
+      "choices": [
+        {
+          "text": "Check customer rebate agreements and consistent classification of rebates when comparing net revenue and gross margins.",
+          "why": "Classification can make gross profit look stronger without demonstrating better customer economics."
+        },
+        {
+          "text": "Treat the gross-margin advantage as pricing power if the rebates appear elsewhere in operating expenses.",
+          "why": "Including an amount elsewhere does not make the gross-margin comparison economically comparable."
+        },
+        {
+          "text": "Remove customer rebates from the analysis because they are discretionary marketing spending.",
+          "why": "The actual customer arrangements determine their substance; a marketing label cannot justify ignoring them."
+        },
+        {
+          "text": "Confirm only when the rebates were paid, because payment dates determine their income-statement classification.",
+          "why": "Cash timing does not determine whether a payment is a customer rebate or a selling expense."
+        }
+      ],
+      "explanation": "The SEC's settled findings described rebate classification in Canada, France and Germany that boosted reported gross profits. Monsanto settled without admitting or denying the findings; the transferable lesson is to compare margins using consistent treatment of customer incentives.",
+      "note": "Historical SEC settled findings, not an admission or a contested final judgment. The analogous diligence question is instructional; no company financial statistics are invented.",
+      "stats": [],
+      "source": {
+        "title": "Monsanto Paying $80 Million Penalty for Accounting Violations",
+        "url": "https://www.sec.gov/news/press-release/2016-25",
+        "kind": "Historical enforcement case",
+        "note": "Establishes the SEC's settled findings about rebate classification and the settlement's non-admission status; the exercise adds only the analytical application."
+      },
+      "evidence": "They were booked as selling, general, and administrative (SG&A) expenses rather than rebates",
+      "calculations": []
     }
   ],
-  "researchNote": "Opened primary sources covering an October 2026 SEC settlement, Akorn's historical operational inventory disclosures, and BDC financing guidance. Three new questions prioritize foundation and verdict, the least-populated modes. Historical facts and fictional training assumptions are distinguished; no files or accounts were accessed."
+  "researchNote": "Opened primary sources covering 2026 restaurant cost pressures, 2025 occupancy research and an older SEC enforcement case. Prioritized lease and verdict, tied for the fewest existing cases. All fictional deal facts are training assumptions; no files or accounts were accessed."
 }
 </script>
 <script>
