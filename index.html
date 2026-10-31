@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-10-30T12:03:05.283978+00:00",
+  "checkedAt": "2026-10-31T14:11:30.581131+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -3950,9 +3950,102 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "They were booked as selling, general, and administrative (SG&A) expenses rather than rebates",
       "calculations": []
+    },
+    {
+      "id": "lease-capricor-2026-upfront-rent-despite-abatement",
+      "mode": "lease",
+      "concept": "Rent concessions versus upfront cash requirements",
+      "caseType": "Historical case",
+      "prompt": "Capricor's July 9, 2026 lease for San Diego, California premises provides future base-rent abatement but also requires a rent payment when the executed lease is delivered. What should a bakery operator learn before budgeting a similar concession?",
+      "choices": [
+        {
+          "text": "Check signing payments and when prepaid rent is applied, separately from the abatement schedule.",
+          "why": "A future rent concession can coexist with an upfront payment, so both provisions affect opening liquidity."
+        },
+        {
+          "text": "Exclude all base-rent payments from the signing budget because future rent is abated.",
+          "why": "This overlooks the express requirement to deliver prepaid rent with the executed lease."
+        },
+        {
+          "text": "Treat the signing payment as an extra expense that never offsets later rent.",
+          "why": "The lease identifies the payment as rent for a later period, rather than an additional permanent charge."
+        },
+        {
+          "text": "Assume the upfront payment automatically cancels the abatement.",
+          "why": "The payment and concession provisions coexist; one does not automatically eliminate the other."
+        }
+      ],
+      "explanation": "Section 3(a) requires prepaid base rent with delivery of the executed lease, even though the agreement also provides later abatement. An operator should map contractual payment dates and credits before deciding how much opening cash a concession actually preserves.",
+      "note": "Actual California commercial lease dated July 9, 2026. The bakery application is a training analogy; no Capricor financial performance or subsequent payment outcome is assumed.",
+      "stats": [],
+      "source": {
+        "title": "LEASE AGREEMENT",
+        "url": "https://www.sec.gov/Archives/edgar/data/1133869/000110465926097294/capr-20260630xex10d2.htm",
+        "kind": "First-party commercial lease exhibit",
+        "note": "Section 3(a) establishes the signing payment, its later application and base-rent abatement. The exercise transfers that cash-planning lesson to bakery lease review."
+      },
+      "evidence": "Tenant shall deliver to Landlord, concurrent with Tenant’s delivery of an executed copy of this Lease to Landlord",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-wholesale-contract-transfer-unverified",
+      "mode": "verdict",
+      "concept": "Customer concentration and contract transferability",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Orchard Spindle's valuation depends on a profitable wholesale contract requiring customer consent to transfer. The customer has not decided; the seller permits direct verification and a consent condition before closing. Other diligence is satisfactory, but price and debt coverage without this contract have not been established. Before committing unconditionally, what is your verdict?",
+      "choices": [
+        {
+          "text": "Investigate",
+          "why": "Consent and the economics without the contract remain unresolved, but direct verification and a closing condition offer concrete ways to resolve them."
+        },
+        {
+          "text": "Invest",
+          "why": "Historical contract earnings do not establish that the buyer will receive those earnings after closing."
+        },
+        {
+          "text": "Pass",
+          "why": "The customer has not refused consent, and the seller permits protective terms. An unacceptable outcome has not yet been verified."
+        }
+      ],
+      "explanation": "BDC advises checking whether key customer contracts can be assigned to the buyer. Obtain the required consent and verify the contract's continuing economics, or establish a supportable price and funded downside plan without it, before committing.",
+      "note": "Orchard Spindle, its Ontario transaction, contract terms and all stat entries are fictional training assumptions. No claim is made about Ontario statutory transfer rights.",
+      "stats": [
+        [
+          "Revenue",
+          "Fictional: historical sales verified; post-transfer sales unresolved"
+        ],
+        [
+          "Margins",
+          "Fictional: wholesale contract profitable at verified recurring costs"
+        ],
+        [
+          "Customer mix",
+          "Fictional: material dependence on consent-required wholesale customer"
+        ],
+        [
+          "Occupancy",
+          "Fictional: lease diligence satisfactory"
+        ],
+        [
+          "Debt",
+          "Fictional: coverage without wholesale contract not established"
+        ],
+        [
+          "AR days",
+          "Fictional: historical collection timing verified; no numeric assumption"
+        ]
+      ],
+      "source": {
+        "title": "How to conduct due diligence when buying a business",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/buying-business-conducting-due-diligence",
+        "kind": "Practitioner guidance",
+        "note": "Updated November 24, 2025. BDC recommends verifying assignment of key contracts. The bakery, consent status, financing uncertainty and offered closing protection are invented."
+      },
+      "evidence": "You should also make sure key contracts, such as leases, regulatory agreements and customer contracts, can be assigned to you",
+      "calculations": []
     }
   ],
-  "researchNote": "Opened primary sources covering 2026 restaurant cost pressures, 2025 occupancy research and an older SEC enforcement case. Prioritized lease and verdict, tied for the fewest existing cases. All fictional deal facts are training assumptions; no files or accounts were accessed."
+  "researchNote": "Opened primary sources for two additions covering lease and verdict, the two least-represented modes. The July 2026 lease provides a documented operational example; BDC guidance updated November 24, 2025 supports the fictional acquisition exercise. Neither question requires scored arithmetic."
 }
 </script>
 <script>
