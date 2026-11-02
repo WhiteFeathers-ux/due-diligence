@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-11-01T17:21:14.815326+00:00",
+  "checkedAt": "2026-11-02T13:08:19.943035+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -4115,9 +4115,102 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "The decrease in our take rate was due to sales mix into higher value items.",
       "calculations": []
+    },
+    {
+      "id": "lease-beyond-meat-2026-surrender-restoration-scope",
+      "mode": "lease",
+      "concept": "Restoration costs and deadlines in a negotiated surrender",
+      "caseType": "Historical case",
+      "prompt": "Beyond Meat's July 31, 2026 lease amendment for El Segundo, California required specified restoration work at its expense after surrendering part of its premises. What should a bakery operator learn before budgeting a negotiated surrender?",
+      "choices": [
+        {
+          "text": "Identify the agreed restoration scope, deadlines, access rights and costs before treating the surrender as affordable.",
+          "why": "The amendment preserved specified work obligations, provided access to perform them and allocated their cost to the tenant."
+        },
+        {
+          "text": "Remove movable equipment and assume that completes all restoration duties.",
+          "why": "Removing personal property did not replace the separately specified repair and restoration work."
+        },
+        {
+          "text": "Assume the landlord's acceptance of possession transfers unfinished restoration costs to the landlord.",
+          "why": "This amendment expressly preserved tenant-funded restoration despite acceptance of possession."
+        },
+        {
+          "text": "Budget the work but assume its completion date is flexible once the space is surrendered.",
+          "why": "The agreement imposed a restoration deadline, specified exceptions and potential liability for delay."
+        }
+      ],
+      "explanation": "The amendment tied the tenant's remaining restoration duties to an agreed exhibit and provided access to complete the work. An exit budget should therefore reflect the signed work scope and timing, alongside continuing payment obligations.",
+      "note": "Actual US contractual example dated July 31, 2026, concerning California premises. The bakery application is a training analogy; this contract does not establish a universal legal rule or prove whether the work was completed.",
+      "stats": [],
+      "source": {
+        "title": "FIFTH AMENDMENT TO LEASE",
+        "url": "https://www.sec.gov/Archives/edgar/data/1655210/000165521026000055/exhibit108-fifthamendmentt.htm",
+        "kind": "First-party contractual filing",
+        "note": "Beyond Meat's amendment establishes tenant-funded restoration, deadlines and access following partial surrender. The exercise invents no company financial statistics."
+      },
+      "evidence": "The cost of performing the work described above in paragraph 1.1 and Exhibit 1 shall be borne by Tenant.",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-comparable-multiple-earnings-definition",
+      "mode": "verdict",
+      "concept": "Matching valuation multiples to comparable earnings definitions",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Quince Board's asking price is justified solely by applying a comparable-business EBITDA multiple to the bakery's revenue. An independent valuator has not reconciled the earnings definitions or assessed comparability. The seller permits that review and repricing; other diligence is satisfactory. Before accepting the price, what is your verdict?",
+      "choices": [
+        {
+          "text": "Investigate",
+          "why": "The valuation mixes different financial measures. Independent review can establish an appropriate earnings base, comparable multiple and revised price before commitment."
+        },
+        {
+          "text": "Invest",
+          "why": "Satisfactory operational diligence does not establish that a price calculated using inconsistent financial measures is reasonable."
+        },
+        {
+          "text": "Pass",
+          "why": "The pricing defect is unresolved and potentially correctable, with review and repricing permitted; unacceptable final terms have not been established."
+        }
+      ],
+      "explanation": "BDC explains that market valuation multiples may use EBITDA, revenue or other metrics and vary with business characteristics. The multiple and the target financial measure must be consistent, while comparability and an independent valuation still require examination.",
+      "note": "Quince Board, its transaction and every stat-row value are fictional training assumptions. BDC supplies Canadian acquisition guidance, not evidence about this invented bakery or an appropriate market multiple.",
+      "stats": [
+        [
+          "Revenue",
+          "Fictional: CAD 900,000 annually"
+        ],
+        [
+          "Margins",
+          "Fictional: EBITDA margin 12%"
+        ],
+        [
+          "Customer mix",
+          "Fictional: retail 80%; wholesale 20%"
+        ],
+        [
+          "Occupancy",
+          "Fictional: CAD 54,000 annual all-in occupancy cost"
+        ],
+        [
+          "Debt",
+          "Fictional: proposed acquisition debt CAD 180,000; financing review complete"
+        ],
+        [
+          "AR days",
+          "Fictional: 18 days"
+        ]
+      ],
+      "source": {
+        "title": "The steps you need to take BEFORE buying a business",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/due-diligence-valuation",
+        "kind": "Practitioner guidance",
+        "note": "Explains independent valuation and market multiples based on different financial metrics. The inconsistent application and all bakery facts are invented."
+      },
+      "evidence": "The specific figure used and type of ratio vary depending on many factors",
+      "calculations": []
     }
   ],
-  "researchNote": "All four modes were tied at 23 cases. Selected foundation and investor for two distinct additions, using opened SEC primary sources covering a 2019 enforcement event and a September 2026 quarterly filing. No scored arithmetic or invented company metrics."
+  "researchNote": "Researched lease and verdict, the two modes with the fewest cases. Opened a July 2026 first-party lease amendment and established BDC acquisition guidance. The questions address restoration obligations on negotiated surrender and valuation multiples applied to inconsistent earnings definitions; neither repeats a supplied prompt."
 }
 </script>
 <script>
