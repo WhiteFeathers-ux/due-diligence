@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-11-02T13:08:19.943035+00:00",
+  "checkedAt": "2026-11-03T13:29:46.720216+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -4208,9 +4208,81 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "The specific figure used and type of ratio vary depending on many factors",
       "calculations": []
+    },
+    {
+      "id": "foundation-ethan-allen-2026-advertising-expense-timing",
+      "mode": "foundation",
+      "concept": "Advertising expense recognition versus expected future sales",
+      "caseType": "Adapted case",
+      "prompt": "Ethan Allen's fiscal 2026 US filing expenses direct-mail advertising when supplied to the carrier. In a fictional training example following that policy, a retailer has prepaid a campaign and now hands the mailers to the carrier. Can it keep the cost as an asset because sales may arrive next quarter?",
+      "choices": [
+        {
+          "text": "No. Recognize advertising expense and reduce the prepaid asset when the mailers reach the carrier.",
+          "why": "The stated policy's expense trigger has occurred; anticipated sales do not postpone it."
+        },
+        {
+          "text": "Yes. Retain the asset until the campaign generates enough sales to recover its cost.",
+          "why": "Cost recovery is uncertain and is not the expense trigger in the disclosed policy."
+        },
+        {
+          "text": "No. Reduce cash again and recognize expense when the mailers reach the carrier.",
+          "why": "The payment already occurred. Recognizing the expense consumes the prepaid asset without another cash payment."
+        },
+        {
+          "text": "Yes. Reclassify the prepaid cost as a receivable from prospective customers.",
+          "why": "Sending advertising does not create a customer's obligation to pay."
+        }
+      ],
+      "explanation": "Ethan Allen's policy ties direct-mail expense recognition to delivery to the carrier. In this example, recognizing the expense reduces the prepaid asset and profit, while cash is unchanged at that moment.",
+      "note": "The retailer and transaction are fictional training assumptions. Ethan Allen's disclosed policy is real; the exercise does not claim that the company deferred advertising improperly. Ignore income taxes.",
+      "stats": [],
+      "source": {
+        "title": "Ethan Allen Interiors Inc. Form 10-K for the fiscal year ended June 30, 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/896156/000143774926029578/eth20260630c_10k.htm",
+        "kind": "Official company annual filing",
+        "note": "The Advertising Expenses section establishes the direct-mail expense trigger. The prepaid transaction and statement effects are simplified training assumptions."
+      },
+      "evidence": "Advertising costs from our direct mailers are expensed when provided to the carrier for distribution.",
+      "calculations": []
+    },
+    {
+      "id": "investor-weatherford-tax-rate-earnings-quality",
+      "mode": "investor",
+      "concept": "Tax-driven earnings quality and valuation assumptions",
+      "caseType": "Historical case",
+      "prompt": "The SEC's September 27, 2016 US settled Weatherford order found that unsupported tax adjustments understated tax expense while the company promoted its low effective tax rate as an advantage. Before valuing another business using a similarly low tax rate, what should an analyst request?",
+      "choices": [
+        {
+          "text": "Reconcile tax expense to supported jurisdictional calculations and separate durable tax benefits from unsupported or temporary adjustments.",
+          "why": "This tests whether the tax advantage supporting after-tax earnings has a defensible and repeatable basis."
+        },
+        {
+          "text": "Carry the historical tax rate forward because management previously presented it as a competitive advantage.",
+          "why": "Management's description does not establish that the accounting or future tax assumption is supportable."
+        },
+        {
+          "text": "Use cash taxes paid as the sole measure of the current period's tax expense.",
+          "why": "Payment timing and deferred taxes can make cash taxes differ from accrual tax expense."
+        },
+        {
+          "text": "Verify revenue and operating costs only, since tax accounting cannot change net earnings.",
+          "why": "Tax expense directly affects net earnings, even when pretax operating results are unchanged."
+        }
+      ],
+      "explanation": "The SEC's settled findings described post-closing tax adjustments used to meet previously disclosed effective tax rates. A valuation using after-tax earnings should test the support and persistence of tax benefits; Weatherford and the other respondents settled without admitting or denying the findings.",
+      "note": "Historical US SEC administrative settlement concerning Weatherford's 2007–2012 reporting. This asks for a transferable diligence lesson, not a current investment verdict or a finding about another company.",
+      "stats": [],
+      "source": {
+        "title": "Weatherford International plc, et al.",
+        "url": "https://www.sec.gov/files/litigation/admin/2016/33-10221.pdf",
+        "kind": "Historical enforcement case",
+        "note": "The September 27, 2016 order establishes the SEC's settled tax-accounting findings and non-admission terms. The proposed diligence request is the exercise's application."
+      },
+      "evidence": "This deceptive intercompany tax accounting improperly inflated Weatherford’s earnings and materially understated its ETR and tax expense.",
+      "calculations": []
     }
   ],
-  "researchNote": "Researched lease and verdict, the two modes with the fewest cases. Opened a July 2026 first-party lease amendment and established BDC acquisition guidance. The questions address restoration obligations on negotiated surrender and valuation multiples applied to inconsistent earnings definitions; neither repeats a supplied prompt."
+  "researchNote": "All modes were tied at 24 cases. Two new questions cover foundation and investor, using an opened fiscal 2026 company filing and an opened historical SEC settled order. Neither repeats a supplied prompt. Research completed November 3, 2026."
 }
 </script>
 <script>
