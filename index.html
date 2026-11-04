@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-11-03T13:29:46.720216+00:00",
+  "checkedAt": "2026-11-04T14:49:40.551785+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -4280,9 +4280,138 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "This deceptive intercompany tax accounting improperly inflated Weatherford’s earnings and materially understated its ETR and tax expense.",
       "calculations": []
+    },
+    {
+      "id": "lease-bakery-renewal-notice-deadline",
+      "mode": "lease",
+      "concept": "Renewal options require timely exercise",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Silver Peel has a renewal option requiring written notice before a specified deadline. Its renovation forecast assumes renewal, but the owner plans to discuss staying only when the initial term expires. What should the owner do now?",
+      "choices": [
+        {
+          "text": "Have counsel confirm the option's conditions and arrange compliant notice before the deadline.",
+          "why": "An option's practical value depends on satisfying its exercise requirements, including notice timing and form."
+        },
+        {
+          "text": "Wait until expiry because having an option reserves the space automatically.",
+          "why": "The fictional clause requires affirmative notice; the option alone does not establish that it has been exercised."
+        },
+        {
+          "text": "Include renewal in the forecast because the landlord previously welcomed the renovations.",
+          "why": "A favourable conversation does not establish compliance with the written renewal conditions."
+        },
+        {
+          "text": "Keep paying rent after expiry and assume the same renewal term follows.",
+          "why": "Continued payments do not establish that the specified option has been validly exercised or that its terms apply."
+        }
+      ],
+      "explanation": "BDC advises tenants to understand both when and how a commercial lease renews. Before relying on future occupancy to justify renovations, the owner should verify and satisfy the actual option requirements.",
+      "note": "Silver Peel, its Ontario location, lease clause and renovation forecast are fictional training assumptions. This exercise concerns contract review and planning, not a statement about statutory renewal rights.",
+      "stats": [],
+      "source": {
+        "title": "How to negotiate a commercial lease effectively",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-negotiate-commercial-lease-effectively",
+        "kind": "Practitioner guidance",
+        "note": "BDC establishes the importance of checking when and how renewal occurs. The notice requirement and owner's proposed delay are invented."
+      },
+      "evidence": "Be sure to understand when and how the lease will be renewed.",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-single-supplier-continuity",
+      "mode": "verdict",
+      "concept": "Supplier concentration and operational continuity",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Chestnut Fold depends on one mill's proprietary flour for its core products. Supply after the acquisition is unconfirmed, and alternative flour has not passed production trials. The seller permits direct supplier discussions, trials and repricing; other diligence is satisfactory. Before committing unconditionally, what is the verdict?",
+      "choices": [
+        {
+          "text": "Investigate",
+          "why": "Supply continuity and substitute performance remain unresolved, but direct verification and trials could resolve them before commitment."
+        },
+        {
+          "text": "Invest",
+          "why": "Verified historical earnings do not establish that essential inputs will remain available after closing."
+        },
+        {
+          "text": "Pass",
+          "why": "No verified supply failure or unacceptable fixed terms have been established; the seller permits the checks and adjustments needed."
+        }
+      ],
+      "explanation": "BDC identifies reliance on a single supplier as a material risk and recommends meeting key suppliers. Confirm post-closing supply and test alternatives before deciding whether maintainable earnings and the price remain supportable.",
+      "note": "Chestnut Fold and every operational and financial detail are fictional training assumptions. Stat rows provide context, not sufficient evidence to approve the acquisition.",
+      "stats": [
+        [
+          "Revenue",
+          "Fictional annual sales: CAD 940,000"
+        ],
+        [
+          "Margins",
+          "Fictional reported operating margin: 11%"
+        ],
+        [
+          "Customer mix",
+          "Fictional sales mix: 70% retail, 30% wholesale"
+        ],
+        [
+          "Occupancy",
+          "Fictional annual all-in occupancy cost: CAD 68,000"
+        ],
+        [
+          "Debt",
+          "Fictional proposed acquisition debt: CAD 230,000"
+        ],
+        [
+          "AR days",
+          "Fictional wholesale receivable days: 26"
+        ]
+      ],
+      "source": {
+        "title": "How to conduct due diligence when buying a business",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/buying-business-conducting-due-diligence",
+        "kind": "Practitioner guidance",
+        "note": "BDC establishes supplier concentration and switching disruption as diligence issues. The bakery, proprietary input, financial figures and available deal remedies are invented."
+      },
+      "evidence": "Ask to meet key suppliers, especially if there is high supplier concentration.",
+      "calculations": []
+    },
+    {
+      "id": "investor-miller-energy-reserve-report-valuation",
+      "mode": "investor",
+      "concept": "A technical report may not establish fair value",
+      "caseType": "Historical case",
+      "prompt": "The SEC's January 12, 2016 US settled order found that Miller Energy used a petroleum reserve report that expressly disclaimed being an opinion of fair value to value acquired Alaska assets. What should an analyst learn before relying on a specialist report in an acquisition valuation?",
+      "choices": [
+        {
+          "text": "Check the report's purpose, assumptions and asset scope, and reconcile its conclusions with relevant market evidence.",
+          "why": "A technically valid report for one purpose may be unsuitable for valuation; overlapping assets and unsupported assumptions also require review."
+        },
+        {
+          "text": "Accept the figure because an independent technical specialist prepared the report.",
+          "why": "Specialist involvement does not make the report suitable for a different measurement purpose."
+        },
+        {
+          "text": "Use the purchase price as the only permissible value in every acquisition.",
+          "why": "The order explains that fair-value accounting applied; the lesson is to substantiate the measurement rather than impose a universal purchase-price rule."
+        },
+        {
+          "text": "Add separately listed equipment values to the report without checking what it already includes.",
+          "why": "The order also found double-counting of fixed assets already included in the reserve report."
+        }
+      ],
+      "explanation": "The SEC found that Miller Energy used an unsuitable reserve report, understated expense inputs and double-counted assets. The company settled without admitting or denying the findings, except jurisdiction; the transferable lesson is to test a report's fitness and underlying evidence before relying on its valuation.",
+      "note": "Historical US administrative settlement concerning Alaska assets acquired in 2009. The findings are those of the SEC's settled order, not a litigated court judgment or an admission; the question invents no company metrics.",
+      "stats": [],
+      "source": {
+        "title": "Miller Energy Resources, Inc., et al.",
+        "url": "https://www.sec.gov/litigation/admin/2016/33-10002.pdf",
+        "kind": "Historical enforcement case",
+        "note": "January 12, 2016 order making findings and imposing penalties as to Miller Energy. It establishes the report-purpose mismatch, understated expense inputs and double-counting."
+      },
+      "evidence": "the reserve report used by the CFO expressly disclaimed that the numbers therein represented the engineer firm’s opinion of fair value.",
+      "calculations": []
     }
   ],
-  "researchNote": "All modes were tied at 24 cases. Two new questions cover foundation and investor, using an opened fiscal 2026 company filing and an opened historical SEC settled order. Neither repeats a supplied prompt. Research completed November 3, 2026."
+  "researchNote": "Researched lease and verdict, the two least represented modes, plus a new historical valuation case. Opened BDC guidance and the SEC's Miller Energy settled order. Searched 2026 lease developments but did not establish a sufficiently distinct current case for inclusion. All fictional facts are identified as training assumptions; no files or accounts were changed."
 }
 </script>
 <script>
