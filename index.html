@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-11-04T14:49:40.551785+00:00",
+  "checkedAt": "2026-11-05T13:56:08.354067+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -4409,9 +4409,81 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "the reserve report used by the CFO expressly disclaimed that the numbers therein represented the engineer firm’s opinion of fair value.",
       "calculations": []
+    },
+    {
+      "id": "foundation-krispy-kreme-fixed-cost-operating-leverage",
+      "mode": "foundation",
+      "concept": "Fixed costs and operating leverage",
+      "caseType": "Historical case",
+      "prompt": "Krispy Kreme's US annual report for February 1, 2009 explains that declining sales hurt margins because factory-store costs could not fall proportionately. Which budgeting lesson follows?",
+      "choices": [
+        {
+          "text": "Separate fixed, variable and semi-fixed costs when testing a sales downturn.",
+          "why": "Some costs persist as sales fall, so a forecast must reflect how each cost actually behaves."
+        },
+        {
+          "text": "Reduce every operating expense by the same percentage as sales.",
+          "why": "This assumes costs adjust proportionately, contradicting the operational constraint described in the filing."
+        },
+        {
+          "text": "Keep the historical operating margin constant at lower sales.",
+          "why": "A constant margin can hide the increasing burden of fixed costs when revenue declines."
+        },
+        {
+          "text": "Exclude fixed store costs when deciding whether the store can break even.",
+          "why": "Fixed costs still need coverage even though they do not vary directly with production."
+        }
+      ],
+      "explanation": "Krispy Kreme reported that significant fixed and semi-fixed costs prevented operating expenses from declining in proportion to sales. A useful downside forecast models cost behavior and feasible cost reductions before assessing break-even.",
+      "note": "Historical first-party operating disclosure for fiscal 2009 in a US SEC filing. No fictional company statistics or current investment verdict are introduced.",
+      "stats": [],
+      "source": {
+        "title": "ANNUAL REPORT",
+        "url": "https://www.sec.gov/Archives/edgar/data/1100270/000120677409000797/krispykreme_10k.htm",
+        "kind": "First-party operational disclosure",
+        "note": "Krispy Kreme's Form 10-K, under store-profitability risks, establishes the effect of fixed costs during declining sales. The exercise supplies qualitative budgeting alternatives."
+      },
+      "evidence": "significant fixed and semi-fixed costs prevent us from reducing our operating expenses in proportion with declining sales",
+      "calculations": []
+    },
+    {
+      "id": "lease-miss-jones-2026-conditional-deposit-release",
+      "mode": "lease",
+      "concept": "Conditional security-deposit release and liquidity",
+      "caseType": "Historical case",
+      "prompt": "Miss Jones Baking Co.'s April 8, 2026 Emeryville, California sublease permits a deposit reduction only after timing, payment-history, damage and operating-cash-flow conditions, plus a documentation process. What should an operator learn before budgeting a similar refund?",
+      "choices": [
+        {
+          "text": "Model the eligibility conditions and refund process, with a downside plan if the cash remains tied up.",
+          "why": "The deposit release depends on contractual conditions and supporting evidence, so the anniversary alone does not establish availability."
+        },
+        {
+          "text": "Treat the refund as automatically available on the first anniversary.",
+          "why": "The anniversary is only the earliest permitted date; the other conditions and process still apply."
+        },
+        {
+          "text": "Use positive net income as sufficient proof that the operating-cash-flow condition is met.",
+          "why": "Accounting profit and operating cash flow differ, and the contract specifies its own cash-flow evidence."
+        },
+        {
+          "text": "Deduct the expected refund from rent while waiting for confirmation.",
+          "why": "A conditional refund provision does not itself authorize a unilateral rent offset."
+        }
+      ],
+      "explanation": "Section 4(d) makes deposit reduction conditional on more than elapsed time and requires financial statements and written notification, followed by an objection-or-refund process. Budgeting should reflect those conditions and possible delay; this California contract does not establish a universal tenant entitlement.",
+      "note": "The Purple Mixer, Inc. dba Miss Jones Baking Co. and Metagenomi Therapeutics, Inc. are real parties to the dated California sublease. No fictional financial statistics or assumptions about actual compliance or refund receipt are supplied.",
+      "stats": [],
+      "source": {
+        "title": "SUBLEASE",
+        "url": "https://www.sec.gov/Archives/edgar/data/1785279/000119312526342400/mgx-ex10_1.htm",
+        "kind": "Executed commercial sublease filed with SEC",
+        "note": "Section 4(d), Security Deposit “Burn Off”, establishes conditional release and its evidence and response process. The exercise adds alternative budgeting interpretations, not claims about subsequent performance."
+      },
+      "evidence": "the Burn Off shall not occur prior to the one-year anniversary of the Commencement Date.",
+      "calculations": []
     }
   ],
-  "researchNote": "Researched lease and verdict, the two least represented modes, plus a new historical valuation case. Opened BDC guidance and the SEC's Miller Energy settled order. Searched 2026 lease developments but did not establish a sufficiently distinct current case for inclusion. All fictional facts are identified as training assumptions; no files or accounts were changed."
+  "researchNote": "Two new cases cover foundation and lease, both tied for the fewest research cases. Opened primary sources pair historical operating experience with a 2026 baking-company sublease. Neither question requires scored arithmetic."
 }
 </script>
 <script>
