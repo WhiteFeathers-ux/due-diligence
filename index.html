@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-11-06T13:01:45.435146+00:00",
+  "checkedAt": "2026-11-07T13:01:41.715620+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -4574,9 +4574,81 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "merchandise subject to such a markdown never reverted back to its original retail price.",
       "calculations": []
+    },
+    {
+      "id": "foundation-alphabet-2026-equity-proceeds-not-revenue",
+      "mode": "foundation",
+      "concept": "Equity financing and statement relationships",
+      "caseType": "Historical case",
+      "prompt": "Alphabet's US quarterly filing for September 30, 2026 reports proceeds from issuing common stock within financing activities. In a simplified direct cash share issuance, ignoring issuance costs, which statement relationship is correct?",
+      "choices": [
+        {
+          "text": "Cash and contributed equity increase; the issuance does not create revenue or profit.",
+          "why": "Investors provide capital in exchange for ownership. The receipt increases assets and equity and appears as financing cash flow."
+        },
+        {
+          "text": "Cash and revenue increase because the company received money.",
+          "why": "Receiving cash does not establish earned revenue; selling ownership interests is a financing transaction."
+        },
+        {
+          "text": "Cash and a repayment liability increase, just as with a bank loan.",
+          "why": "The simplified transaction issues common equity, rather than creating a contractual borrowing obligation."
+        },
+        {
+          "text": "Cash increases and retained earnings increase through net income.",
+          "why": "Share issuance increases contributed capital directly; its proceeds do not pass through net income into retained earnings."
+        }
+      ],
+      "explanation": "Alphabet's filing separates equity issuance proceeds from operating cash generation. A direct cash issuance of common shares increases cash and contributed equity without generating revenue or profit, so a larger cash balance alone does not demonstrate better operating performance.",
+      "note": "The filing and reporting period are real. The isolated direct issuance, with issuance costs ignored, is an explicit training assumption rather than a reconstruction of every Alphabet financing transaction.",
+      "stats": [],
+      "source": {
+        "title": "Alphabet Inc. Form 10-Q for the quarterly period ended September 30, 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+        "kind": "Company quarterly filing",
+        "note": "The cash-flow statement places common-stock issuance proceeds in financing activities. The exercise isolates a direct cash common-share issuance and omits issuance costs."
+      },
+      "evidence": "Proceeds from issuance of common stock, net of costs",
+      "calculations": []
+    },
+    {
+      "id": "lease-bakery-landlord-work-delivery-deadlines",
+      "mode": "lease",
+      "concept": "Landlord work commitments and opening-date risk",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Butter Fern's opening forecast depends on the landlord completing electrical upgrades before possession. The landlord promises completion verbally, but the draft lease specifies neither the work nor a completion deadline or delay remedy. What should the owner do before relying on the opening date?",
+      "choices": [
+        {
+          "text": "Have counsel document the required work, completion deadline and negotiated delay remedies in the lease, then model delay exposure.",
+          "why": "Written scope and timing make the commitment reviewable, while negotiated remedies and a delay forecast address the financial consequences of late delivery."
+        },
+        {
+          "text": "Sign because the landlord's agreement to pay establishes when the work must be finished.",
+          "why": "Responsibility for payment does not specify completion timing or what happens if the premises are delivered late."
+        },
+        {
+          "text": "Keep the opening forecast unchanged because electrical upgrades improve the landlord's property.",
+          "why": "The landlord's incentive to improve the property does not establish a dependable delivery schedule."
+        },
+        {
+          "text": "Rely on a contractor's estimated completion date without adding the landlord's obligations to the lease.",
+          "why": "An estimate helps planning but does not resolve the missing contractual scope, deadline and remedies."
+        }
+      ],
+      "explanation": "BDC advises tenants to put modification requirements, clear deadlines and penalties for late completion into their leases. Butter Fern should obtain a documented agreement and assess delayed-opening cash needs before treating the projected opening date as dependable; any remedy depends on the negotiated terms and applicable law.",
+      "note": "Butter Fern, its location and all transaction circumstances are fictional. This Canadian training adaptation concerns documenting landlord work, rather than an existing legal entitlement to delay compensation.",
+      "stats": [],
+      "source": {
+        "title": "How to choose the best location for your business",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-choose-right-location-for-your-business",
+        "kind": "Practitioner guidance",
+        "note": "BDC recommends contractual specifications, deadlines and late-completion penalties for modifications to rented premises. The bakery, promised electrical work and missing lease provisions are invented."
+      },
+      "evidence": "These provisions need to be written into your lease.",
+      "calculations": []
     }
   ],
-  "researchNote": "Two additions cover verdict, the least-populated mode, and investor, tied for next fewest. Supporting SEC and BDC pages were opened and read. Searches also covered November 2026 developments, but no sufficiently verified current case was selected. No files or accounts were changed."
+  "researchNote": "Opened primary sources for two new cases in foundation and lease, both tied for the fewest research cases. The pack combines Alphabet's September 2026 filing with established BDC commercial-property guidance. No files or accounts were accessed."
 }
 </script>
 <script>
