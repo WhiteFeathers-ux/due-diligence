@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-11-07T13:01:41.715620+00:00",
+  "checkedAt": "2026-11-08T13:01:43.609876+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -4646,9 +4646,102 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "These provisions need to be written into your lease.",
       "calculations": []
+    },
+    {
+      "id": "investor-mcdonalds-2026-franchisor-margin-comparability",
+      "mode": "investor",
+      "concept": "Business-model comparability in margin analysis",
+      "caseType": "Historical case",
+      "prompt": "McDonald's US annual filing for December 31, 2025 distinguishes franchise rent and royalties from franchisees' restaurant sales. Before using its corporate operating margin as a target for an independently operated bakery, what should an analyst check?",
+      "choices": [
+        {
+          "text": "Compare revenue definitions, operating responsibilities and capital requirements before selecting a margin benchmark.",
+          "why": "A franchisor's fee revenue and obligations differ from an operator's food sales, staffing and production costs."
+        },
+        {
+          "text": "Use the corporate margin directly because both businesses sell prepared food.",
+          "why": "Shared products do not establish comparable revenue bases or operating responsibilities."
+        },
+        {
+          "text": "Replace corporate revenue with systemwide restaurant sales while keeping corporate expenses unchanged.",
+          "why": "That combines franchisees' sales with expenses that do not include their complete operating costs."
+        },
+        {
+          "text": "Compare revenue growth first; similar growth makes the margins comparable.",
+          "why": "Similar growth does not resolve differences in revenue recognition, capital needs or who bears restaurant expenses."
+        }
+      ],
+      "explanation": "McDonald's describes conventional franchise revenue primarily as rent and royalties, while franchisees operate their restaurants and fund specified investments. A bakery valuation needs benchmarks with comparable economics before interpreting a margin gap as operating underperformance.",
+      "note": "Documented first-party operational experience reported in a 2026 US filing, not an enforcement allegation. The hypothetical bakery comparison is a training application; no bakery financial figures are asserted.",
+      "stats": [],
+      "source": {
+        "title": "McDonald's Corporation 2025 Annual Report",
+        "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+        "kind": "First-party annual report",
+        "note": "Establishes franchise revenue definitions and allocation of operating and capital responsibilities. The analyst's bakery benchmarking decision is invented."
+      },
+      "evidence": "Franchised sales are not recorded as revenues by the Company",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-supplier-credit-terms-reset",
+      "mode": "verdict",
+      "concept": "Supplier payment terms and acquisition working capital",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Hawthorn Paddle's acquisition forecast assumes supplier credit will continue. Suppliers instead confirm payment before delivery after closing. Independent diligence incorporates those terms into seasonal cash forecasts and a revised valuation; the seller accepts a price below that valuation. All essential diligence is complete, financing and additional working capital are committed, and checked downside forecasts cover operations, maintenance and debt, preserve reserves and meet the buyer's fixed return hurdle. At these revised terms, what is the verdict?",
+      "choices": [
+        {
+          "text": "Invest",
+          "why": "The verified payment-term change is included in valuation and funded cash forecasts, with essential diligence and the return hurdle satisfied."
+        },
+        {
+          "text": "Investigate",
+          "why": "The supplier terms, funding requirement and valuation consequences have already been independently resolved in the stated facts."
+        },
+        {
+          "text": "Pass",
+          "why": "Payment before delivery increases funding needs, but the exercise explicitly establishes adequate committed funding and an acceptable revised price."
+        }
+      ],
+      "explanation": "Profitable sales can require more cash when suppliers stop extending credit. Here the buyer has verified the change, funded its consequences and secured a supported price, making Invest appropriate under the stated assumptions.",
+      "note": "Hawthorn Paddle, its supplier communications, financial conditions and all stat rows are fictional training assumptions. Canadian guidance supports checking supplier contracts and independently assessing acquisition value; it does not describe this transaction.",
+      "stats": [
+        [
+          "Revenue",
+          "Fictional: historical sales independently verified"
+        ],
+        [
+          "Margins",
+          "Fictional: revised earnings support the agreed valuation"
+        ],
+        [
+          "Customer mix",
+          "Fictional: customer diligence complete; no material unresolved concentration finding"
+        ],
+        [
+          "Occupancy",
+          "Fictional: lease checks complete; costs included in forecasts"
+        ],
+        [
+          "Debt",
+          "Fictional: committed financing; downside debt payments covered"
+        ],
+        [
+          "AR days",
+          "Fictional: collection timing verified and included in seasonal forecasts"
+        ]
+      ],
+      "source": {
+        "title": "The steps you need to take BEFORE buying a business",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/due-diligence-valuation",
+        "kind": "Practitioner guidance",
+        "note": "Supports examining supplier contracts, financial statements and independent valuation. The payment-term reset, funding, acceptable price and verdict conditions are fictional."
+      },
+      "evidence": "any contracts it has with employees and suppliers",
+      "calculations": []
     }
   ],
-  "researchNote": "Opened primary sources for two new cases in foundation and lease, both tied for the fewest research cases. The pack combines Alphabet's September 2026 filing with established BDC commercial-property guidance. No files or accounts were accessed."
+  "researchNote": "Reviewed primary-source pages covering McDonald's 2025 operations, reported in 2026, and older Canadian acquisition guidance. Selected verdict, the least-populated mode, and investor, tied for the next-lowest count. No files or accounts were accessed."
 }
 </script>
 <script>
