@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-11-08T13:01:43.609876+00:00",
+  "checkedAt": "2026-11-09T14:28:22.940740+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -4739,9 +4739,81 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "any contracts it has with employees and suppliers",
       "calculations": []
+    },
+    {
+      "id": "foundation-dividends-retained-earnings-versus-expense",
+      "mode": "foundation",
+      "concept": "Dividends link cash and retained earnings without reducing operating profit",
+      "caseType": "Research-informed practice",
+      "prompt": "In a fictional US bakery corporation, an ordinary cash dividend is declared and paid immediately from retained earnings, with no previously recorded dividend payable. Ignore taxes and fees. Which statement relationship is correct?",
+      "choices": [
+        {
+          "text": "Cash and retained earnings decrease; net income is unchanged, and the payment is a financing cash outflow.",
+          "why": "The payment distributes earnings to shareholders rather than creating an expense of earning revenue."
+        },
+        {
+          "text": "Cash and net income decrease; the payment is an operating cash outflow.",
+          "why": "This treats a distribution to owners as an operating expense, confusing how profits are used with how profits are earned."
+        },
+        {
+          "text": "Cash decreases and a dividend liability decreases; retained earnings are unchanged.",
+          "why": "That describes payment of a dividend declared and recorded earlier. Here, declaration and payment occur together, so the combined transaction reduces retained earnings."
+        },
+        {
+          "text": "Cash decreases, but retained earnings remain unchanged because the dividend uses prior profits.",
+          "why": "Retained earnings represent accumulated earnings kept in the business; distributing those earnings reduces that balance."
+        }
+      ],
+      "explanation": "A dividend distributes earnings rather than measuring a cost of generating them. In this simplified transaction, cash and retained earnings fall while net income remains unchanged; the payment belongs in financing cash flows.",
+      "note": "The bakery and transaction are fictional training assumptions under a simplified US corporate accounting example. The source provides the statement framework and identifies dividends as distributions of earnings.",
+      "stats": [],
+      "source": {
+        "title": "Beginners' Guide to Financial Statement",
+        "url": "https://www.sec.gov/investor/pubs/begfinstmtguide.htm",
+        "kind": "Regulator educational guidance",
+        "note": "The SEC guide explains equity, earnings distributions and statement relationships. The immediate declaration-and-payment scenario is invented."
+      },
+      "evidence": "Sometimes companies distribute earnings, instead of retaining them. These distributions are called dividends.",
+      "calculations": []
+    },
+    {
+      "id": "lease-ballys-2026-development-cross-default",
+      "mode": "lease",
+      "concept": "Linked agreements can threaten occupancy despite timely rent payments",
+      "caseType": "Historical case",
+      "prompt": "Bally’s US annual report for December 31, 2025, filed in 2026, describes a cross-default between its Chicago lease and development agreement. What should a bakery operator learn when reviewing a lease linked to a separate build-out agreement?",
+      "choices": [
+        {
+          "text": "Review linked default triggers, notice and cure periods, and termination remedies across both agreements.",
+          "why": "A breach of a linked agreement can create lease consequences, so reviewing rent obligations alone may miss a threat to occupancy."
+        },
+        {
+          "text": "Review only the lease’s rent-payment clause because timely rent necessarily protects occupancy.",
+          "why": "The disclosed arrangement includes defaults beyond unpaid rent, including a cross-default with the development agreement."
+        },
+        {
+          "text": "Assume separate document titles prevent a construction dispute from affecting the lease.",
+          "why": "Express cross-default provisions can connect obligations despite their placement in separate documents."
+        },
+        {
+          "text": "Budget a cash reserve instead of reviewing the linked clauses because reserves prevent contractual default.",
+          "why": "Cash may help fund compliance, but it does not resolve nonfinancial obligations or establish the applicable cure rights."
+        }
+      ],
+      "explanation": "Bally’s disclosed that defaults under the Chicago lease included a cross-default with its development agreement, with termination rights tied to lease defaults. The transferable lesson is to map linked obligations and remedies before relying on continued occupancy, rather than assume paying rent addresses every default risk.",
+      "note": "Documented US contractual disclosure concerning Chicago, Illinois; this is not an enforcement finding or a statement that Bally’s defaulted. The bakery application is hypothetical, and actual rights depend on its negotiated documents and applicable law.",
+      "stats": [],
+      "source": {
+        "title": "Bally’s Corporation — Form 10-K for the year ended December 31, 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000019/baly-20251231.htm",
+        "kind": "Official company annual filing",
+        "note": "The risk-factor discussion establishes the Chicago lease’s development-agreement cross-default and termination provisions. The exercise applies that review lesson to a hypothetical bakery without assuming identical terms."
+      },
+      "evidence": "GLP has the right to terminate the Chicago MLA upon any event of default under the Chicago MLA.",
+      "calculations": []
     }
   ],
-  "researchNote": "Reviewed primary-source pages covering McDonald's 2025 operations, reported in 2026, and older Canadian acquisition guidance. Selected verdict, the least-populated mode, and investor, tied for the next-lowest count. No files or accounts were accessed."
+  "researchNote": "Researched and opened SEC primary sources. Two new cases cover foundation and lease, both tied for the fewest existing cases. The pack pairs an older SEC accounting guide with Bally’s 2026-filed annual report; no company metrics or current investment recommendations are invented."
 }
 </script>
 <script>
