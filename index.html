@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-11-09T14:28:22.940740+00:00",
+  "checkedAt": "2026-11-10T14:08:02.049261+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -4811,9 +4811,102 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "GLP has the right to terminate the Chicago MLA upon any event of default under the Chicago MLA.",
       "calculations": []
+    },
+    {
+      "id": "investor-ups-valuation-consultant-information",
+      "mode": "investor",
+      "concept": "Independent valuation depends on complete inputs",
+      "caseType": "Historical case",
+      "prompt": "The SEC's November 22, 2024 US settled UPS order found that valuation consultants were not given internal sale analyses and proposed transaction terms relevant to Freight's goodwill testing. What should an analyst learn before relying on an external valuation?",
+      "choices": [
+        {
+          "text": "Check that the consultant received material contrary evidence and used supportable market-participant assumptions.",
+          "why": "An external report can remain unreliable when management withholds evidence or supplies unsuitable assumptions."
+        },
+        {
+          "text": "Accept the valuation if the consultant is independent of the company.",
+          "why": "Independence alone does not establish that the consultant received complete information."
+        },
+        {
+          "text": "Ignore proposed sale terms until a binding sale agreement exists.",
+          "why": "Relevant transaction evidence can inform valuation before a binding agreement is signed."
+        },
+        {
+          "text": "Assume every prospective buyer can preserve the seller's existing synergies.",
+          "why": "Buyer capabilities and standalone costs require evidence; the seller's economics may not transfer."
+        }
+      ],
+      "explanation": "The SEC found that UPS relied on consultant valuations without supplying material internal assessments and sale information. UPS settled without admitting or denying the substantive findings. External expertise does not replace checking the completeness and suitability of valuation inputs.",
+      "note": "Historical US administrative settlement concerning 2019–2020 conduct; this is a diligence lesson, not a current investment verdict.",
+      "stats": [],
+      "source": {
+        "title": "In the Matter of United Parcel Service, Inc. — Order Instituting Cease-and-Desist Proceedings Pursuant to Section 8A of the Securities Act of 1933 and Section 21C of the Securities Exchange Act of 1934, Making Findings, and Imposing a Cease-and-Desist Order",
+        "url": "https://www.sec.gov/files/litigation/admin/2024/33-11328.pdf",
+        "kind": "Historical enforcement case",
+        "note": "The settled order establishes the SEC's findings about omitted valuation information. The exercise invents only the answer choices and transferable diligence question."
+      },
+      "evidence": "Yet UPS did not disclose this information to the valuation consultant either.",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-tax-payments-debt-coverage",
+      "mode": "verdict",
+      "concept": "Debt coverage after cash taxes",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Linden Peel's acquisition presentation shows EBITDA covering loan payments. Independent diligence confirms that required cash income-tax payments leave insufficient cash for scheduled debt service. No lawful tax deferral, additional funding or feasible operating change closes the gap, and the seller refuses revised terms. At these offered terms, what is your verdict?",
+      "choices": [
+        {
+          "text": "Pass",
+          "why": "Verified required cash payments make the offered financing unsustainable, with no available remedy."
+        },
+        {
+          "text": "Invest",
+          "why": "EBITDA excludes income taxes; covering debt before those cash payments does not establish affordability."
+        },
+        {
+          "text": "Investigate",
+          "why": "The material facts and lack of remedies are already verified; no identified unresolved question could rescue these terms."
+        }
+      ],
+      "explanation": "BDC's lender guidance deducts current income taxes when assessing debt-service coverage. Here, verified cash taxes defeat the offered deal's coverage, and the scenario rules out funding or contractual remedies.",
+      "note": "Linden Peel, its location, financial characteristics and all transaction facts are fictional training assumptions. BDC supplies the coverage principle, not evidence about an actual bakery or a universal lending threshold.",
+      "stats": [
+        [
+          "Revenue",
+          "Verified historical sales; fictional"
+        ],
+        [
+          "Margins",
+          "Positive EBITDA; inadequate cash after taxes; fictional"
+        ],
+        [
+          "Customer mix",
+          "Diversified retail and wholesale; fictional"
+        ],
+        [
+          "Occupancy",
+          "Lease costs included in forecasts; fictional"
+        ],
+        [
+          "Debt",
+          "Scheduled payments exceed cash available after taxes; fictional"
+        ],
+        [
+          "AR days",
+          "Verified collections reflected in forecasts; fictional"
+        ]
+      ],
+      "source": {
+        "title": "How a bank looks at your business",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/get-financing/how-a-bank-looks-at-your-business",
+        "kind": "Practitioner guidance",
+        "note": "BDC describes deducting current income taxes in debt-service coverage analysis. The bakery, cash shortfall, verification and unavailable remedies are invented."
+      },
+      "evidence": "less current income taxes, distributions paid and unfunded capital expenditures incurred during the period",
+      "calculations": []
     }
   ],
-  "researchNote": "Researched and opened SEC primary sources. Two new cases cover foundation and lease, both tied for the fewest existing cases. The pack pairs an older SEC accounting guide with Bally’s 2026-filed annual report; no company metrics or current investment recommendations are invented."
+  "researchNote": "Reviewed primary SEC and BDC sources, including a 2026 annual filing and an older settled enforcement case. Selected two distinct additions: verdict, the least-populated mode, and investor, tied for next-fewest. No files, accounts or private data were accessed."
 }
 </script>
 <script>
