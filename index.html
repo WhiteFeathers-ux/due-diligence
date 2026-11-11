@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-11-10T14:08:02.049261+00:00",
+  "checkedAt": "2026-11-11T13:01:55.710941+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -4904,9 +4904,81 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "less current income taxes, distributions paid and unfunded capital expenditures incurred during the period",
       "calculations": []
+    },
+    {
+      "id": "foundation-rpm-loss-accrual-before-resolution",
+      "mode": "foundation",
+      "concept": "Loss contingencies: recognition can precede payment and final resolution",
+      "caseType": "Historical case",
+      "prompt": "The SEC's December 23, 2020 US RPM release describes allegations of delayed loss accruals for a DOJ investigation. In a simplified example where a loss already meets applicable accrual requirements, may a company wait for a final judgment or payment to record it?",
+      "choices": [
+        {
+          "text": "No; recognize the loss expense and liability when accrual is required, even before payment.",
+          "why": "Recognition follows the applicable accrual requirements rather than the eventual cash-payment date."
+        },
+        {
+          "text": "Yes; an unresolved investigation cannot affect earnings until a court enters judgment.",
+          "why": "Final judgment is not a universal prerequisite for recognizing a loss contingency."
+        },
+        {
+          "text": "Record a liability immediately, but defer the expense until cash is paid.",
+          "why": "In this simplified loss-accrual example, the expense accompanies recognition of the liability."
+        },
+        {
+          "text": "Disclose the investigation in a note instead of recording an otherwise required accrual.",
+          "why": "Disclosure does not substitute for recognition when accrual requirements are met."
+        }
+      ],
+      "explanation": "An accrual can recognize a loss expense and liability before payment or final resolution. RPM and its general counsel settled without admitting or denying the allegations; the District of Columbia federal court entered the consent final judgment on December 22, 2020.",
+      "note": "The historical allegations and settlement are real. The simplified accounting premise is a training assumption, not an independent finding about when RPM met recognition requirements.",
+      "stats": [],
+      "source": {
+        "title": "SEC Obtains Final Judgment Against Rpm International Inc. and Its General Counsel",
+        "url": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-24994",
+        "kind": "Historical enforcement case",
+        "note": "Establishes the alleged delayed accrual and settlement without admissions. The exercise supplies a simplified premise that accrual is already required."
+      },
+      "evidence": "RPM failed to timely disclose a material loss contingency, or record an accrual",
+      "calculations": []
+    },
+    {
+      "id": "lease-bakery-landlord-consent-versus-zoning",
+      "mode": "lease",
+      "concept": "Landlord permission and municipal approval are separate diligence checks",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Russet Whisk has written landlord permission for a production fit-out. Its opening plan assumes that permission also establishes zoning compliance, which nobody has checked. What should the owner do before committing?",
+      "choices": [
+        {
+          "text": "Verify zoning and required municipal approvals separately, then reflect approval risks in the commitment and opening plan.",
+          "why": "Landlord permission addresses the lease relationship; it does not establish compliance with public requirements."
+        },
+        {
+          "text": "Proceed because written landlord permission establishes that the planned alterations satisfy zoning.",
+          "why": "The landlord's contractual consent does not establish municipal compliance."
+        },
+        {
+          "text": "Rely on the previous tenant's retail use as proof that bakery production is permitted.",
+          "why": "A previous use does not establish that the proposed production activity and alterations are allowed."
+        },
+        {
+          "text": "Sign unconditionally and verify zoning after construction begins.",
+          "why": "That commits funds before resolving whether the planned fit-out is permitted."
+        }
+      ],
+      "explanation": "BDC advises checking both the lease and zoning before planned improvements. For this fictional Ontario bakery, written landlord consent resolves only one check; approval uncertainty should be addressed before committing funds and relying on an opening date.",
+      "note": "Russet Whisk, its permission and all circumstances are fictional. This exercise applies Canadian practitioner guidance and asserts no automatic cancellation right or US legal protection.",
+      "stats": [],
+      "source": {
+        "title": "How to negotiate a commercial lease effectively",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-negotiate-commercial-lease-effectively",
+        "kind": "Practitioner guidance",
+        "note": "BDC explicitly recommends checking lease and zoning permission for improvements. The bakery and its unchecked approval assumptions are invented."
+      },
+      "evidence": "You should make sure the lease and zoning allow your planned leasehold improvements.",
+      "calculations": []
     }
   ],
-  "researchNote": "Reviewed primary SEC and BDC sources, including a 2026 annual filing and an older settled enforcement case. Selected two distinct additions: verdict, the least-populated mode, and investor, tied for next-fewest. No files, accounts or private data were accessed."
+  "researchNote": "Researched foundation and lease, both tied for the fewest cases at 28. Opened SEC and BDC primary sources supporting two new lessons. Also searched 2026 developments, but the candidate current SEC filing could not be opened; no facts from that filing are included."
 }
 </script>
 <script>
