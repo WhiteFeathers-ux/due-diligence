@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-11-11T13:01:55.710941+00:00",
+  "checkedAt": "2026-11-12T13:02:33.037659+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -4976,9 +4976,138 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "You should make sure the lease and zoning allow your planned leasehold improvements.",
       "calculations": []
+    },
+    {
+      "id": "verdict-bakery-affiliate-rent-normalized",
+      "mode": "verdict",
+      "concept": "Related-party occupancy costs and maintainable earnings",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Russet Bench rents from the seller's affiliate at a preferential rate that ends at closing. Counsel verifies the replacement lease, and independent diligence includes its higher occupancy costs in maintainable earnings and downside forecasts. The seller accepts a price below the revised independent valuation. All essential diligence is complete; committed financing and funded working capital cover operations, maintenance and debt, preserve reserves and meet the buyer's fixed return hurdle. At these revised terms, what is your verdict?",
+      "choices": [
+        {
+          "text": "Invest",
+          "why": "The replacement occupancy obligation is verified, incorporated into earnings and cash forecasts, and reflected in a supported price."
+        },
+        {
+          "text": "Investigate",
+          "why": "Further investigation would be appropriate if replacement rent or affordability remained unresolved; the prompt explicitly establishes both."
+        },
+        {
+          "text": "Pass",
+          "why": "The higher rent has been absorbed through verified forecasts and repricing; the offered terms still meet the buyer's requirements."
+        }
+      ],
+      "explanation": "BDC recommends examining normalization adjustments, sustainable earnings and leases during acquisition diligence. Preferential historical rent should be replaced with the buyer's verified ongoing occupancy costs before assessing value and debt coverage; the stated revised deal passes those checks.",
+      "note": "Russet Bench, every figure, lease term, diligence outcome and financing condition are fictional training assumptions. This Ontario exercise illustrates acquisition analysis, not a legal rule about related-party leases.",
+      "stats": [
+        [
+          "Revenue",
+          "CAD 1.4 million annually"
+        ],
+        [
+          "Margins",
+          "12% normalized EBITDA margin, including replacement rent"
+        ],
+        [
+          "Customer mix",
+          "80% retail; 20% wholesale; no customer above 5%"
+        ],
+        [
+          "Occupancy",
+          "CAD 112,000 annual all-in replacement occupancy cost"
+        ],
+        [
+          "Debt",
+          "CAD 260,000 acquisition term loan; coverage verified in downside forecasts"
+        ],
+        [
+          "AR days",
+          "8 days"
+        ]
+      ],
+      "source": {
+        "title": "How to conduct due diligence when buying a business",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/buying-business-conducting-due-diligence",
+        "kind": "Practitioner guidance",
+        "note": "BDC identifies normalization adjustments, earnings sustainability and lease review as diligence subjects. The bakery, numerical dashboard and supported Invest conclusion are invented."
+      },
+      "evidence": "impact of potential normalizations",
+      "calculations": []
+    },
+    {
+      "id": "foundation-logitech-acquired-intangible-amortization",
+      "mode": "foundation",
+      "concept": "Amortization links expense, asset carrying value and equity",
+      "caseType": "Historical case",
+      "prompt": "The SEC's April 19, 2016 US settled Logitech order found a failure to amortize certain acquired intangibles. In a simplified example, required current-period amortization is omitted. Ignoring taxes, how are the financial statements misstated?",
+      "choices": [
+        {
+          "text": "Expense is understated; profit, the intangible asset's carrying value and equity are overstated; cash is unchanged.",
+          "why": "Omitting amortization leaves both the expense and accumulated amortization too low, inflating earnings and net assets without changing cash."
+        },
+        {
+          "text": "Expense and cash payments are understated, while the intangible asset's carrying value is correct.",
+          "why": "Amortization allocates an already recorded asset cost; recording it does not require a current cash payment."
+        },
+        {
+          "text": "Profit is correct because acquisition costs affect earnings only when the acquired asset is sold.",
+          "why": "An intangible requiring amortization affects earnings over its useful life, even while the business retains it."
+        },
+        {
+          "text": "Expense is understated and liabilities are overstated, while assets and equity are correct.",
+          "why": "The omitted entry reduces an asset's net carrying value through amortization; it does not ordinarily settle or create a liability."
+        }
+      ],
+      "explanation": "Required amortization recognizes the consumption of an intangible asset's service potential over time. Omitting it overstates profit and the remaining asset balance without generating cash.",
+      "note": "The SEC order contains settled findings concerning Logitech, a Swiss-incorporated SEC registrant. Respondents settled without admitting or denying the findings, subject to the order's stated exceptions; the isolated current-period accounting example is a training simplification.",
+      "stats": [],
+      "source": {
+        "title": "Logitech International, et al.",
+        "url": "https://www.sec.gov/litigation/admin/2016/34-77644.pdf",
+        "kind": "Historical enforcement case",
+        "note": "The April 19, 2016 settled order documents uncorrected acquired-intangible amortization errors. The exercise isolates the accounting effect and invents no company financial statistics."
+      },
+      "evidence": "the Company had failed to amortize certain intangibles.",
+      "calculations": []
+    },
+    {
+      "id": "investor-ralph-lauren-2026-tariff-refund-margin",
+      "mode": "investor",
+      "concept": "Separating non-routine cost recoveries from sustainable margins",
+      "caseType": "Historical case",
+      "prompt": "Ralph Lauren's US quarterly filing for September 26, 2026 identifies tariff refunds as non-routine gross-profit adjustments recorded within cost of goods sold. Before projecting its reported gross margin into a valuation, what should an analyst do?",
+      "choices": [
+        {
+          "text": "Separate the refund benefit from ongoing product economics and assess future sourcing costs and pricing.",
+          "why": "A recovery of previously paid tariffs can improve reported gross profit without establishing a repeatable margin on future sales."
+        },
+        {
+          "text": "Project the reported margin unchanged because the refund was received in cash.",
+          "why": "Cash receipt supports realization of the recovery, but does not establish that equivalent recoveries will recur."
+        },
+        {
+          "text": "Ignore the refund because only revenue items can affect gross margin.",
+          "why": "Gross profit also depends on cost of goods sold, where the filing records these adjustments."
+        },
+        {
+          "text": "Remove all gross-margin improvement because the filing identifies a non-routine benefit.",
+          "why": "The filing also identifies operating drivers; one unusual component does not invalidate every source of improvement."
+        }
+      ],
+      "explanation": "The filing distinguishes tariff-refund benefits from pricing, mix and product-cost drivers. A valuation should assess the sustainable contribution of each driver rather than automatically extrapolating or rejecting the entire reported improvement.",
+      "note": "This is a documented 2026 reporting event, not an enforcement allegation or a current investment recommendation. No forecast, normalized margin or company metric is invented.",
+      "stats": [],
+      "source": {
+        "title": "Ralph Lauren Corporation — Form 10-Q for the quarterly period ended September 26, 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026070697/rl-20260926.htm",
+        "kind": "Official company quarterly filing",
+        "note": "The filing establishes the refund's cost-of-goods-sold classification and its contribution to gross-margin improvement. The diligence question applies that disclosure without calculating a normalized result."
+      },
+      "evidence": "Non-routine gross profit adjustments relate to the receipt of IEEPA tariff refunds",
+      "calculations": []
     }
   ],
-  "researchNote": "Researched foundation and lease, both tied for the fewest cases at 28. Opened SEC and BDC primary sources supporting two new lessons. Also searched 2026 developments, but the candidate current SEC filing could not be opened; no facts from that filing are included."
+  "researchNote": "Three new cases cover verdict, the least-populated mode, and foundation and investor, tied for next fewest. Opened primary sources support a recent 2026 operating disclosure, an older settled SEC accounting case, and Canadian acquisition guidance. No files or private accounts were accessed."
 }
 </script>
 <script>
