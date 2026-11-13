@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-11-12T13:02:33.037659+00:00",
+  "checkedAt": "2026-11-13T13:02:04.911171+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -5105,9 +5105,102 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "Non-routine gross profit adjustments relate to the receipt of IEEPA tariff refunds",
       "calculations": []
+    },
+    {
+      "id": "lease-capri-2026-continuous-operation",
+      "mode": "lease",
+      "concept": "Continuous-operation clauses and downside occupancy economics",
+      "caseType": "Historical case",
+      "prompt": "Capri Holdings' US annual filing for March 28, 2026 warns that continuous-operation clauses may prevent closing underperforming stores. What should a bakery operator learn before budgeting to stop trading while continuing to pay rent?",
+      "choices": [
+        {
+          "text": "Check operating obligations, exceptions and remedies with counsel, and budget the costs of any required continued trading.",
+          "why": "A lease may require business operations as well as rent payments, changing the financial consequences of stopping trade."
+        },
+        {
+          "text": "Budget rent alone because paying it satisfies every continuing lease obligation.",
+          "why": "Payment obligations and operating obligations can be separate; satisfying one does not establish compliance with the other."
+        },
+        {
+          "text": "Assume verified operating losses automatically suspend a continuous-operation clause.",
+          "why": "The disclosure supplies no automatic loss-based exception; the actual agreement and applicable law require review."
+        },
+        {
+          "text": "Replace staffed trading with storage use because the premises remain occupied.",
+          "why": "Physical occupancy does not establish that storage satisfies an obligation to operate a retail business."
+        }
+      ],
+      "explanation": "Capri identifies continuous-operation clauses as a possible obstacle to closing an underperforming store. A bakery's downside plan should therefore establish whether it can stop trading and which operating costs remain unavoidable, rather than budgeting rent alone.",
+      "note": "Real first-party disclosure in a US SEC filing concerning Capri's global store portfolio, not a court finding or a universal rule of US lease law. The bakery application is a training scenario; no Capri financial statistics are invented.",
+      "stats": [],
+      "source": {
+        "title": "CAPRI HOLDINGS LTD — FORM 10-K — For the fiscal year ended March 28, 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1530721/000153072126000047/cpri-20260328.htm",
+        "kind": "First-party operational risk disclosure",
+        "note": "The filing expressly identifies continuous-operation clauses as a potential barrier to store closure. The exercise applies that disclosed risk to a hypothetical bakery without assuming identical terms or jurisdiction."
+      },
+      "evidence": "we may be unable to close an underperforming retail store due to continuous operation clauses in our lease agreements.",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-covenant-enforcement-confirmed",
+      "mode": "verdict",
+      "concept": "Scheduled debt coverage versus enforceable covenant compliance",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Laurel Tin can fund scheduled loan instalments. However, counsel and the lender confirm that the offered acquisition financing breaches its leverage covenant at closing and permits immediate repayment demand. The lender refuses a waiver or amendment; no replacement financing or equity is available, and immediate repayment cannot be funded. The seller refuses revised terms. At these offered terms, what is your verdict?",
+      "choices": [
+        {
+          "text": "Pass",
+          "why": "The financing defect and inability to meet an immediate repayment demand are verified, with no available cure at the offered terms."
+        },
+        {
+          "text": "Invest",
+          "why": "Affordable scheduled instalments do not resolve the confirmed covenant breach or the resulting repayment exposure."
+        },
+        {
+          "text": "Investigate",
+          "why": "Counsel and the lender have already resolved the material uncertainty, and the stated financing and negotiation alternatives are exhausted."
+        }
+      ],
+      "explanation": "BDC explains that covenant breaches can lead a lender to call in a loan; scheduled payment capacity alone does not establish financing viability. Here, the breach, enforcement right and absence of a funded remedy are explicit training assumptions, supporting Pass at the offered terms.",
+      "note": "Laurel Tin, its Ontario acquisition, all terms and all stat-row descriptions are fictional training assumptions. No financial figures or actual borrower enforcement event are attributed to BDC; the lender's refusal and counsel's conclusions are stipulated solely for this exercise.",
+      "stats": [
+        [
+          "Revenue",
+          "Fictional: historical sales verified"
+        ],
+        [
+          "Margins",
+          "Fictional: operations cover scheduled instalments"
+        ],
+        [
+          "Customer mix",
+          "Fictional: diversified retail customers"
+        ],
+        [
+          "Occupancy",
+          "Fictional: lease costs included in forecasts"
+        ],
+        [
+          "Debt",
+          "Fictional: closing covenant breach; no waiver"
+        ],
+        [
+          "AR days",
+          "Fictional: mainly payment at sale"
+        ]
+      ],
+      "source": {
+        "title": "What are loan covenants?",
+        "url": "https://www.bdc.ca/en/articles-tools/entrepreneur-toolkit/templates-business-guides/glossary/covenants",
+        "kind": "Practitioner guidance",
+        "note": "BDC describes covenant monitoring and possible enforcement, including calling in a loan. It does not establish automatic acceleration for every breach; this exercise invents a specifically verified contractual exposure and exhausted remedies."
+      },
+      "evidence": "the lending institution can decide to end the relationship with the business and call in the loan.",
+      "calculations": []
     }
   ],
-  "researchNote": "Three new cases cover verdict, the least-populated mode, and foundation and investor, tied for next fewest. Opened primary sources support a recent 2026 operating disclosure, an older settled SEC accounting case, and Canadian acquisition guidance. No files or private accounts were accessed."
+  "researchNote": "Two new cases target lease and verdict, tied for the fewest existing research cases. Opened primary sources support a 2026 retailer disclosure and Canadian lender guidance. The lease case addresses compulsory operation rather than continuing rent after closure; the verdict case addresses covenant enforcement despite affordable scheduled payments. No files or accounts were accessed."
 }
 </script>
 <script>
