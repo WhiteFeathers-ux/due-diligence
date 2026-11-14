@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-11-13T13:02:04.911171+00:00",
+  "checkedAt": "2026-11-14T13:01:40.903299+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -5198,9 +5198,81 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "the lending institution can decide to end the relationship with the business and call in the loan.",
       "calculations": []
+    },
+    {
+      "id": "foundation-costar-2026-contract-asset-reclassification",
+      "mode": "foundation",
+      "concept": "Contract assets, receivables and revenue timing",
+      "caseType": "Adapted case",
+      "prompt": "CoStar's US September 30, 2026 filing distinguishes conditional contract assets from receivables. In a simplified training example, revenue was properly recognized earlier; the remaining billing condition is now satisfied, but no cash arrives. Ignoring taxes and credit-loss changes, what happens?",
+      "choices": [
+        {
+          "text": "Reclassify the contract asset to a receivable; revenue and cash remain unchanged.",
+          "why": "The condition changes the classification of the existing right to payment. The revenue was already recognized."
+        },
+        {
+          "text": "Record new revenue and a receivable when the billing condition is satisfied.",
+          "why": "This would recognize the same revenue twice under the stated assumptions."
+        },
+        {
+          "text": "Reclassify the contract asset directly to cash because payment is now due.",
+          "why": "An unconditional right to payment is a receivable; it is not evidence that cash has been collected."
+        },
+        {
+          "text": "Reverse the earlier revenue and defer it until the customer pays.",
+          "why": "The example explicitly establishes that earlier recognition was proper. Collection timing alone does not undo earned revenue."
+        }
+      ],
+      "explanation": "CoStar describes contract assets as conditional rights arising from satisfied performance obligations that become receivables when the conditions are satisfied. In this simplified example, satisfying the billing condition changes an asset's classification without creating another sale or a cash receipt.",
+      "note": "The disclosure is real. The isolated transaction and its accounting assumptions are fictional training assumptions, not a reported CoStar transaction.",
+      "stats": [],
+      "source": {
+        "title": "CoStar Group, Inc. Form 10-Q for the quarterly period ended September 30, 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1057352/000105735226000083/csgp-20260930.htm",
+        "kind": "Company quarterly filing",
+        "note": "Contract Balances and Note 3 establish the distinction between conditional contract assets and receivables. The exercise invents a simplified reclassification."
+      },
+      "evidence": "Contract assets are generated when contractual billing schedules differ from revenue recognition timing.",
+      "calculations": []
+    },
+    {
+      "id": "investor-marvell-2023-growth-working-capital-funding",
+      "mode": "investor",
+      "concept": "Growth-related working-capital funding",
+      "caseType": "Historical case",
+      "prompt": "Marvell's US fiscal 2023 annual filing describes inventory built for backlog and new products, plus prepayments to reserve supply capacity. Before assuming a similar expansion will fund itself from sales growth, what should an analyst examine?",
+      "choices": [
+        {
+          "text": "Model when inventory and supplier prepayments consume cash relative to customer collections, including a slower-demand scenario.",
+          "why": "Expansion can require cash before customers pay; weaker demand can prolong that funding gap."
+        },
+        {
+          "text": "Treat the inventory buildup as immediate cash generation because it supports future orders.",
+          "why": "Inventory may support future sales, but purchasing it can consume cash before those sales generate collections."
+        },
+        {
+          "text": "Exclude supply-capacity prepayments from liquidity forecasts because they are recorded as assets.",
+          "why": "Asset recognition does not eliminate the cash paid to suppliers or make that cash available for payroll."
+        },
+        {
+          "text": "Use projected gross profit as the cash available for expansion without modeling payment timing.",
+          "why": "Gross profit does not capture the timing of inventory purchases, supplier prepayments and customer collections."
+        }
+      ],
+      "explanation": "Marvell reported working-capital cash outflows involving receivables, inventory and prepaid assets, and explained the operational reasons for building inventory and reserving supply. The transferable lesson is to test expansion's funding timeline and downside liquidity separately from projected profitability.",
+      "note": "Historical first-party operational disclosure for the fiscal year ended January 28, 2023. The comparable expansion is hypothetical; the question does not assert misconduct or recommend an investment in Marvell.",
+      "stats": [],
+      "source": {
+        "title": "Marvell Technology, Inc. Form 10-K for the fiscal year ended January 28, 2023",
+        "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563223000013/mrvl-20230128.htm",
+        "kind": "Historical company operational disclosure",
+        "note": "Liquidity and Capital Resources explains inventory buildup and supply-capacity prepayments. The exercise applies that documented experience to a hypothetical expansion."
+      },
+      "evidence": "We increased inventory in order to better support unfulfilled backlog",
+      "calculations": []
     }
   ],
-  "researchNote": "Two new cases target lease and verdict, tied for the fewest existing research cases. Opened primary sources support a 2026 retailer disclosure and Canadian lender guidance. The lease case addresses compulsory operation rather than continuing rent after closure; the verdict case addresses covenant enforcement despite affordable scheduled payments. No files or accounts were accessed."
+  "researchNote": "All modes are tied at 30 research cases. Added two distinct lessons in foundation and investor, using opened SEC filings: CoStar's September 2026 disclosure and Marvell's fiscal 2023 operational experience. No scored arithmetic, invented company metrics, or current investment recommendations."
 }
 </script>
 <script>
