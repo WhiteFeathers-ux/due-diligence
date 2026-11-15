@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-11-14T13:01:40.903299+00:00",
+  "checkedAt": "2026-11-15T13:02:31.404368+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -5270,9 +5270,102 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "We increased inventory in order to better support unfulfilled backlog",
       "calculations": []
+    },
+    {
+      "id": "lease-commercial-expense-audit-procedures",
+      "mode": "lease",
+      "concept": "Preserving contractual rights to verify occupancy charges",
+      "caseType": "Historical case",
+      "prompt": "A San Francisco office lease filed with the SEC in 2026 gives the tenant expense-audit rights subject to deadlines and accountant qualifications. Missing the audit commencement deadline generally constitutes approval of the statement. What should a bakery operator learn before accepting similar terms?",
+      "choices": [
+        {
+          "text": "Check that the audit process is usable, budget for qualified review and calendar the contractual deadlines.",
+          "why": "A verification right has practical value only if the tenant can satisfy its procedures, qualifications and timing."
+        },
+        {
+          "text": "Wait until moving out to review all accumulated expense statements together.",
+          "why": "Earlier statements may already fall outside the contractual audit period."
+        },
+        {
+          "text": "Assume an ordinary bookkeeper can conduct the audit because the tenant pays for it.",
+          "why": "This lease specifies qualifications for the tenant's accountant; payment alone does not satisfy them."
+        },
+        {
+          "text": "Assume requesting supporting invoices automatically preserves every audit right.",
+          "why": "The lease separately addresses document requests, audit commencement and audit completion. A document request should not be assumed to satisfy every requirement."
+        }
+      ],
+      "explanation": "Section 4.6 of the filed California lease conditions expense verification on specific procedures and deadlines, including qualifications for the auditor. For a bakery considering similar language, review those conditions before signing and establish a process for checking annual statements.",
+      "note": "The office lease and its procedures are real. The bakery application is a training analogy; these negotiated California terms are not universal statutory rules. No actual overcharge or missed deadline is alleged.",
+      "stats": [],
+      "source": {
+        "title": "OFFICE LEASE",
+        "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/exhibit109-sx1.htm",
+        "kind": "First-party commercial lease exhibit",
+        "note": "Section 4.6 establishes document-access rights, auditor qualifications and deadlines for San Francisco premises. The exercise supplies the bakery application."
+      },
+      "evidence": "Tenant shall have the right to conduct the Audit remotely through electronic communications.",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-unfunded-seller-indemnity",
+      "mode": "verdict",
+      "concept": "Unrecorded liabilities and the financial strength behind an indemnity",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Laurel Sieve is offered as a share purchase. Counsel identifies an unresolved customer lawsuit omitted from the accounts. The seller offers an unsecured indemnity, but its ability to pay is unverified. The seller permits legal review, financial verification and negotiation of funded protection; other diligence is satisfactory. Before committing unconditionally, what is the verdict?",
+      "choices": [
+        {
+          "text": "Investigate",
+          "why": "The potential liability and the reliability of the proposed protection remain unresolved, but legal review and verification could establish acceptable terms."
+        },
+        {
+          "text": "Invest",
+          "why": "An unsecured promise does not establish that funds will be available when a claim must be paid. Essential diligence remains incomplete."
+        },
+        {
+          "text": "Pass",
+          "why": "No verified, unavoidable loss or refusal to negotiate establishes that the offered transaction cannot be made acceptable."
+        }
+      ],
+      "explanation": "BDC warns that a share purchaser acquires exposure to liabilities even when they are absent from the books, including lawsuits. In this fictional exercise, assess the claim, the seller's capacity to honor its promise and any enforceable funded protection before finalizing price and cash requirements.",
+      "note": "Laurel Sieve, the lawsuit, indemnity and all displayed operating information are fictional training assumptions. BDC supports the liability-diligence principle; it does not describe this transaction or guarantee any particular legal protection.",
+      "stats": [
+        [
+          "Revenue",
+          "Fictional annual sales: CAD 1.2 million"
+        ],
+        [
+          "Margins",
+          "Fictional normalized EBITDA margin before claim costs: 12%"
+        ],
+        [
+          "Customer mix",
+          "Fictional mix: retail and wholesale; largest customer 9%"
+        ],
+        [
+          "Occupancy",
+          "Fictional annual occupancy cost: CAD 84,000"
+        ],
+        [
+          "Debt",
+          "Fictional proposed acquisition debt: CAD 250,000"
+        ],
+        [
+          "AR days",
+          "Fictional wholesale receivable days: 28"
+        ]
+      ],
+      "source": {
+        "title": "The steps you need to take before buying a business",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/due-diligence-valuation",
+        "kind": "Practitioner guidance",
+        "note": "BDC explains that share purchases include recorded and unrecorded liabilities and identifies lawsuits as potential exposures. The indemnity scenario and all business details are invented."
+      },
+      "evidence": "whether they are recorded on the company books or not.",
+      "calculations": []
     }
   ],
-  "researchNote": "All modes are tied at 30 research cases. Added two distinct lessons in foundation and investor, using opened SEC filings: CoStar's September 2026 disclosure and Marvell's fiscal 2023 operational experience. No scored arithmetic, invented company metrics, or current investment recommendations."
+  "researchNote": "Prioritized lease and verdict, tied for the fewest research cases. Opened a 2026 SEC-filed commercial lease, FactSet's fiscal 2026 lease disclosures, and older BDC acquisition guidance. Selected two distinct lessons: expense-audit procedures and the collectibility of seller indemnities. No files, accounts or private data were accessed."
 }
 </script>
 <script>
