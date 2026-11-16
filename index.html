@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-11-15T13:02:31.404368+00:00",
+  "checkedAt": "2026-11-16T13:01:44.882483+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -5363,9 +5363,81 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "whether they are recorded on the company books or not.",
       "calculations": []
+    },
+    {
+      "id": "foundation-valero-2026-lifo-liquidation-cost-layers",
+      "mode": "foundation",
+      "concept": "Inventory cost layers and reported profit",
+      "caseType": "Historical case",
+      "prompt": "Valero's US quarterly filing for September 30, 2026 reports a cost benefit from liquidating older LIFO inventory layers carried below current replacement costs. Why can this improve reported profit without cheaper current purchases?",
+      "choices": [
+        {
+          "text": "Older, lower inventory costs enter expense as those layers are liquidated.",
+          "why": "The expense reflects historical carrying costs, which can be lower than the cost of replacing the goods today."
+        },
+        {
+          "text": "Remaining inventory is automatically written up to replacement cost through income.",
+          "why": "The disclosed benefit came from liquidating historical cost layers, rather than marking remaining inventory up to replacement value."
+        },
+        {
+          "text": "Reducing inventory creates additional sales revenue independently of customer transactions.",
+          "why": "An inventory reduction does not itself establish revenue; the disclosed benefit affected costs."
+        },
+        {
+          "text": "Suppliers must have lowered current purchase prices.",
+          "why": "Historical cost layers can reduce expense even when replacement costs remain higher."
+        }
+      ],
+      "explanation": "Liquidating lower-cost LIFO layers can reduce recognized costs and lift profit without an improvement in current purchasing economics. Valero linked the inventory reduction to its California operations, so the benefit should be distinguished from recurring operating improvement.",
+      "note": "Actual 2026 US filing and operational disclosure; no fictional company figures or transaction assumptions. The question isolates the disclosed inventory-cost mechanism.",
+      "stats": [],
+      "source": {
+        "title": "Valero Energy Corporation — Form 10-Q for the quarterly period ended September 30, 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1035002/000162828026067679/vlo-20260930.htm",
+        "kind": "Official company filing",
+        "note": "Notes 2 and 3 establish that reduced inventory released older LIFO layers below replacement costs and benefited reported costs. The exercise supplies qualitative answer alternatives."
+      },
+      "evidence": "liquidation of LIFO inventory layers established in prior years at costs lower than current replacement costs",
+      "calculations": []
+    },
+    {
+      "id": "investor-nvidia-cryptomining-underlying-demand",
+      "mode": "investor",
+      "concept": "Underlying demand versus product-category labels",
+      "caseType": "Historical case",
+      "prompt": "The SEC's May 6, 2022 US settled NVIDIA action found inadequate disclosure of cryptomining's contribution to fiscal 2018 gaming revenue growth. Before projecting similarly labeled product sales into a valuation, what should an analyst examine?",
+      "choices": [
+        {
+          "text": "The actual end uses driving growth and their sensitivity to changing customer economics.",
+          "why": "A product marketed for one activity may derive substantial demand from another activity with different volatility."
+        },
+        {
+          "text": "The marketed product category alone, treating its customers as one stable demand pool.",
+          "why": "The gaming label did not establish that all demand came from conventional gaming uses."
+        },
+        {
+          "text": "Only whether the sales were collected in cash.",
+          "why": "Collection supports realized cash receipts but does not establish that the underlying demand will recur."
+        },
+        {
+          "text": "Only total revenue growth, because end-use differences disappear at company level.",
+          "why": "Aggregate growth can conceal dependence on a volatile source of demand that matters to forecasts."
+        }
+      ],
+      "explanation": "The SEC found that NVIDIA failed to disclose cryptomining as a significant driver of gaming revenue growth during two fiscal 2018 quarters. NVIDIA settled without admitting or denying the findings; the transferable lesson is to test underlying demand drivers before extrapolating growth.",
+      "note": "Historical US settled administrative findings, not an admission or a current investment verdict. The diligence alternatives are training applications of the documented disclosure issue.",
+      "stats": [],
+      "source": {
+        "title": "SEC Charges NVIDIA Corporation with Inadequate Disclosures about Impact of Cryptomining",
+        "url": "https://www.sec.gov/newsroom/press-releases/2022-79",
+        "kind": "Historical enforcement case",
+        "note": "Establishes the SEC's settled findings concerning undisclosed cryptomining demand and NVIDIA's neither-admit-nor-deny settlement. The exercise invents no financial metrics."
+      },
+      "evidence": "this increase in gaming sales was driven in significant part by cryptomining.",
+      "calculations": []
     }
   ],
-  "researchNote": "Prioritized lease and verdict, tied for the fewest research cases. Opened a 2026 SEC-filed commercial lease, FactSet's fiscal 2026 lease disclosures, and older BDC acquisition guidance. Selected two distinct lessons: expense-audit procedures and the collectibility of seller indemnities. No files, accounts or private data were accessed."
+  "researchNote": "All four modes are tied at 31 cases. Selected foundation and investor for two new lessons, using an opened 2026 operational filing and an opened historical SEC enforcement release. No files or accounts were accessed."
 }
 </script>
 <script>
