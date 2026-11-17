@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-11-16T13:01:44.882483+00:00",
+  "checkedAt": "2026-11-17T14:03:02.092929+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -5435,9 +5435,138 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "this increase in gaming sales was driven in significant part by cryptomining.",
       "calculations": []
+    },
+    {
+      "id": "lease-mgm-2026-casualty-restoration-exposure",
+      "mode": "lease",
+      "concept": "Casualty restoration obligations and interruption liquidity",
+      "caseType": "Historical case",
+      "prompt": "MGM's US master lease, amended April 21, 2026, generally requires restoration after casualty even for uninsured damage, subject to specified exceptions. What should a bakery operator learn before assuming fire damage ends its lease obligations?",
+      "choices": [
+        {
+          "text": "Review restoration, termination and rent provisions together with insurance and cash reserves.",
+          "why": "Repair duties and continuing payments can create separate funding needs."
+        },
+        {
+          "text": "Budget only the insurance deductible.",
+          "why": "Coverage gaps and continuing obligations may exceed the deductible."
+        },
+        {
+          "text": "Assume unusable premises automatically terminate the lease.",
+          "why": "The agreement specifies conditions and exceptions."
+        },
+        {
+          "text": "Assume the landlord must fund all restoration.",
+          "why": "This lease places substantial restoration duties on the tenant."
+        }
+      ],
+      "explanation": "Physical damage does not necessarily end contractual obligations. Check the actual lease and insurance before budgeting interruption cash needs.",
+      "note": "A US contractual example, not a universal legal rule or a report of an actual fire.",
+      "stats": [],
+      "source": {
+        "title": "THIRD AMENDMENT TO AMENDED AND RESTATED MASTER LEASE",
+        "url": "https://www.sec.gov/Archives/edgar/data/789570/000078957026000076/exhibit101-q22026.htm",
+        "kind": "Executed lease filed with the SEC",
+        "note": "Exhibit A, section 14.2, establishes conditional restoration duties; bakery application is instructional."
+      },
+      "evidence": "such damage shall not terminate this Master Lease",
+      "calculations": []
+    },
+    {
+      "id": "verdict-bakery-customers-common-ownership",
+      "mode": "verdict",
+      "concept": "Customer concentration by economic decision-maker",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Tamarack Tin describes its wholesale accounts as independent customers. Diligence discovers that its largest accounts share one parent company, but purchasing authority and post-acquisition buying plans remain unverified. The seller permits direct confirmation and repricing; other diligence is satisfactory. Before committing unconditionally, what is your verdict?",
+      "choices": [
+        {
+          "text": "Investigate",
+          "why": "Verify who controls purchasing, confirm continuation plans and test cash coverage if the group reduces orders."
+        },
+        {
+          "text": "Invest",
+          "why": "Separate invoices do not establish independent purchasing decisions or supported acquisition economics."
+        },
+        {
+          "text": "Pass",
+          "why": "Shared ownership raises risk, but no verified unacceptable terms or unavoidable cash shortfall have been established."
+        }
+      ],
+      "explanation": "Several customer accounts can represent one concentrated economic exposure. Because the purchasing relationships and cash consequences can still be verified and reflected in price, the evidence supports further investigation.",
+      "note": "The company, all figures, ownership relationship and transaction conditions are fictional training assumptions. BDC supplies the general diligence principle, not findings about this invented business.",
+      "stats": [
+        [
+          "Revenue",
+          "CAD 1,200,000 annually"
+        ],
+        [
+          "Margins",
+          "Reported EBITDA margin: 12%"
+        ],
+        [
+          "Customer mix",
+          "35% of revenue from accounts sharing one parent"
+        ],
+        [
+          "Occupancy",
+          "CAD 72,000 annually"
+        ],
+        [
+          "Debt",
+          "Proposed acquisition debt: CAD 180,000"
+        ],
+        [
+          "AR days",
+          "28 days"
+        ]
+      ],
+      "source": {
+        "title": "The steps you need to take BEFORE buying a business",
+        "url": "https://www.bdc.ca/en/articles-tools/start-buy-business/buy-business/due-diligence-valuation",
+        "kind": "Practitioner guidance",
+        "note": "BDC recommends checking concentrated customers' continuation intentions before acquisition. Common ownership and every scenario detail are invented."
+      },
+      "evidence": "confirm that they intend to continue doing business with the firm once you have acquired it.",
+      "calculations": []
+    },
+    {
+      "id": "investor-brixmor-comparative-base-manipulation",
+      "mode": "investor",
+      "concept": "Growth quality and integrity of comparative periods",
+      "caseType": "Historical case",
+      "prompt": "In its August 1, 2019 US Brixmor action, the SEC alleged tactics including improperly lowering prior-year same-property net operating income to strengthen reported growth. Which diligence check best addresses this risk?",
+      "choices": [
+        {
+          "text": "Reconstruct both periods using consistent definitions and inspect changes to the comparison base.",
+          "why": "A distorted prior period can manufacture apparent growth."
+        },
+        {
+          "text": "Verify only the current period's total.",
+          "why": "That leaves the comparative base unchecked."
+        },
+        {
+          "text": "Treat repeated guidance achievement as independent validation.",
+          "why": "Targets are not evidence that calculations are sound."
+        },
+        {
+          "text": "Compare published growth rates without checking definitions.",
+          "why": "Inconsistent inputs can undermine the comparison."
+        }
+      ],
+      "explanation": "Growth quality depends on both periods and consistent measurement. Brixmor settled without admitting or denying the allegations; the release separately describes company settled-order findings and allegations against individuals.",
+      "note": "Historical US enforcement lesson, not a current investment verdict.",
+      "stats": [],
+      "source": {
+        "title": "SEC Charges Brixmor Property Group Inc. and Former Senior Executives with Accounting Fraud",
+        "url": "https://www.sec.gov/newsroom/press-releases/2019-143",
+        "kind": "Historical enforcement case",
+        "note": "Documents the alleged comparison-base manipulation and company settlement; diligence choices are instructional."
+      },
+      "evidence": "improperly lowering the prior year's SP NOI",
+      "calculations": []
     }
   ],
-  "researchNote": "All four modes are tied at 31 cases. Selected foundation and investor for two new lessons, using an opened 2026 operational filing and an opened historical SEC enforcement release. No files or accounts were accessed."
+  "researchNote": "Opened primary sources for three new questions, covering lease and verdict, the two modes with the fewest cases, plus investor. Research combines an executed April 2026 lease amendment with a documented 2019 SEC enforcement case and BDC acquisition guidance. No files, accounts or private data were accessed."
 }
 </script>
 <script>
