@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-11-17T14:03:02.092929+00:00",
+  "checkedAt": "2026-11-19T13:02:09.646662+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -5564,9 +5564,81 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "improperly lowering the prior year's SP NOI",
       "calculations": []
+    },
+    {
+      "id": "foundation-auburn-2026-pending-insurance-recovery",
+      "mode": "foundation",
+      "concept": "Loss accrual and separate recognition of insurance recovery",
+      "caseType": "Historical case",
+      "prompt": "Auburn National Bancorporation’s US Form 10-Q for September 30, 2026 reports an accrued mortgage-lien loss and a pending insurance claim that did not meet recognition criteria. How should the pending claim affect the recorded loss?",
+      "choices": [
+        {
+          "text": "Keep the loss accrued and leave the potential insurance recovery unrecorded until it qualifies for recognition.",
+          "why": "The loss met the accrual criteria, while the potential recovery had yet to meet its own recognition criteria."
+        },
+        {
+          "text": "Reduce the loss accrual by the amount management expects the insurer to pay.",
+          "why": "An expected reimbursement that falls short of recognition criteria cannot reduce the recorded loss."
+        },
+        {
+          "text": "Reverse the loss accrual and record any uninsured portion when the insurer makes its decision.",
+          "why": "The loss already qualified for accrual independently of the insurer’s decision."
+        },
+        {
+          "text": "Keep the full loss accrued and record an insurance receivable for the amount claimed.",
+          "why": "Submitting a claim establishes the amount requested. Recognition requires separate support for the recovery."
+        }
+      ],
+      "explanation": "Auburn recorded the probable, reasonably estimable loss in the second quarter of 2026. At September 30, it had yet to recognize an insurance receivable because the pending recovery had not met the applicable criteria.",
+      "note": "The loss and pending claim are reported events. The alternative accounting entries are hypothetical.",
+      "stats": [],
+      "source": {
+        "title": "FORM 10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/750574/000143774926035472/aubn20260930_10q.htm",
+        "kind": "Company quarterly filing",
+        "note": "Note 6 describes the loss accrual and explains why Auburn had yet to record the insurance receivable. The exercise supplies hypothetical alternative entries."
+      },
+      "evidence": "the Company has not recorded a receivable for any potential insurance recovery",
+      "calculations": []
+    },
+    {
+      "id": "lease-yoshiharu-radius-second-site-percentage-rent",
+      "mode": "lease",
+      "concept": "Radius restrictions and percentage rent on second-site sales",
+      "caseType": "Adapted case",
+      "prompt": "Yoshiharu’s December 30, 2020 Irvine, California retail lease ties a radius-clause breach to percentage rent. A fictional bakery reviewing similar terms plans to open a nearby second shop through an affiliate. What should it check before committing to the second site?",
+      "choices": [
+        {
+          "text": "Check whether the clause covers the affiliate and location, whether an exception applies, and how the second shop’s sales would affect rent at the first.",
+          "why": "The filed clause reaches entities under common control and can bring second-site sales into the first site’s percentage-rent calculation."
+        },
+        {
+          "text": "Budget the second shop independently because its affiliate will sign a separate lease and keep separate books.",
+          "why": "Separate leases and books leave common-control provisions and sales attribution under the first lease in play."
+        },
+        {
+          "text": "Measure the distance between the two storefronts and proceed if that distance exceeds the stated radius.",
+          "why": "The filed lease measures from the nearest point on the shopping center perimeter to the second business’s front door."
+        },
+        {
+          "text": "Compare the shops’ menus and proceed if each has a different signature product.",
+          "why": "The clause addresses similar businesses. A difference in one product leaves the overall similarity, ownership and location questions unresolved."
+        }
+      ],
+      "explanation": "Yoshiharu’s lease specifies when nearby similar businesses are covered, provides an exception for specified landlord-related centers, and adds the other business’s sales to the percentage-rent calculation if the covenant is breached. A bakery can map its proposed location against the lease’s measurement rule and test the rent impact before committing.",
+      "note": "Yoshiharu and its Irvine lease are real. The bakery, affiliate and proposed second shop are fictional.",
+      "stats": [],
+      "source": {
+        "title": "RETAIL LEASE",
+        "url": "https://www.sec.gov/Archives/edgar/data/1898604/000149315222002176/ex10-7.htm",
+        "kind": "Executed retail lease filed with the SEC",
+        "note": "Sections 1.11 and 7.4 establish the measurement rule, covered entities, exception and percentage-rent remedy. The exercise invents the bakery’s expansion plan."
+      },
+      "evidence": "the Gross Sales of the Other Business shall be included in the Gross Sales made from the Premises",
+      "calculations": []
     }
   ],
-  "researchNote": "Opened primary sources for three new questions, covering lease and verdict, the two modes with the fewest cases, plus investor. Research combines an executed April 2026 lease amendment with a documented 2019 SEC enforcement case and BDC acquisition guidance. No files, accounts or private data were accessed."
+  "researchNote": "Added one foundation case and one lease case, both from modes tied for the fewest research cases. The sources are a November 2026 US quarterly filing and a California restaurant lease effective in December 2020."
 }
 </script>
 <script>
