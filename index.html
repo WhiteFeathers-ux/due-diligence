@@ -254,7 +254,7 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
 <body><div class="shell" id="shell" data-view="home"><header class="mast"><span class="brand">Due Diligence</span><span id="xp">0 XP</span></header><p id="storage" class="storage hidden" role="status">Progress stays in this session. Browser storage is unavailable.</p><main id="app" tabindex="-1"></main><p class="savefoot">Offline practice · <span id="save-status">Saved in this browser</span></p></div>
 <script type="application/json" id="research-data">{
   "version": 1,
-  "checkedAt": "2026-11-19T13:02:09.646662+00:00",
+  "checkedAt": "2026-11-20T13:04:39.824099+00:00",
   "schedule": "Daily at 08:00 America/Indiana/Indianapolis",
   "cases": [
     {
@@ -5636,9 +5636,102 @@ button.ans:active{background:color-mix(in srgb,var(--mc) 12%,transparent)}
       },
       "evidence": "the Gross Sales of the Other Business shall be included in the Gross Sales made from the Premises",
       "calculations": []
+    },
+    {
+      "id": "verdict-bakery-fixed-rate-financing-repriced",
+      "mode": "verdict",
+      "concept": "Testing acquisition returns with committed fixed-rate financing",
+      "caseType": "Adapted case",
+      "prompt": "Fictional Ontario bakery Kettle Bloom can be acquired with a committed loan whose rate is fixed until the loan is fully repaid. Independent forecasts use its actual payment schedule and show that even weak sales leave enough cash for operations, maintenance and debt payments while preserving reserves and meeting the buyer’s return hurdle. Working capital is funded, essential diligence is complete, and the agreed price is below the independent valuation. What is your verdict?",
+      "choices": [
+        {
+          "text": "Invest",
+          "why": "The verified price, committed financing and downside cash forecast support the deal at the offered terms."
+        },
+        {
+          "text": "Investigate",
+          "why": "The loan terms and their effect on cash flow have already been checked, and essential diligence is complete."
+        },
+        {
+          "text": "Pass",
+          "why": "The fixed-rate payments are already reflected in the downside forecast, which preserves reserves and meets the buyer’s required return."
+        }
+      ],
+      "explanation": "A rate fixed through final repayment makes the loan’s interest cost predictable, while sales can still vary. Here the independently checked downside forecast uses the committed payment schedule and supports the buyer’s required return at the agreed price.",
+      "note": "Kettle Bloom, its Ontario acquisition, all figures and all diligence outcomes are fictional training assumptions.",
+      "stats": [
+        [
+          "Revenue",
+          "CAD 1.18 million annually"
+        ],
+        [
+          "Margins",
+          "56% gross margin, 12% adjusted EBITDA margin"
+        ],
+        [
+          "Customer mix",
+          "74% retail, 26% wholesale"
+        ],
+        [
+          "Occupancy",
+          "CAD 82,000 annually"
+        ],
+        [
+          "Debt",
+          "CAD 250,000 acquisition loan at a fixed rate through final repayment"
+        ],
+        [
+          "AR days",
+          "24 days on credit sales"
+        ]
+      ],
+      "source": {
+        "title": "Fixed or variable-rate loans: What’s best for your business?",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/get-financing/fixed-rate-or-variable-rate-loans-which-best-business",
+        "kind": "Practitioner guidance",
+        "note": "BDC explains how fixed rates improve financing-cost predictability and how cash forecasts help assess rate exposure. The acquisition terms, valuation and forecast results are invented."
+      },
+      "evidence": "A smaller company with tighter cash flow may be more inclined to fix their loan rate",
+      "calculations": []
+    },
+    {
+      "id": "investor-vornado-2026-swap-to-cap-debt-coverage",
+      "mode": "investor",
+      "concept": "Debt coverage when a fixed-rate swap gives way to a cap",
+      "caseType": "Historical case",
+      "prompt": "In its US Form 10-Q for September 30, 2026, Vornado reported that part of a variable-rate term loan moved from swap protection to an interest-rate cap in October. How should an analyst forecast debt coverage on that portion?",
+      "choices": [
+        {
+          "text": "Model the floating benchmark under several scenarios, apply the cap while it lasts, and include the loan spread and scheduled principal.",
+          "why": "Interest can vary below the cap, and the expiry date determines when the benchmark exposure changes again."
+        },
+        {
+          "text": "Carry the old swapped rate through loan maturity because the loan remained hedged.",
+          "why": "The swap expired on that portion, and the cap does not preserve the former fixed rate."
+        },
+        {
+          "text": "Use the cap strike plus the loan spread as the fixed rate through maturity.",
+          "why": "That would miss lower interest when the benchmark is below the strike and potential higher interest after the cap expires."
+        },
+        {
+          "text": "Use the latest floating rate for every future period and revisit it at the next reporting date.",
+          "why": "A single observed rate misses both the range of payments while the cap is in force and exposure after expiry."
+        }
+      ],
+      "explanation": "A cap limits exposure above its strike on the covered benchmark for a defined period, while interest can still vary below the strike. Forecasting debt coverage requires tracking the covered balance and expiry alongside the contractual spread and principal schedule.",
+      "note": "The October hedge transition is a reported event. The question asks for a transferable forecasting method and assumes no future rate path.",
+      "stats": [],
+      "source": {
+        "title": "vno-20260930",
+        "url": "https://www.sec.gov/Archives/edgar/data/899689/000089968926000053/vno-20260930.htm",
+        "kind": "SEC quarterly filing",
+        "note": "Vornado Realty Trust and Vornado Realty L.P.’s Form 10-Q describes the October 2026 swap expiry, the replacement SOFR cap and its expiry. The forecasting choices are written for the exercise."
+      },
+      "evidence": "became subject to a 4.75% SOFR strike rate cap entered into on September 29, 2026, which expires in October 2027",
+      "calculations": []
     }
   ],
-  "researchNote": "Added one foundation case and one lease case, both from modes tied for the fewest research cases. The sources are a November 2026 US quarterly filing and a California restaurant lease effective in December 2020."
+  "researchNote": "Two new cases cover verdict, the lowest-count mode, and investor, one of the three modes tied at the next count. The sources are a November 2026 SEC filing and earlier BDC financing guidance."
 }
 </script>
 <script>
